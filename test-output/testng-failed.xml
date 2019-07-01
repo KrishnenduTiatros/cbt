@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Tiatros]" parallel="classes">
+  <listeners>
+    <listener class-name="com.qa.tiatros.report.ExtentReportListner"/>
+  </listeners>
+  <test thread-count="2" name="ALL(failed)" parallel="classes">
+    <classes>
+      <class name="com.qa.tiatros.testcase.DashboardTest">
+        <methods>
+          <include name="dashboard_Click_All"/>
+          <include name="initobjects"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.testcase.DashboardTest -->
+      <class name="com.qa.tiatros.testcase.Direct_DashboardTest">
+        <methods>
+          <include name="initobjects"/>
+          <include name="tearDown"/>
+          <include name="click_StressInventorypage_after_SignIN"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.testcase.Direct_DashboardTest -->
+      <class name="com.qa.tiatros.testcase.SignupTest">
+        <methods>
+          <include name="signup_TillDashboard"/>
+          <include name="validationAndVerification_Signup"/>
+          <include name="tearDown"/>
+          <include name="initobjects"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.testcase.SignupTest -->
+    </classes>
+  </test> <!-- ALL(failed) -->
+</suite> <!-- Failed suite [Tiatros] -->

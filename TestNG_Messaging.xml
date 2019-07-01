@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener
+			class-name="com.qa.tiatros.report.ExtentReportListner" />
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.qa.tiatros.messaging.testcase.TC001" />
+		<!-- 	<class name="com.qa.tiatros.messaging.testcase.TC002" />
+			<class name="com.qa.tiatros.messaging.testcase.TC003" />
+			<class name="com.qa.tiatros.messaging.testcase.TC004" />
+			<class name="com.qa.tiatros.messaging.testcase.TC005" />
+			<class name="com.qa.tiatros.messaging.testcase.TC006" />
+			<class name="com.qa.tiatros.messaging.testcase.TC007" />
+			<class name="com.qa.tiatros.messaging.testcase.TC008" />
+			<class name="com.qa.tiatros.messaging.testcase.TC009" />
+			<class name="com.qa.tiatros.messaging.testcase.TC010" />
+			<class name="com.qa.tiatros.messaging.testcase.TC011" />
+			<class name="com.qa.tiatros.messaging.testcase.TC012" /> -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

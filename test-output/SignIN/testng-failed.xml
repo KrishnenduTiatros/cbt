@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SignIN]">
+  <listeners>
+    <listener class-name="com.qa.tiatros.report.ExtentReportListner"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.qa.tiatros.signIn.testcase.TC004">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initobjects"/>
+          <include name="tc004_signIN"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.signIn.testcase.TC004 -->
+      <class name="com.qa.tiatros.signIn.testcase.TC006">
+        <methods>
+          <include name="initobjects"/>
+          <include name="tearDown"/>
+          <include name="tc006_signIN"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.signIn.testcase.TC006 -->
+      <class name="com.qa.tiatros.signIn.testcase.TC002">
+        <methods>
+          <include name="initobjects"/>
+          <include name="tearDown"/>
+          <include name="tc002_signIN"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.signIn.testcase.TC002 -->
+      <class name="com.qa.tiatros.signIn.testcase.TC011">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tc011_signIN"/>
+          <include name="initobjects"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.signIn.testcase.TC011 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SignIN] -->

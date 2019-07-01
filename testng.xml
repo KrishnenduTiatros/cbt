@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tiatros">
+	<listeners>
+		<listener
+			class-name="com.qa.tiatros.report.ExtentReportListner" />
+	</listeners>
+
+	<test name="ALL">
+		<classes>
+			<!-- >class name="com.qa.tiatros.testcase.RegistrationTest" /> -->
+			<class name="com.qa.tiatros.testcase.SignupTest" /> 
+			<class name="com.qa.tiatros.testcase.Direct_DashboardTest" />
+			<class name="com.qa.tiatros.testcase.DashboardTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
