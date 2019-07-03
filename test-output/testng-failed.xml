@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Tiatros]" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.qa.tiatros.report.ExtentReportListner"/>
   </listeners>
-  <test thread-count="2" name="ALL(failed)" parallel="classes">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tiatros.testcase.DashboardTest">
-        <methods>
-          <include name="dashboard_Click_All"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.testcase.DashboardTest -->
-      <class name="com.qa.tiatros.testcase.Direct_DashboardTest">
+      <class name="com.qa.tiatros.messaging.testcase.TC003">
         <methods>
           <include name="initobjects"/>
           <include name="tearDown"/>
-          <include name="click_StressInventorypage_after_SignIN"/>
+          <include name="addReplyComments"/>
         </methods>
-      </class> <!-- com.qa.tiatros.testcase.Direct_DashboardTest -->
-      <class name="com.qa.tiatros.testcase.SignupTest">
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC003 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC012">
         <methods>
-          <include name="signup_TillDashboard"/>
-          <include name="validationAndVerification_Signup"/>
+          <include name="myGroupSection"/>
           <include name="tearDown"/>
           <include name="initobjects"/>
         </methods>
-      </class> <!-- com.qa.tiatros.testcase.SignupTest -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
     </classes>
-  </test> <!-- ALL(failed) -->
-</suite> <!-- Failed suite [Tiatros] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
