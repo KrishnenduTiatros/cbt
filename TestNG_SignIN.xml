@@ -6,7 +6,7 @@
 		<listener
 			class-name="com.qa.tiatros.report.ExtentReportListner" />
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test name="SignIN">
 		<classes>
 			<class name="com.qa.tiatros.signIn.testcase.TC009">
 				<methods>
@@ -26,11 +26,6 @@
 			<class name="com.qa.tiatros.signIn.testcase.TC006">
 				<methods>
 					<include name="tc006_signIN" />
-				</methods>
-			</class>
-			<class name="com.qa.tiatros.course.testcase.TC001">
-				<methods>
-					<include name="tc001_signIN" />
 				</methods>
 			</class>
 			<class name="com.qa.tiatros.signIn.testcase.TC005">

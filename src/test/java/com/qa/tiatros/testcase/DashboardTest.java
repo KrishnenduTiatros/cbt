@@ -31,6 +31,8 @@ public class DashboardTest extends TestBase {
 	RegistrationPage rp;
 	SignupPage sp;
 	SigninPage sgn;
+	
+	
 	PinPage p;
 	ProfilePage pp;
 	FromWelcomeVidPage fwv;

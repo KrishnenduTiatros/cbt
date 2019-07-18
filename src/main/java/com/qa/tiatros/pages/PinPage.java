@@ -16,6 +16,10 @@ public class PinPage extends TestBase {
 
 	@FindBy(xpath = "//h2[contains(text(),'Check Your Email!')]")
 	WebElement verification_text4;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter your pin']")
+	WebElement enterPin;
+	
 
 	// Initializing the page object
 
@@ -32,11 +36,12 @@ public class PinPage extends TestBase {
 
 	// Business Component
 
-	public ProfilePage verifyPin() {
-		
+	public ProfilePage verifyPin() throws Throwable {
+		String pin = UtilTest.fetchGmailPin("krishnendu@tiatros.com", "q1w2e3R$");
+		UtilTest.sendkeys(driver, enterPin, pin);
+		Thread.sleep(2000);
 		UtilTest.element_click(driver, verify_pin);
+		//UtilTest.writeExcel("SignUP", prop.getProperty("TestCase"), "Email");
 		return new ProfilePage();
-
 	}
-
 }

@@ -41,6 +41,7 @@ com/qa/tiatros/pages/CourseDashboardPage.class
 com/qa/tiatros/signIn/testcase/TC011.class
 com/qa/tiatros/signIn/testcase/TC008.class
 com/qa/tiatros/messaging/testcase/TC006.class
+com/qa/tiatros/messaging/testcase/TC016.class
 com/qa/tiatros/messaging/testcase/TC002.class
 com/qa/tiatros/pages/PsychoeducationLecture_T_Page.class
 com/qa/tiatros/testcase/DashboardTest.class

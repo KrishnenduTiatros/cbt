@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Tiatros</th></tr>
+<tr><td><a href="#t0">ALL</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">2</td><td class="num">49,881</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Tiatros</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ALL &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qa.tiatros.testcase.DashboardTest</td><td><a href="#m0">dashboard_Click_All</a></td><td rowspan="1">1563260576970</td><td rowspan="1">5800</td></tr><tr class="failedodd"><td rowspan="1">com.qa.tiatros.testcase.SignupTest</td><td><a href="#m1">signup_TillDashboard</a></td><td rowspan="1">1563260548493</td><td rowspan="1">7000</td></tr><tr><th colspan="4">ALL &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.tiatros.testcase.SignupTest</td><td><a href="#m2">validationAndVerification_Signup</a></td><td rowspan="1">1563260563518</td><td rowspan="1">6145</td></tr></tbody>
+</table>
+<h2>ALL</h2><h3 id="m0">com.qa.tiatros.testcase.DashboardTest#dashboard_Click_All</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:313)
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:163)
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:131)
+	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)
+	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:112)
+	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:83)
+	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:128)
+	at org.apache.poi.openxml4j.opc.ZipPackagePart.&lt;init&gt;(ZipPackagePart.java:78)
+	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:243)
+	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:673)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:274)
+	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:258)
+	at com.qa.tiatros.util.UtilTest.readExcel(UtilTest.java:103)
+	at com.qa.tiatros.pages.SignupPage.signup_Details(SignupPage.java:71)
+	at com.qa.tiatros.testcase.DashboardTest.dashboard_Click_All(DashboardTest.java:71)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.qa.tiatros.testcase.SignupTest#signup_TillDashboard</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:313)
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:163)
+	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:131)
+	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)
+	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:112)
+	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:83)
+	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:128)
+	at org.apache.poi.openxml4j.opc.ZipPackagePart.&lt;init&gt;(ZipPackagePart.java:78)
+	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:243)
+	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:673)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:274)
+	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:258)
+	at com.qa.tiatros.util.UtilTest.readExcel(UtilTest.java:103)
+	at com.qa.tiatros.pages.SignupPage.signup_Details(SignupPage.java:71)
+	at com.qa.tiatros.testcase.SignupTest.signup_TillDashboard(SignupTest.java:54)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qa.tiatros.testcase.SignupTest#validationAndVerification_Signup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

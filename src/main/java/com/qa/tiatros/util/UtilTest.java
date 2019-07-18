@@ -1,17 +1,21 @@
 package com.qa.tiatros.util;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
@@ -34,25 +38,30 @@ public class UtilTest extends TestBase {
 	public static long IMPLICIT_WAIT = 15;
 
 	public static String t = "";
+	public static String demail = "";
 
+	// This Method used to type any given word in fields
 	public static void sendkeys(WebDriver driver, WebElement element, String value) {
 		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
 		element.sendKeys(value);
 	}
 
+	// This Method used to click any element in the application
 	public static void element_click(WebDriver driver, WebElement element) {
 		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
 
+	// This method used to scroll down a web page
 	public static void scrollDown(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement Ele = element;
 		js.executeScript("arguments[0].scrollIntoView();", Ele);
 	}
 
+	// This method to select element from the drop down
 	public static void select_dropdown(WebElement element, String value) {
 		try {
 			Thread.sleep(1000);
@@ -68,15 +77,16 @@ public class UtilTest extends TestBase {
 		}
 	}
 
+	// This method will generate dynamic mail id with the help of current time
 	public static String emailidgenerate() {
 		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
 		Date date = new Date();
 		String t = dateFormat.format(date);
 		String beforet = "krishnendu+";
 		String aftert = "@tiatros.com";
-		String time = beforet.concat(t).concat(aftert);
-		System.out.println(time);
-		return time;
+		demail = beforet.concat(t).concat(aftert);
+		System.out.println(demail);
+		return demail;
 	}
 
 	public static void by_click(WebDriver driver, By element1) {
@@ -86,6 +96,7 @@ public class UtilTest extends TestBase {
 		element.click();
 	}
 
+	// This Method read data from the excel file
 	@SuppressWarnings("deprecation")
 	public static String readExcel(String sheetName, String rowName, String colNum) throws Throwable {
 
@@ -139,6 +150,39 @@ public class UtilTest extends TestBase {
 		return ret;
 	}
 
+	// This Method will write data in the excel
+	@SuppressWarnings("deprecation")
+	public static void writeExcel(String sheetName, String rowName, String colNum) throws Throwable {
+		Cell cell;
+		Row row;
+		File src = new File(prop.getProperty("ExcelPath"));
+		FileInputStream fis = new FileInputStream(src);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sheet = wb.getSheet(sheetName);
+		int numRows = sheet.getLastRowNum() + 1;
+		int numCols = sheet.getRow(0).getLastCellNum();
+		row = sheet.getRow(0);
+		int col_Num = -1;
+		String ret = "";
+
+		// Create a loop to read the column number from which user want to read.
+		for (int i = 0; i < numCols; i++) {
+			if (row.getCell(i).getStringCellValue().trim().equals(colNum.trim()))
+				col_Num = i;
+		}
+		for (int j = 1; j <= numRows; j++) {
+			if (rowName.equals(sheet.getRow(j).getCell(0).getStringCellValue())) {
+
+				cell = row.createCell(col_Num);
+				cell.setCellValue(demail);
+				break;
+
+			}
+			wb.close();
+		}
+
+	}
+
 	public static void takeScreenshot(String testMethodName) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
@@ -175,7 +219,7 @@ public class UtilTest extends TestBase {
 		}
 		wb.close();
 		return ob;
-		
+
 	}
 
 	public static String title() {
@@ -357,38 +401,38 @@ public class UtilTest extends TestBase {
 	}
 
 	public static void fetchValue(String PStage) {
-		
+
 		System.out.println("Data Fetched :- " + PStage);
 		for (int i = 1; i <= 4; i++) {
 			String value;
 			switch (i) {
 			case 1:
-				value = driver.findElement(By.xpath(
-						"//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"+PStage+"')]//following::*["
-								+ i + "]"))
+				value = driver.findElement(By
+						.xpath("//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"
+								+ PStage + "')]//following::*[" + i + "]"))
 						.getText();
 				System.out.println("PSS10 = " + value);
 				break;
 
 			case 2:
-				value = driver.findElement(By.xpath(
-						"//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"+PStage+"')]//following::*["
-								+ i + "]"))
+				value = driver.findElement(By
+						.xpath("//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"
+								+ PStage + "')]//following::*[" + i + "]"))
 						.getText();
 				System.out.println("GAD7 = " + value);
 				break;
 			case 3:
-				value = driver.findElement(By.xpath(
-						"//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"+PStage+"')]//following::*["
-								+ i + "]"))
+				value = driver.findElement(By
+						.xpath("//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"
+								+ PStage + "')]//following::*[" + i + "]"))
 						.getText();
 				System.out.println("PHQ9 = " + value);
 				break;
 
 			case 4:
-				value = driver.findElement(By.xpath(
-						"//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"+PStage+"')]//following::*["
-								+ i + "]"))
+				value = driver.findElement(By
+						.xpath("//table[@class='table table-bordered validative-masure']//tbody/tr/*[contains(text(),'"
+								+ PStage + "')]//following::*[" + i + "]"))
 						.getText();
 				System.out.println("PHQ15 = " + value);
 				break;
@@ -399,10 +443,51 @@ public class UtilTest extends TestBase {
 
 	}
 
-	public static void scrollDown()
-	{
+	public static void scrollDown() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		 js.executeScript("window.scrollBy(0,5000)");
+		js.executeScript("window.scrollBy(0,5000)");
 	}
 
+	public static String fetchGmailPin(String email, String pass) throws Throwable {
+
+		((JavascriptExecutor) driver).executeScript("window.open()");
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get("https://mail.google.com/");
+
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("krishnendu@tiatros.com");
+		driver.findElement(By.xpath("//div[@class='dG5hZc']//div/div[@id='identifierNext']")).click();
+		Thread.sleep(3000);
+
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("q1w2e3R$");
+		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
+		Thread.sleep(5000);
+
+		driver.findElement(By.xpath("//input[@aria-label='Search mail']")).sendKeys(demail);
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//button[@aria-label='Search Mail']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//div[@class='ae4 UI UJ']")).click();
+
+		String s = driver
+				.findElement(
+						By.xpath("//span[contains(text(),'Your pin:')]/following-sibling::span[starts-with(@id,'m_')]"))
+				.getText();
+		System.out.println(s);
+		
+		driver.findElement(By.xpath("//div[starts-with(@class,'gb_ha') and @role='button']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
+		try {
+			Alert alert = driver.switchTo().alert();	
+			driver.switchTo().alert().accept();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Thread.sleep(3000);
+		driver.close();
+		driver.switchTo().window(tabs.get(0)); // switches to new tab
+		return s;
+	}
 }

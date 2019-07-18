@@ -7,6 +7,7 @@ com/qa/tiatros/signIn/testcase/TC011.class
 com/qa/tiatros/signIn/testcase/TC008.class
 com/qa/tiatros/messaging/testcase/TC006.class
 com/qa/tiatros/testcase/SignupTest.class
+com/qa/tiatros/messaging/testcase/TC016.class
 com/qa/tiatros/messaging/testcase/TC002.class
 com/qa/tiatros/testcase/DashboardTest.class
 com/qa/tiatros/messaging/testcase/TC012.class

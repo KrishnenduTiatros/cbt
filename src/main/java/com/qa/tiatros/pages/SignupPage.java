@@ -79,7 +79,7 @@ public class SignupPage extends TestBase
 		UtilTest.element_click(driver, term_use);
 		Thread.sleep(3000);
 		UtilTest.element_click(driver, user_register);
-		Thread.sleep(20000);
+		Thread.sleep(7000);
 		return new PinPage();
 	}
 }

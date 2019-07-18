@@ -9,7 +9,6 @@ import org.testng.Assert;
 import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.util.UtilTest;
 
-
 public class CourseDashboardPage extends TestBase {
 
 	// Page factory - OR
@@ -95,30 +94,33 @@ public class CourseDashboardPage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Program Overview')]")
 	WebElement programOverview;
-	
+
 	@FindBy(xpath = "//span[@class='custom-nav-label']")
 	WebElement settings;
-	
+
 	@FindBy(xpath = "//a[contains(text(),'Profile')]")
 	WebElement profile;
-	
+
 	@FindBy(xpath = "//input[@id='user_first_name']")
 	WebElement firstName;
-	
+
 	@FindBy(xpath = "//input[@id='user_last_name']")
 	WebElement lastName;
-	
+
 	@FindBy(xpath = "//input[@id='user_current_password']")
 	WebElement cPassword;
-	
+
 	@FindBy(xpath = "//input[@id='submit_profile']")
 	WebElement submitProfile;
-	
+
 	@FindBy(xpath = "//button[@class='confirm']")
 	WebElement continueDialogbox;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'My Progress')]")
 	WebElement mYProgress;
+
+	@FindBy(xpath = "//a[contains(text(),'peer')]")
+	WebElement peerDetails;
 
 	// Initializing the page object
 
@@ -127,7 +129,7 @@ public class CourseDashboardPage extends TestBase {
 	}
 
 	// All Verifications and Validations
-	
+
 	public void courseDashboardVerification() {
 		boolean vt = myMessage_title.isDisplayed();
 		Assert.assertEquals(vt, true, "My Message Text Not Found");
@@ -136,7 +138,7 @@ public class CourseDashboardPage extends TestBase {
 	}
 
 	// Business Component
-	
+
 	public MessagePostPage add_MessagePost() throws Throwable {
 		Thread.sleep(5000);
 		UtilTest.element_click(driver, new_Message);
@@ -240,18 +242,15 @@ public class CourseDashboardPage extends TestBase {
 	public void clickReport() {
 		UtilTest.clickReportAlert();
 	}
-	
-	
-	public void notificationCounterCheck()
-	{
+
+	public void notificationCounterCheck() {
 		UtilTest.counterCheck("Notification");
 	}
-	
-	public void groupMessageCounterCheck()
-	{
+
+	public void groupMessageCounterCheck() {
 		UtilTest.counterCheck("Group Message");
 	}
-	
+
 	public void changeProfileDetails() throws Throwable {
 		UtilTest.element_click(driver, hambarger);
 		UtilTest.element_click(driver, settings);
@@ -265,17 +264,20 @@ public class CourseDashboardPage extends TestBase {
 		UtilTest.element_click(driver, submitProfile);
 		Thread.sleep(4000);
 		UtilTest.element_click(driver, continueDialogbox);
-		Thread.sleep(4000);	
+		Thread.sleep(4000);
 	}
-	
-	public PersonalProgress myProgress()
-	{
+
+	public PersonalProgress myProgress() {
 		UtilTest.element_click(driver, hambarger);
-		UtilTest.element_click(driver, mYProgress);		
+		UtilTest.element_click(driver, mYProgress);
 		return new PersonalProgress();
 	}
-	
-	
-	
-	
+
+	public void clickPeerReview() throws Throwable {
+		UtilTest.element_click(driver, peer_review);
+		Thread.sleep(5000);
+		UtilTest.element_click(driver, peerDetails);
+		Thread.sleep(5000);		
+	}
+
 }

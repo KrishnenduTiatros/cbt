@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Tiatros]" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Tiatros]">
   <listeners>
     <listener class-name="com.qa.tiatros.report.ExtentReportListner"/>
   </listeners>
-  <test thread-count="2" name="ALL(failed)" parallel="classes">
+  <test thread-count="5" name="ALL(failed)">
     <classes>
       <class name="com.qa.tiatros.testcase.DashboardTest">
         <methods>
@@ -15,9 +15,14 @@
       </class> <!-- com.qa.tiatros.testcase.DashboardTest -->
       <class name="com.qa.tiatros.testcase.Direct_DashboardTest">
         <methods>
+          <include name="click_userfactspage_after_SignIN"/>
           <include name="initobjects"/>
           <include name="tearDown"/>
           <include name="click_StressInventorypage_after_SignIN"/>
+          <include name="click_gad7page_after_SignIN"/>
+          <include name="click_pss10Page_after_SignIN"/>
+          <include name="click_phq15page_after_SignIN"/>
+          <include name="click_phq9Page_after_SignIN"/>
         </methods>
       </class> <!-- com.qa.tiatros.testcase.Direct_DashboardTest -->
       <class name="com.qa.tiatros.testcase.SignupTest">

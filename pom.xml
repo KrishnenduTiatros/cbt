@@ -28,11 +28,11 @@
                 <configuration>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>TestNG_Messaging.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
-            <!-- Compiler plugin configures the java version to be usedfor compiling
+            <!-- Compiler plugin configures the java version to be used for compiling
                 the code -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -43,8 +43,6 @@
             </plugin>
         </plugins>
     </build>
-
-	
 
 	<dependencies>
 

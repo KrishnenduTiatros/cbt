@@ -1,18 +1,11 @@
 package com.qa.tiatros.testcase;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.pages.DashboardPage;
 import com.qa.tiatros.pages.FromWelcomeVidPage;
@@ -23,7 +16,6 @@ import com.qa.tiatros.pages.PinPage;
 import com.qa.tiatros.pages.ProfilePage;
 import com.qa.tiatros.pages.Pss10Page;
 import com.qa.tiatros.pages.RegistrationPage;
-import com.qa.tiatros.pages.ReturnUserRegistrationPage;
 import com.qa.tiatros.pages.SigninPage;
 import com.qa.tiatros.pages.SignupPage;
 import com.qa.tiatros.pages.Stress_inventoryPage;
