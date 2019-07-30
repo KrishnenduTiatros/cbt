@@ -10,7 +10,6 @@ import com.qa.tiatros.util.UtilTest;
 public class SignupPage extends TestBase
 
 {
-
 	// Page factory - OR
 
 	@FindBy(xpath = "//input[@id='user_first_name']")

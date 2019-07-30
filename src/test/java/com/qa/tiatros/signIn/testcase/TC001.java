@@ -37,7 +37,7 @@ public class TC001 extends TestBase {
 	}
 
 	// Method:- Click on the forget password link and press the back button to check the UI design 
-	@Test
+	@Test(invocationCount=5)
 	public void tc001_signIN() throws Throwable {
 
 		sgn.verify_text12();

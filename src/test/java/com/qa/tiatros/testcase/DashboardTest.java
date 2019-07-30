@@ -31,8 +31,6 @@ public class DashboardTest extends TestBase {
 	RegistrationPage rp;
 	SignupPage sp;
 	SigninPage sgn;
-	
-	
 	PinPage p;
 	ProfilePage pp;
 	FromWelcomeVidPage fwv;
@@ -67,7 +65,7 @@ public class DashboardTest extends TestBase {
 	}
 
 	@Test(enabled = true)
-	public void dashboard_Click_All() throws Throwable { // This Test case will run End to END Registration
+	public void dashboard_Click_All() throws Throwable { // This Test case will run End to END Registration without phn number
 
 		sp = rp.click_signupLink();
 		p = sp.signup_Details();
@@ -119,7 +117,7 @@ public class DashboardTest extends TestBase {
 	}
 
 	@Test(enabled = false)
-	public void dashboard_Click_All_Phone() throws Throwable { // This Test case will run End to END Registration
+	public void dashboard_Click_All_Phone() throws Throwable { // This Test case will run End to END Registration with phn number included 
 
 		sp = rp.click_signupLink();
 		p = sp.signup_Details();
