@@ -2,13 +2,11 @@ package com.qa.tiatros.pages;
 
 import java.util.List;
 import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.util.UtilTest;
 

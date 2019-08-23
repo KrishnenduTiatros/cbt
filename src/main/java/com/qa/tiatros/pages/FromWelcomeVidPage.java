@@ -39,8 +39,11 @@ public class FromWelcomeVidPage extends TestBase {
 	@FindBy(xpath = "//h2[contains(text(),'Complete Your Profile')]")
 	WebElement verification_text6;
 
-	@FindBy(xpath = "//h3[contains(text(),'Select a Start Date')]//following-sibling::div[1]/div[1]/div")
+	@FindBy(xpath = "//*[starts-with(@class,'col-xs-8 col-sm-7')]//following::div[@class='form-group accept-1']/div//ins")
 	WebElement check_box;
+	
+	@FindBy(xpath = "//*[starts-with(@class,'col-xs-8 col-sm-7')]//following::div[@class='form-group action-btn-1']/div//ins")
+	WebElement notify_me;
 
 	@FindBy(xpath = "//input[@id='submit_profile']")
 	WebElement save;
@@ -67,8 +70,8 @@ public class FromWelcomeVidPage extends TestBase {
 		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
 		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
 		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
-		Thread.sleep(1000);
-		UtilTest.element_click(driver, check_box);
+		Thread.sleep(2000);
+		check_box.click();
 		Thread.sleep(2000);
 		UtilTest.element_click(driver, save);
 		Thread.sleep(5000);

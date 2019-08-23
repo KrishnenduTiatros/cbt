@@ -457,35 +457,34 @@ public class UtilTest extends TestBase {
 
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("krishnendu@tiatros.com");
 		driver.findElement(By.xpath("//div[@class='dG5hZc']//div/div[@id='identifierNext']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("q1w2e3R$");
 		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
 		Thread.sleep(5000);
 
 		driver.findElement(By.xpath("//input[@aria-label='Search mail']")).sendKeys(demail);
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[@aria-label='Search Mail']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='ae4 UI UJ']")).click();
-
+		Thread.sleep(3000);
 		String s = driver
 				.findElement(
 						By.xpath("//span[contains(text(),'Your pin:')]/following-sibling::span[starts-with(@id,'m_')]"))
 				.getText();
 		System.out.println(s);
-		
-		driver.findElement(By.xpath("//div[starts-with(@class,'gb_ha') and @role='button']")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
 		try {
-			Alert alert = driver.switchTo().alert();	
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//div[starts-with(@class,'gb_ha') and @role='button']")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
+			Alert alert = driver.switchTo().alert();
 			driver.switchTo().alert().accept();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
-		Thread.sleep(3000);
 		driver.close();
 		driver.switchTo().window(tabs.get(0)); // switches to new tab
 		return s;

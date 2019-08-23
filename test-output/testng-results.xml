@@ -1,73 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90895" started-at="2019-07-24T11:00:13Z" finished-at="2019-07-24T11:01:44Z">
+  <suite name="Default suite" duration-ms="261727" started-at="2019-08-23T11:16:36Z" finished-at="2019-08-23T11:20:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90895" started-at="2019-07-24T11:00:13Z" finished-at="2019-07-24T11:01:44Z">
-      <class name="com.qa.tiatros.signIn.testcase.TC001">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="initobjects" is-config="true" duration-ms="12793" started-at="2019-07-24T11:00:13Z" finished-at="2019-07-24T11:00:26Z">
+    <test name="Default test" duration-ms="261727" started-at="2019-08-23T11:16:36Z" finished-at="2019-08-23T11:20:58Z">
+      <class name="com.qa.tiatros.registration.testcase.DashboardTest">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.DashboardTest@ff5b51f]" name="initobjects" is-config="true" duration-ms="8826" started-at="2019-08-23T11:16:36Z" finished-at="2019-08-23T11:16:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="tc001_signIN()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tc001_signIN" duration-ms="7082" started-at="2019-07-24T11:00:26Z" finished-at="2019-07-24T11:00:33Z">
+        <test-method status="PASS" signature="dashboard_Click_All()[pri:0, instance:com.qa.tiatros.registration.testcase.DashboardTest@ff5b51f]" name="dashboard_Click_All" duration-ms="252769" started-at="2019-08-23T11:16:45Z" finished-at="2019-08-23T11:20:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc001_signIN -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tearDown" is-config="true" duration-ms="78" started-at="2019-07-24T11:00:33Z" finished-at="2019-07-24T11:00:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="initobjects" is-config="true" duration-ms="6234" started-at="2019-07-24T11:00:33Z" finished-at="2019-07-24T11:00:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="tc001_signIN()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tc001_signIN" duration-ms="6768" started-at="2019-07-24T11:00:39Z" finished-at="2019-07-24T11:00:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc001_signIN -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tearDown" is-config="true" duration-ms="83" started-at="2019-07-24T11:00:46Z" finished-at="2019-07-24T11:00:46Z">
+        </test-method> <!-- dashboard_Click_All -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.DashboardTest@ff5b51f]" name="tearDown" is-config="true" duration-ms="105" started-at="2019-08-23T11:20:58Z" finished-at="2019-08-23T11:20:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="initobjects" is-config="true" duration-ms="10991" started-at="2019-07-24T11:00:46Z" finished-at="2019-07-24T11:00:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="tc001_signIN()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tc001_signIN" duration-ms="6766" started-at="2019-07-24T11:00:57Z" finished-at="2019-07-24T11:01:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc001_signIN -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tearDown" is-config="true" duration-ms="83" started-at="2019-07-24T11:01:04Z" finished-at="2019-07-24T11:01:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="initobjects" is-config="true" duration-ms="13949" started-at="2019-07-24T11:01:04Z" finished-at="2019-07-24T11:01:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="tc001_signIN()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tc001_signIN" duration-ms="6777" started-at="2019-07-24T11:01:18Z" finished-at="2019-07-24T11:01:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc001_signIN -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tearDown" is-config="true" duration-ms="81" started-at="2019-07-24T11:01:25Z" finished-at="2019-07-24T11:01:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="initobjects" is-config="true" duration-ms="11951" started-at="2019-07-24T11:01:25Z" finished-at="2019-07-24T11:01:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="tc001_signIN()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tc001_signIN" duration-ms="7149" started-at="2019-07-24T11:01:37Z" finished-at="2019-07-24T11:01:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc001_signIN -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.signIn.testcase.TC001@2d928643]" name="tearDown" is-config="true" duration-ms="81" started-at="2019-07-24T11:01:44Z" finished-at="2019-07-24T11:01:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.signIn.testcase.TC001 -->
+      </class> <!-- com.qa.tiatros.registration.testcase.DashboardTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

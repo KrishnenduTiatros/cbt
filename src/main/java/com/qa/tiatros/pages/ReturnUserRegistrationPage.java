@@ -20,11 +20,26 @@ public class ReturnUserRegistrationPage extends TestBase {
 	@FindBy(xpath = "//button[@id='validate']")
 	WebElement validate_coupon;
 	
-	@FindBy(xpath = "//h3[contains(text(),'Select a Start Date')]//following-sibling::div[1]/div[1]/div")
+	@FindBy(xpath = "//*[@class='col-xs-8 col-sm-7 no-padding m-t-md m-b-lg']//following::div[@class=\"form-group accept-1\"]/div")//h3[contains(text(),'Select a Start Date')]//following-sibling::div[1]/div[1]/div
 	WebElement check_box;
 
 	@FindBy(xpath = "//input[@id='submit_profile']")
 	WebElement save;
+	
+	@FindBy(id = "date_month")
+	WebElement month;
+
+	@FindBy(id = "date_day")
+	WebElement day;
+
+	@FindBy(id = "date_year")
+	WebElement year;
+
+	@FindBy(id = "user_gender")
+	WebElement gender;
+
+	@FindBy(id = "zip_code")
+	WebElement zip;
 	
 	// Initializing the page object
 	public ReturnUserRegistrationPage() {
@@ -41,12 +56,18 @@ public class ReturnUserRegistrationPage extends TestBase {
 	// Business Component
 
 	public DashboardPage click_signupLink() throws Throwable {
-	
+		
+		zip.clear();
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));	
 		Thread.sleep(2000);
-		UtilTest.sendkeys(driver, return_coupon_code, UtilTest.readExcel("ReturnUser", prop.getProperty("TestCase"), "R_Coupon")); // Reading data from xlsx file     //prop.getProperty("R_Coupon")
+		UtilTest.sendkeys(driver, return_coupon_code,prop.getProperty("R_Coupon") ); // Reading data from xlsx file // UtilTest.readExcel("ReturnUser", prop.getProperty("TestCase"), "R_Coupon")    //prop.getProperty("R_Coupon")
 		Thread.sleep(2000);
 		UtilTest.element_click(driver, validate_coupon);
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		UtilTest.element_click(driver, check_box);
 		Thread.sleep(2000);
 		UtilTest.element_click(driver, save);

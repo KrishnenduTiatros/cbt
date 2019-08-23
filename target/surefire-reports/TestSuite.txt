@@ -1,42 +1,78 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 51.169 sec <<< FAILURE!
-signup_TillDashboard(com.qa.tiatros.testcase.SignupTest)  Time elapsed: 7.434 sec  <<< FAILURE!
-java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:313)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:163)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:131)
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)
-	at org.apache.poi.openxml4j.opc.PackagePart.<init>(PackagePart.java:112)
-	at org.apache.poi.openxml4j.opc.PackagePart.<init>(PackagePart.java:83)
-	at org.apache.poi.openxml4j.opc.PackagePart.<init>(PackagePart.java:128)
-	at org.apache.poi.openxml4j.opc.ZipPackagePart.<init>(ZipPackagePart.java:78)
-	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:243)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:673)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:274)
-	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:258)
-	at com.qa.tiatros.util.UtilTest.readExcel(UtilTest.java:103)
-	at com.qa.tiatros.pages.SignupPage.signup_Details(SignupPage.java:71)
-	at com.qa.tiatros.testcase.SignupTest.signup_TillDashboard(SignupTest.java:54)
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 7, Time elapsed: 6.51 sec <<< FAILURE!
+initobjects(com.qa.tiatros.testcase.SignupTest)  Time elapsed: 3.934 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 74
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.75 seconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:c6e:c5e3:389a:7d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: driver.version: ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:147)
+	at com.qa.tiatros.base.TestBase.init(TestBase.java:52)
+	at com.qa.tiatros.testcase.SignupTest.initobjects(SignupTest.java:40)
 
-dashboard_Click_All(com.qa.tiatros.testcase.DashboardTest)  Time elapsed: 6.25 sec  <<< FAILURE!
-java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:313)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:163)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.<init>(PackageRelationshipCollection.java:131)
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)
-	at org.apache.poi.openxml4j.opc.PackagePart.<init>(PackagePart.java:112)
-	at org.apache.poi.openxml4j.opc.PackagePart.<init>(PackagePart.java:83)
-	at org.apache.poi.openxml4j.opc.PackagePart.<init>(PackagePart.java:128)
-	at org.apache.poi.openxml4j.opc.ZipPackagePart.<init>(ZipPackagePart.java:78)
-	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:243)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:673)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:274)
-	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:258)
-	at com.qa.tiatros.util.UtilTest.readExcel(UtilTest.java:103)
-	at com.qa.tiatros.pages.SignupPage.signup_Details(SignupPage.java:71)
-	at com.qa.tiatros.testcase.DashboardTest.dashboard_Click_All(DashboardTest.java:71)
+initobjects(com.qa.tiatros.testcase.DashboardTest)  Time elapsed: 5.548 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 74
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.52 seconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:c6e:c5e3:389a:7d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: driver.version: ChromeDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:147)
+	at com.qa.tiatros.base.TestBase.init(TestBase.java:52)
+	at com.qa.tiatros.testcase.DashboardTest.initobjects(DashboardTest.java:52)
 

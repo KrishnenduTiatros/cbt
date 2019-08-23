@@ -105,6 +105,14 @@ public class ReturnUserRegistration extends TestBase {
 		si = d.stress_inventoryQuestion();
 		si.verify_text12();
 		si.stress_inventory_CheckBox();
+		
+		try {
+					// Pledge call
+					d.pledge();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 		d.scale_click();
 		d.course_complete();

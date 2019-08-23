@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Tiatros">
-              <span class="suite-name border-failed">Tiatros</span>
+              <span class="suite-name border-skipped">Tiatros</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,40 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">3 methods,  3 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Tiatros" class="hide-methods failed suite-Tiatros"> (hide)</a> <!-- hide-methods failed suite-Tiatros -->
-                      <a href="#" panel-name="suite-Tiatros" class="show-methods failed suite-Tiatros"> (show)</a> <!-- show-methods failed suite-Tiatros -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Tiatros" class="hide-methods skipped suite-Tiatros"> (hide)</a> <!-- hide-methods skipped suite-Tiatros -->
+                      <a href="#" panel-name="suite-Tiatros" class="show-methods skipped suite-Tiatros"> (show)</a> <!-- show-methods skipped suite-Tiatros -->
                     </span>
-                    <div class="method-list-content failed suite-Tiatros">
+                    <div class="method-list-content skipped suite-Tiatros">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tiatros" title="com.qa.tiatros.testcase.DashboardTest" hash-for-method="dashboard_Click_All">dashboard_Click_All</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tiatros" title="com.qa.tiatros.testcase.SignupTest" hash-for-method="signup_TillDashboard">signup_TillDashboard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Tiatros -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Tiatros" class="hide-methods passed suite-Tiatros"> (hide)</a> <!-- hide-methods passed suite-Tiatros -->
-                      <a href="#" panel-name="suite-Tiatros" class="show-methods passed suite-Tiatros"> (show)</a> <!-- show-methods passed suite-Tiatros -->
-                    </span>
-                    <div class="method-list-content passed suite-Tiatros">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tiatros" title="com.qa.tiatros.testcase.SignupTest" hash-for-method="validationAndVerification_Signup">validationAndVerification_Signup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Tiatros -->
+                    </div> <!-- method-list-content skipped suite-Tiatros -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,9 +127,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Tiatros" class="panel Tiatros">
-          <div class="suite-Tiatros-class-failed">
+          <div class="suite-Tiatros-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.qa.tiatros.testcase.SignupTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -147,32 +138,86 @@
                   <a name="signup_TillDashboard">
                   </a> <!-- signup_TillDashboard -->
                   <span class="method-name">signup_TillDashboard</span>
-                  <div class="stack-trace">java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:313)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:163)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:131)
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)
-	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:112)
-	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:83)
-	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:128)
-	at org.apache.poi.openxml4j.opc.ZipPackagePart.&lt;init&gt;(ZipPackagePart.java:78)
-	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:243)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:673)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:274)
-	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:258)
-	at com.qa.tiatros.util.UtilTest.readExcel(UtilTest.java:103)
-	at com.qa.tiatros.pages.SignupPage.signup_Details(SignupPage.java:71)
-	at com.qa.tiatros.testcase.SignupTest.signup_TillDashboard(SignupTest.java:54)
-... Removed 34 stack frames
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 74
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.75 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:c6e:c5e3:389a:7d69%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:147)
+	at com.qa.tiatros.base.TestBase.init(TestBase.java:52)
+	at com.qa.tiatros.testcase.SignupTest.initobjects(SignupTest.java:40)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validationAndVerification_Signup">
+                  </a> <!-- validationAndVerification_Signup -->
+                  <span class="method-name">validationAndVerification_Signup</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 74
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.75 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:c6e:c5e3:389a:7d69%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:147)
+	at com.qa.tiatros.base.TestBase.init(TestBase.java:52)
+	at com.qa.tiatros.testcase.SignupTest.initobjects(SignupTest.java:40)
+... Removed 41 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tiatros-class-failed -->
-          <div class="suite-Tiatros-class-failed">
+          </div> <!-- suite-Tiatros-class-skipped -->
+          <div class="suite-Tiatros-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.qa.tiatros.testcase.DashboardTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -181,44 +226,43 @@
                   <a name="dashboard_Click_All">
                   </a> <!-- dashboard_Click_All -->
                   <span class="method-name">dashboard_Click_All</span>
-                  <div class="stack-trace">java.lang.NoSuchMethodError: org.apache.poi.util.POILogger.log(ILjava/lang/Object;)V
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:313)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:163)
-	at org.apache.poi.openxml4j.opc.PackageRelationshipCollection.&lt;init&gt;(PackageRelationshipCollection.java:131)
-	at org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)
-	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:112)
-	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:83)
-	at org.apache.poi.openxml4j.opc.PackagePart.&lt;init&gt;(PackagePart.java:128)
-	at org.apache.poi.openxml4j.opc.ZipPackagePart.&lt;init&gt;(ZipPackagePart.java:78)
-	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:243)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:673)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:274)
-	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:258)
-	at com.qa.tiatros.util.UtilTest.readExcel(UtilTest.java:103)
-	at com.qa.tiatros.pages.SignupPage.signup_Details(SignupPage.java:71)
-	at com.qa.tiatros.testcase.DashboardTest.dashboard_Click_All(DashboardTest.java:71)
-... Removed 34 stack frames
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 74
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.52 seconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:c6e:c5e3:389a:7d69%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:147)
+	at com.qa.tiatros.base.TestBase.init(TestBase.java:52)
+	at com.qa.tiatros.testcase.DashboardTest.initobjects(DashboardTest.java:52)
+... Removed 41 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tiatros-class-failed -->
-          <div class="suite-Tiatros-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.qa.tiatros.testcase.SignupTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validationAndVerification_Signup">
-                  </a> <!-- validationAndVerification_Signup -->
-                  <span class="method-name">validationAndVerification_Signup</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tiatros-class-passed -->
+          </div> <!-- suite-Tiatros-class-skipped -->
         </div> <!-- panel Tiatros -->
         <div panel-name="test-xml-Tiatros" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -279,20 +323,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'signup_TillDashboard')
 data.setCell(0, 2, 'com.qa.tiatros.testcase.SignupTest')
-data.setCell(0, 3, 7000);
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validationAndVerification_Signup')
-data.setCell(1, 2, 'com.qa.tiatros.testcase.SignupTest')
-data.setCell(1, 3, 6145);
+data.setCell(1, 1, 'dashboard_Click_All')
+data.setCell(1, 2, 'com.qa.tiatros.testcase.DashboardTest')
+data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'dashboard_Click_All')
-data.setCell(2, 2, 'com.qa.tiatros.testcase.DashboardTest')
-data.setCell(2, 3, 5800);
+data.setCell(2, 1, 'validationAndVerification_Signup')
+data.setCell(2, 2, 'com.qa.tiatros.testcase.SignupTest')
+data.setCell(2, 3, 0);
 window.suiteTableData['Tiatros']= { tableData: data, tableDiv: 'times-div-Tiatros'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Tiatros">
               </div> <!-- times-div-Tiatros -->
             </div> <!-- times-div -->
@@ -331,48 +375,38 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tiatros.testcase.SignupTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">initobjects</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">signup_TillDashboard</span>
-                <span class="method-start">15000 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">22434 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">initobjects</span>
-                <span class="method-start">22570 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validationAndVerification_Signup</span>
-                <span class="method-start">30025 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">36170 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tiatros.testcase.DashboardTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">initobjects</span>
-                <span class="method-start">36304 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">dashboard_Click_All</span>
-                <span class="method-start">43477 ms</span>
+                <span class="method-name">initobjects</span>
+                <span class="method-start">3617 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tiatros.testcase.SignupTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">signup_TillDashboard</span>
+                <span class="method-start">-1566291716001 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">49727 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">validationAndVerification_Signup</span>
+                <span class="method-start">-1566291716001 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tiatros.testcase.DashboardTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">dashboard_Click_All</span>
+                <span class="method-start">-1566291716001 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

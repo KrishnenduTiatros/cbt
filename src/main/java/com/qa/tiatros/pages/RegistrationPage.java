@@ -57,8 +57,8 @@ public class RegistrationPage extends TestBase {
 	
 	public ReturnUserRegistrationPage click_login() throws Throwable { // This login for returned user
 		Thread.sleep(5000);
-		UtilTest.sendkeys(driver, user_name,UtilTest.readExcel("ReturnUser", prop.getProperty("TestCase"), "R_username")); //prop.getProperty("R_username")
-		UtilTest.sendkeys(driver, user_pass, UtilTest.readExcel("ReturnUser", prop.getProperty("TestCase"), "R_userpass")); //prop.getProperty("R_userpass")
+		UtilTest.sendkeys(driver, user_name,prop.getProperty("R_username")); //UtilTest.readExcel("ReturnUser", prop.getProperty("TestCase"), "R_username")
+		UtilTest.sendkeys(driver, user_pass,prop.getProperty("R_userpass")); //  UtilTest.readExcel("ReturnUser", prop.getProperty("TestCase"), "R_userpass")
 		UtilTest.element_click(driver, login);
 		return new ReturnUserRegistrationPage();
 
