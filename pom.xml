@@ -29,6 +29,8 @@
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>Test_Messaging.xml</suiteXmlFile>
+                        <suiteXmlFile>TestNG_SignIN.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

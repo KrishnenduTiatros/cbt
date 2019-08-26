@@ -6,20 +6,13 @@
   </listeners>
   <test thread-count="5" verbose="0" name="ALL(failed)">
     <classes>
-      <class name="com.qa.tiatros.testcase.SignupTest">
-        <methods>
-          <include name="signup_TillDashboard"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.testcase.SignupTest -->
-      <class name="com.qa.tiatros.testcase.DashboardTest">
+      <class name="com.qa.tiatros.registration.testcase.DashboardTest">
         <methods>
           <include name="dashboard_Click_All"/>
-          <include name="initobjects"/>
           <include name="tearDown"/>
+          <include name="initobjects"/>
         </methods>
-      </class> <!-- com.qa.tiatros.testcase.DashboardTest -->
+      </class> <!-- com.qa.tiatros.registration.testcase.DashboardTest -->
     </classes>
   </test> <!-- ALL(failed) -->
 </suite> <!-- Failed suite [Tiatros] -->
