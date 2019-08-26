@@ -1,11 +1,8 @@
 package com.qa.tiatros.util;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -30,6 +27,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+
 import com.qa.tiatros.base.TestBase;
 
 public class UtilTest extends TestBase {
@@ -39,6 +37,8 @@ public class UtilTest extends TestBase {
 
 	public static String t = "";
 	public static String demail = "";
+	
+	public static WebDriverWait wait ;
 
 	// This Method used to type any given word in fields
 	public static void sendkeys(WebDriver driver, WebElement element, String value) {

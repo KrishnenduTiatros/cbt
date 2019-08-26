@@ -9,7 +9,6 @@
       <class name="com.qa.tiatros.testcase.SignupTest">
         <methods>
           <include name="signup_TillDashboard"/>
-          <include name="validationAndVerification_Signup"/>
           <include name="tearDown"/>
           <include name="initobjects"/>
         </methods>

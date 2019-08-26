@@ -12,12 +12,7 @@ import com.qa.tiatros.util.UtilTest;
 
 public class CommonPage extends TestBase {
 
-	public static void by_click(WebDriver driver, By element1) {
-		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOfElementLocated(element1));
-		WebElement element = driver.findElement(element1);
-		element.click();
-	}
+	
 
 	public static void dynamic_Radio_Click() {
 
