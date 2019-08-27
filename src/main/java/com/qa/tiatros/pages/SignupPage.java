@@ -66,7 +66,7 @@ public class SignupPage extends TestBase
 	{
 		
 		// Inserting all Data through xcel file for signup page
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		UtilTest.sendkeys(driver, first_name, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "FirstName"));   //  prop.getProperty("FirstName")
 		UtilTest.sendkeys(driver, last_name, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "LastName") );    //  prop.getProperty("LastName")
 		UtilTest.sendkeys(driver, user_email, UtilTest.emailidgenerate());

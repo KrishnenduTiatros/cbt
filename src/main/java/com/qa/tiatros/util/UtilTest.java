@@ -187,7 +187,7 @@ public class UtilTest extends TestBase {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(src,
-					new File("/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + testMethodName + ".jpg"));
+					new File(prop.getProperty("SCPath") + testMethodName + ".jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -476,7 +476,7 @@ public class UtilTest extends TestBase {
 		System.out.println(s);
 		try {
 			Thread.sleep(2000);
-			driver.findElement(By.xpath("//div[starts-with(@class,'gb_ha') and @role='button']")).click();
+			driver.findElement(By.xpath("//div[starts-with(@class,'gb_ja') and @role='button']")).click();
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
 			Alert alert = driver.switchTo().alert();

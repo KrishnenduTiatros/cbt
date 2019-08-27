@@ -49,7 +49,7 @@ public class RegistrationPage extends TestBase {
 	// Business Component
 
 	public SignupPage click_signupLink() throws Exception {
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		UtilTest.element_click(driver, signup_link);
 		return new SignupPage();
 

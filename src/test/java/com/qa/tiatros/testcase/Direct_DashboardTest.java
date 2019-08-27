@@ -61,7 +61,7 @@ public class Direct_DashboardTest extends TestBase {
 		uf = new User_factsPage();
 	}
 
-	@Test(enabled = false) // This test will check for inventory stress sector message and also click on it
+	@Test(enabled = true) // This test will check for inventory stress sector message and also click on it
 	public void inventory_Your_Stress() throws Exception {
 		sgn.verify_text12();
 		d = sgn.signin();
@@ -70,7 +70,7 @@ public class Direct_DashboardTest extends TestBase {
 		d.verify_text17();
 	}
 
-	@Test(enabled = false) // This test will click on the NPS scale
+	@Test(enabled = true) // This test will click on the NPS scale
 	public void scale_select() throws Throwable {
 		sgn.verify_text12();
 		d = sgn.signin();

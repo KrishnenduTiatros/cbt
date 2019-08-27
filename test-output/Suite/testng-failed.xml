@@ -6,20 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tiatros.messaging.testcase.TC003">
+      <class name="com.qa.tiatros.messaging.testcase.TC002">
         <methods>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-          <include name="addReplyComments"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC003 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC012">
-        <methods>
-          <include name="myGroupSection"/>
+          <include name="upLoadImage"/>
           <include name="tearDown"/>
           <include name="initobjects"/>
         </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC002 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

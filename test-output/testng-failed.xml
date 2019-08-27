@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.qa.tiatros.report.ExtentReportListner"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tiatros.registration.testcase.DashboardTest">
+      <class name="com.qa.tiatros.messaging.testcase.TC002">
         <methods>
-          <include name="dashboard_Click_All"/>
+          <include name="upLoadImage"/>
           <include name="tearDown"/>
           <include name="initobjects"/>
         </methods>
-      </class> <!-- com.qa.tiatros.registration.testcase.DashboardTest -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC002 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
