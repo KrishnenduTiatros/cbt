@@ -489,4 +489,12 @@ public class UtilTest extends TestBase {
 		driver.switchTo().window(tabs.get(0)); // switches to new tab
 		return s;
 	}
+	
+	public static void returnGoalColor()
+	{
+		String colour = driver.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label")).getAttribute("style");
+		System.out.println(colour);
+	}
+	
+	
 }

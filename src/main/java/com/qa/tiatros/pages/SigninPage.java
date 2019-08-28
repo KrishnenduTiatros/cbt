@@ -96,13 +96,21 @@ public class SigninPage extends TestBase {
 		return new DashboardPage();
 	}
 
-	
 	public CourseDashboardPage signin_Course() throws Exception {
 		UtilTest.sendkeys(driver, email, prop.getProperty("Email"));
 		UtilTest.sendkeys(driver, pass, prop.getProperty("Password"));
 		Thread.sleep(2000);
 		UtilTest.element_click(driver, sub);
 		return new CourseDashboardPage();
+	}
+
+	public All_moderator_Page signin_Moderator() throws Exception {
+		UtilTest.sendkeys(driver, email, prop.getProperty("M_username"));
+		UtilTest.sendkeys(driver, pass, prop.getProperty("M_password"));
+		Thread.sleep(2000);
+		UtilTest.element_click(driver, sub);
+		return new All_moderator_Page();
+
 	}
 
 	public void click_mailID() throws Throwable {
