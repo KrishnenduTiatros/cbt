@@ -1,6 +1,5 @@
 package com.qa.tiatros.util;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -27,8 +26,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-
 import com.qa.tiatros.base.TestBase;
+import com.sun.org.apache.xpath.internal.operations.Equals;
 
 public class UtilTest extends TestBase {
 
@@ -37,8 +36,8 @@ public class UtilTest extends TestBase {
 
 	public static String t = "";
 	public static String demail = "";
-	
-	public static WebDriverWait wait ;
+
+	public static WebDriverWait wait;
 
 	// This Method used to type any given word in fields
 	public static void sendkeys(WebDriver driver, WebElement element, String value) {
@@ -186,8 +185,7 @@ public class UtilTest extends TestBase {
 	public static void takeScreenshot(String testMethodName) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(src,
-					new File(prop.getProperty("SCPath") + testMethodName + ".jpg"));
+			FileUtils.copyFile(src, new File(prop.getProperty("SCPath") + testMethodName + ".jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -482,19 +480,33 @@ public class UtilTest extends TestBase {
 			Alert alert = driver.switchTo().alert();
 			driver.switchTo().alert().accept();
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
 		}
 		driver.close();
 		driver.switchTo().window(tabs.get(0)); // switches to new tab
 		return s;
 	}
-	
-	public static void returnGoalColor()
-	{
-		String colour = driver.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label")).getAttribute("style");
-		System.out.println(colour);
+
+	public static void returnGoalColor() {
+		String colour = driver
+				.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label"))
+				.getAttribute("style");
+		
+		int index1 = colour.indexOf(" ");
+		index1 = index1 + 1;
+		int index2 = colour.indexOf(";");
+		String cCode = colour.substring(index1, index2);
+		
+		if (cCode.equalsIgnoreCase("rgb(255, 140, 0)")) {
+			System.out.println("ORANGE");
+		} else if (cCode.equalsIgnoreCase("rgb(255, 0, 0)")) {
+			System.out.println("RED");
+		} else if (cCode.equalsIgnoreCase("rgb(0, 128, 0)")) {
+			System.out.println("GREEN");
+		} else if (cCode.equalsIgnoreCase("rgb(0, 0, 205)")) {
+			System.out.println("PURPLE");
+		}
 	}
-	
-	
+
 }
