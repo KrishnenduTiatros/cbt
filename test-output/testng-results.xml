@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33854" started-at="2019-08-30T09:27:31Z" finished-at="2019-08-30T09:28:05Z">
+  <suite name="Default suite" duration-ms="88680" started-at="2019-09-04T08:29:39Z" finished-at="2019-09-04T08:31:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33854" started-at="2019-08-30T09:27:31Z" finished-at="2019-08-30T09:28:05Z">
-      <class name="com.qa.tiatros.modertor.testcase.TC01">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@ff5b51f]" name="initobjects" is-config="true" duration-ms="9551" started-at="2019-08-30T09:27:31Z" finished-at="2019-08-30T09:27:40Z">
+    <test name="Default test" duration-ms="88680" started-at="2019-09-04T08:29:39Z" finished-at="2019-09-04T08:31:08Z">
+      <class name="com.qa.tiatros.messaging.testcase.TC006">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC006@4b952a2d]" name="initobjects" is-config="true" duration-ms="12680" started-at="2019-09-04T08:29:39Z" finished-at="2019-09-04T08:29:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addNewMessage()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@ff5b51f]" name="addNewMessage" duration-ms="24193" started-at="2019-08-30T09:27:40Z" description="To check the review goal setting section colour" finished-at="2019-08-30T09:28:05Z">
+        <test-method status="PASS" signature="clickAllTilesInMessages()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC006@4b952a2d]" name="clickAllTilesInMessages" duration-ms="75887" started-at="2019-09-04T08:29:52Z" finished-at="2019-09-04T08:31:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewMessage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@ff5b51f]" name="tearDown" is-config="true" duration-ms="84" started-at="2019-08-30T09:28:05Z" finished-at="2019-08-30T09:28:05Z">
+        </test-method> <!-- clickAllTilesInMessages -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC006@4b952a2d]" name="tearDown" is-config="true" duration-ms="83" started-at="2019-09-04T08:31:08Z" finished-at="2019-09-04T08:31:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.modertor.testcase.TC01 -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC006 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,6 +7,22 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.Multipart;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -180,15 +196,6 @@ public class UtilTest extends TestBase {
 			wb.close();
 		}
 
-	}
-
-	public static void takeScreenshot(String testMethodName) {
-		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(src, new File(prop.getProperty("SCPath") + testMethodName + ".jpg"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 	public static Object[][] readExcel(String sheetName) throws Throwable {
@@ -492,21 +499,113 @@ public class UtilTest extends TestBase {
 		String colour = driver
 				.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label"))
 				.getAttribute("style");
-		
+
 		int index1 = colour.indexOf(" ");
 		index1 = index1 + 1;
 		int index2 = colour.indexOf(";");
 		String cCode = colour.substring(index1, index2);
-		
+
 		if (cCode.equalsIgnoreCase("rgb(255, 140, 0)")) {
-			System.out.println("ORANGE");
+			System.out.println("Goals Delay Color  = ORANGE");
 		} else if (cCode.equalsIgnoreCase("rgb(255, 0, 0)")) {
-			System.out.println("RED");
+			System.out.println("Goals Delay Color  = RED");
 		} else if (cCode.equalsIgnoreCase("rgb(0, 128, 0)")) {
-			System.out.println("GREEN");
+			System.out.println("Goals Delay Color  = GREEN");
 		} else if (cCode.equalsIgnoreCase("rgb(0, 0, 205)")) {
-			System.out.println("PURPLE");
+			System.out.println("Goals Delay Color  = PURPLE");
 		}
+	}
+
+	public static void takeScreenshot(String testMethodName) {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(src, new File(prop.getProperty("SCPath") + testMethodName + ".jpg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// Screenshot Capture on a particular situation
+	public static String staticScreenShot(String imageName) {
+		// Fetching current system time for unique image identification
+		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
+		Date date = new Date();
+		String t = dateFormat.format(date);
+
+		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenshotFile, new File(
+					"/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png"));
+		} catch (IOException e) {
+			System.out.println("File Exception- " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		String imagePath = "/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png";
+		return imagePath;
+	}
+
+	public static void sendEmailNotification(String sendTo, String mailSubject, String path1) throws Throwable {
+		// Recipient's Mail id
+		String receipientTo = sendTo;
+
+		// Sender's Mail id
+		String senderFrom = "krishnendu@tiatros.com";
+
+		// Path of PDF test report
+		String path = path1;
+
+		// Getting System properties
+		Properties prop = System.getProperties();
+
+		// Setting up smtp host
+		prop.setProperty("mail.smtp.host", "smtp.gmail.com");
+
+		// Creating a new session for smtp
+		Session session = Session.getDefaultInstance(prop);
+		MimeMessage msg = new MimeMessage(session);
+
+		// Instance of From Internet address
+		InternetAddress frmAddress = new InternetAddress(senderFrom);
+
+		// Instance of To Internet address
+		InternetAddress toAddress = new InternetAddress(receipientTo);
+
+		// Setting up sender's address
+		msg.setFrom(frmAddress);
+
+		// Setting up recipient's address
+		msg.addRecipient(Message.RecipientType.TO, toAddress);
+
+		// Setting email's subject
+		msg.setSubject(mailSubject);
+		BodyPart msgBody = new MimeBodyPart();
+
+		// Setting email's message body
+		msgBody.setText("This is Automated Mail through Selenium Project.");
+
+		// Instance of second part
+		Multipart multiPart = new MimeMultipart();
+		multiPart.addBodyPart(msgBody);
+
+		// Another mail body
+		msgBody = new MimeBodyPart();
+
+		// Path to pdf file for attachment
+		DataSource source = new FileDataSource(path);
+		DataHandler dataHandler = new DataHandler(source);
+		msgBody.setDataHandler(dataHandler);
+		msgBody.setFileName(path);
+		multiPart.addBodyPart(msgBody);
+		msg.setContent(multiPart);
+
+		// Authentication and connection establishment to the sender's mail
+		Transport transport = session.getTransport("smtps");
+		transport.connect("smtp.gmail.com", 465, "krishnendu@tiatros.com", "q1w2e3R$");
+		transport.sendMessage(msg, msg.getAllRecipients());
+		transport.close();
+		System.out.println("Mail Sent successfully");
+
 	}
 
 }

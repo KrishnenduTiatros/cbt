@@ -47,6 +47,8 @@ public class Review_goals_assessments_Page extends TestBase
 			UtilTest.sendkeys(driver, search_textBox, prop.getProperty("Email"));
 			Thread.sleep(5000);
 			UtilTest.returnGoalColor();
+			String path = UtilTest.staticScreenShot("GoalReview");
+			UtilTest.sendEmailNotification(prop.getProperty("SendEmail"),prop.getProperty("EmailSubject"), path);
 		}
 	
 }
