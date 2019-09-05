@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Tiatros">
-              <span class="suite-name border-skipped">Tiatros</span>
+              <span class="suite-name border-failed">Tiatros</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Tiatros" class="hide-methods skipped suite-Tiatros"> (hide)</a> <!-- hide-methods skipped suite-Tiatros -->
-                      <a href="#" panel-name="suite-Tiatros" class="show-methods skipped suite-Tiatros"> (show)</a> <!-- show-methods skipped suite-Tiatros -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Tiatros" class="hide-methods failed suite-Tiatros"> (hide)</a> <!-- hide-methods failed suite-Tiatros -->
+                      <a href="#" panel-name="suite-Tiatros" class="show-methods failed suite-Tiatros"> (show)</a> <!-- show-methods failed suite-Tiatros -->
                     </span>
-                    <div class="method-list-content skipped suite-Tiatros">
+                    <div class="method-list-content failed suite-Tiatros">
                       <span>
-                        <img width="3%" src="skipped.png"/>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tiatros" title="com.qa.tiatros.registration.testcase.TC002" hash-for-method="dashboard_Click_All_Phone">dashboard_Click_All_Phone</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tiatros" title="com.qa.tiatros.registration.testcase.TC003" hash-for-method="direct_Dashboard">direct_Dashboard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Tiatros -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Tiatros" class="hide-methods passed suite-Tiatros"> (hide)</a> <!-- hide-methods passed suite-Tiatros -->
+                      <a href="#" panel-name="suite-Tiatros" class="show-methods passed suite-Tiatros"> (show)</a> <!-- show-methods passed suite-Tiatros -->
+                    </span>
+                    <div class="method-list-content passed suite-Tiatros">
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tiatros" title="com.qa.tiatros.registration.testcase.TC001" hash-for-method="registration_E2E_WithoutPhnNum">registration_E2E_WithoutPhnNum</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Tiatros -->
+                    </div> <!-- method-list-content passed suite-Tiatros -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +136,94 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Tiatros" class="panel Tiatros">
-          <div class="suite-Tiatros-class-skipped">
+          <div class="suite-Tiatros-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.tiatros.registration.testcase.TC003</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="direct_Dashboard">
+                  </a> <!-- direct_Dashboard -->
+                  <span class="method-name">direct_Dashboard</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;row nw-provider-dashboard&apos;]//following::div[1]//div[2]//div[@class=&apos;col-xs-9&apos;][1]//a[@class=&apos;btn btn-primary-blue btn-md btn-block p-sm m-b-md onclick-link&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:68)
+	at com.qa.tiatros.pages.DashboardPage.phq9Question(DashboardPage.java:99)
+	at com.qa.tiatros.registration.testcase.TC003.direct_Dashboard(TC003.java:68)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;row nw-provider-dashboard&apos;]//following::div[1]//div[2]//div[@class=&apos;col-xs-9&apos;][1]//a[@class=&apos;btn btn-primary-blue btn-md btn-block p-sm m-b-md onclick-link&apos;]&quot;}
+  (Session info: chrome=76.0.3809.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:18c8:3292:4b21:7a04%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52704}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c66e96babafdfa9eb163b7b88aaee82b
+*** Element info: {Using=xpath, value=//div[@class=&apos;row nw-provider-dashboard&apos;]//following::div[1]//div[2]//div[@class=&apos;col-xs-9&apos;][1]//a[@class=&apos;btn btn-primary-blue btn-md btn-block p-sm m-b-md onclick-link&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Participents who had been terminated in profile update page not completed Dashboard page activity)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tiatros-class-failed -->
+          <div class="suite-Tiatros-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.tiatros.registration.testcase.TC002</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="dashboard_Click_All_Phone">
+                  </a> <!-- dashboard_Click_All_Phone -->
+                  <span class="method-name">dashboard_Click_All_Phone</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (122cb839562169bad5ee73584eb5704a)] -&gt; xpath: //*[starts-with(@class,&apos;col-xs-8 col-sm-7&apos;)]//following::div[@class=&apos;form-group accept-1&apos;]/div//ins] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:18c8:3292:4b21:7a04%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52629}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 122cb839562169bad5ee73584eb5704a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:68)
+	at com.qa.tiatros.pages.FromWelcomeVidPage.inputProfileDetails_PhoneNumber(FromWelcomeVidPage.java:91)
+	at com.qa.tiatros.registration.testcase.TC002.dashboard_Click_All_Phone(TC002.java:71)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(This Test case will run End to END Registration with phn number included)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tiatros-class-failed -->
+          <div class="suite-Tiatros-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.qa.tiatros.registration.testcase.TC001</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,31 +232,12 @@
                   <a name="registration_E2E_WithoutPhnNum">
                   </a> <!-- registration_E2E_WithoutPhnNum -->
                   <span class="method-name">registration_E2E_WithoutPhnNum</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=76.0.3809.132)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:18c8:3292:4b21:7a04%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52425}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2ad3eb49aae78c0630d4f6e3fbf94eef
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.qa.tiatros.base.TestBase.init(TestBase.java:61)
-	at com.qa.tiatros.registration.testcase.TC001.initobjects(TC001.java:50)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (This Test case will run End to END Registration without phn number)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tiatros-class-skipped -->
+          </div> <!-- suite-Tiatros-class-passed -->
         </div> <!-- panel Tiatros -->
         <div panel-name="test-xml-Tiatros" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -169,6 +254,8 @@ Session ID: 2ad3eb49aae78c0630d4f6e3fbf94eef
   &lt;test thread-count=&quot;5&quot; name=&quot;ALL&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.tiatros.registration.testcase.TC001&quot;/&gt;
+      &lt;class name=&quot;com.qa.tiatros.registration.testcase.TC002&quot;/&gt;
+      &lt;class name=&quot;com.qa.tiatros.registration.testcase.TC003&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ALL --&gt;
 &lt;/suite&gt; &lt;!-- Tiatros --&gt;
@@ -182,7 +269,7 @@ Session ID: 2ad3eb49aae78c0630d4f6e3fbf94eef
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ALL (1 class)</span>
+                <span class="test-name">ALL (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -208,16 +295,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registration_E2E_WithoutPhnNum')
 data.setCell(0, 2, 'com.qa.tiatros.registration.testcase.TC001')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 252272);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'dashboard_Click_All_Phone')
+data.setCell(1, 2, 'com.qa.tiatros.registration.testcase.TC002')
+data.setCell(1, 3, 99356);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'direct_Dashboard')
+data.setCell(2, 2, 'com.qa.tiatros.registration.testcase.TC003')
+data.setCell(2, 3, 35043);
 window.suiteTableData['Tiatros']= { tableData: data, tableDiv: 'times-div-Tiatros'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Tiatros">
               </div> <!-- times-div-Tiatros -->
             </div> <!-- times-div -->
@@ -244,16 +339,52 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tiatros.registration.testcase.TC001</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">registration_E2E_WithoutPhnNum</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initobjects</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">registration_E2E_WithoutPhnNum</span>
+                <span class="method-start">12194 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">264468 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tiatros.registration.testcase.TC002</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initobjects</span>
+                <span class="method-start">264660 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">dashboard_Click_All_Phone</span>
+                <span class="method-start">281328 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">381164 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tiatros.registration.testcase.TC003</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initobjects</span>
+                <span class="method-start">381399 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">direct_Dashboard</span>
+                <span class="method-start">390443 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">426070 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

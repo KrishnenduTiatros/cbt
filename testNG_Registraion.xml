@@ -8,8 +8,18 @@
 
 	<test name="ALL">
 		<classes>
-			<!-- >-->
+			
 			<class name="com.qa.tiatros.registration.testcase.TC001" />
+			<class name="com.qa.tiatros.registration.testcase.TC002" />
+			<class name="com.qa.tiatros.registration.testcase.TC003" />
+		<!--><class name="com.qa.tiatros.registration.testcase.TC004" />
+			<class name="com.qa.tiatros.registration.testcase.TC005" />
+			<class name="com.qa.tiatros.registration.testcase.TC006" />
+			<class name="com.qa.tiatros.registration.testcase.TC007" />
+			<class name="com.qa.tiatros.registration.testcase.TC008" />
+			<class name="com.qa.tiatros.registration.testcase.TC009" />
+			<class name="com.qa.tiatros.registration.testcase.TC010" />
+			<class name="com.qa.tiatros.registration.testcase.TC011" />-->
 		</classes>
 	</test> <!-- Test -->
 
