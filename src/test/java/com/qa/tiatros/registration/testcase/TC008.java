@@ -34,12 +34,16 @@ public class TC008 extends TestBase {
 	}
 
 	@Test(description = "To click the pss10 section only")
-	public void click_phq15page_after_SignIN() throws Exception {
+	public void click_phq15page_after_SignIN() throws Throwable {
 		sgn.verify_text12();
 		d = sgn.signin();
 		p15 = d.phq15Question();
 		p15.verify_text10();
 		p15.phq15_Dynamic_Click();
+		Thread.sleep(3000);
+		
+		// Logout Method
+		d.logoutM();
 	}
 
 	@AfterMethod

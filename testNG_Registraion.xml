@@ -8,10 +8,8 @@
 
 	<test name="ALL">
 		<classes>
-			<!-- >class name="com.qa.tiatros.testcase.RegistrationTest" /> 
-			<class name="com.qa.tiatros.testcase.Direct_DashboardTest" /> 
-			<class name="com.qa.tiatros.testcase.SignupTest" />-->
-			<class name="com.qa.tiatros.registration.testcase.DashboardTest" />
+			<!-- >-->
+			<class name="com.qa.tiatros.registration.testcase.TC001" />
 		</classes>
 	</test> <!-- Test -->
 

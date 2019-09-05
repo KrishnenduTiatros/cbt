@@ -9,7 +9,6 @@ import com.qa.tiatros.pages.Phq9Page;
 import com.qa.tiatros.pages.SigninPage;
 import com.qa.tiatros.pages.SignupPage;
 
-
 public class TC006 extends TestBase {
 	SignupPage sp;
 	SigninPage sgn;
@@ -31,7 +30,7 @@ public class TC006 extends TestBase {
 	}
 
 	@Test(description = "This method will click the PHQ9 sectiona only")
-	public void click_phq9Page_after_SignIN() throws Exception {
+	public void click_phq9Page_after_SignIN() throws Throwable {
 
 		sgn.verify_text12();
 		d = sgn.signin();
@@ -39,8 +38,11 @@ public class TC006 extends TestBase {
 		p9.verify_text8();
 		p9.phq9_Dynamic_Click();
 
+		// Logout Method
+		d.logoutM();
+
 	}
-	
+
 	@AfterMethod
 	public void tearDown() // This AfterMethod will run every time after any @Test
 	{

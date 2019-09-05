@@ -42,6 +42,7 @@ public class TC009 extends TestBase {
 		g7.verify_text9();
 		g7.gad7_Dynamic_Click();
 		
+		Thread.sleep(3000);
 		// Logout Method
 		d.logoutM();
 		

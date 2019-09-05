@@ -6,33 +6,13 @@
   </listeners>
   <test thread-count="5" name="ALL(failed)">
     <classes>
-      <class name="com.qa.tiatros.testcase.DashboardTest">
+      <class name="com.qa.tiatros.registration.testcase.TC001">
         <methods>
-          <include name="dashboard_Click_All"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.testcase.DashboardTest -->
-      <class name="com.qa.tiatros.testcase.Direct_DashboardTest">
-        <methods>
-          <include name="click_userfactspage_after_SignIN"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-          <include name="click_StressInventorypage_after_SignIN"/>
-          <include name="click_gad7page_after_SignIN"/>
-          <include name="click_pss10Page_after_SignIN"/>
-          <include name="click_phq15page_after_SignIN"/>
-          <include name="click_phq9Page_after_SignIN"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.testcase.Direct_DashboardTest -->
-      <class name="com.qa.tiatros.testcase.SignupTest">
-        <methods>
-          <include name="signup_TillDashboard"/>
-          <include name="validationAndVerification_Signup"/>
           <include name="tearDown"/>
           <include name="initobjects"/>
+          <include name="registration_E2E_WithoutPhnNum"/>
         </methods>
-      </class> <!-- com.qa.tiatros.testcase.SignupTest -->
+      </class> <!-- com.qa.tiatros.registration.testcase.TC001 -->
     </classes>
   </test> <!-- ALL(failed) -->
 </suite> <!-- Failed suite [Tiatros] -->

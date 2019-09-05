@@ -13,12 +13,12 @@ import com.qa.tiatros.util.CustomListener;
 
 @Listeners(CustomListener.class)
 public class TC007 extends TestBase {
-	
+
 	SignupPage sp;
 	SigninPage sgn;
 	DashboardPage d;
 	Pss10Page p10;
-	
+
 	public TC007() {
 		super();
 	}
@@ -29,18 +29,20 @@ public class TC007 extends TestBase {
 		sp = new SignupPage();
 		d = new DashboardPage();
 		sgn = new SigninPage();
-		
+
 	}
 
 	@Test(description = "To click the pss10 section only")
-	public void click_pss10Page_after_SignIN() throws Exception 
-	{
+	public void click_pss10Page_after_SignIN() throws Throwable {
 
 		sgn.verify_text12();
 		d = sgn.signin();
 		p10 = d.pss10Question();
 		p10.verify_text11();
 		p10.pss10_Dynamic_Click();
+
+		// Logout Method
+		d.logoutM();
 	}
 
 	@AfterMethod
