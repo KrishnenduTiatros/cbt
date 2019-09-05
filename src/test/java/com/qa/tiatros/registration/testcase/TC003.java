@@ -61,50 +61,57 @@ public class TC003 extends TestBase {
 		uf = new User_factsPage();
 	}
 
-	@Test(enabled = true) // This test will check for inventory stress sector message and also click on it
-	public void inventory_Your_Stress() throws Exception {
-		sgn.verify_text12();
-		d = sgn.signin();
-		d.verify_text15();
-		d.click_inventory_your_stress();
-		d.verify_text17();
-	}
-
-	@Test(enabled = true) // This test will click on the NPS scale
-	public void scale_select() throws Throwable {
-		sgn.verify_text12();
-		d = sgn.signin();
-		d.scale_click();
-
-	}
-
-	@Test(enabled = true)
-	public void click_phq9Page_after_SignIN() throws Exception // to run this test first change the URL to URL1 in
-																// TestBase class and insert the mail-id in properties
-																// file and save it
-	{
-
-		sgn.verify_text12();
-		d = sgn.signin();
+	@Test(description = "Participents who had been terminated in profile update page not completed Dashboard page activity")
+	public void direct_Dashboard() throws Throwable {
+		
+		// Phq9 page call
 		p9 = d.phq9Question();
 		p9.verify_text8();
 		p9.phq9_Dynamic_Click();
 
-	}
+		// Gad7 page call
+		g7 = d.gad7Question();
+		g7.verify_text9();
+		g7.gad7_Dynamic_Click();
 
-	@Test(enabled = true)
-	public void click_pss10Page_after_SignIN() throws Exception // to run this test first change the URL to URL1 in
-																// TestBase class and insert the mail-id in properties
-																// file and save it
-	{
+		// Phq15 Page call
+		p15 = d.phq15Question();
+		p15.verify_text10();
+		p15.phq15_Dynamic_Click();
 
-		sgn.verify_text12();
-		d = sgn.signin();
+		// Phq10 Page call
 		p10 = d.pss10Question();
 		p10.verify_text11();
 		p10.pss10_Dynamic_Click();
+
+		// User facts
+		uf = d.user_factsQuestion();
+		uf.verify_text13();
+		uf.user_facts_details();
+
+		// Stress Inventory Sections
+
+		si = d.stress_inventoryQuestion();
+		si.verify_text12();
+		si.stress_inventory_CheckBox();
+
+		// Pledge call
+		d.pledge();
+
+		d.scale_click();
+		d.course_complete();
+
+		// Logout Method
+		d.logoutM();
+
 	}
 
+	
+
+	
+	
+
+	
 	@Test(enabled = true)
 	public void click_phq15page_after_SignIN() throws Exception // to run this test first change the URL to URL1 in
 																// TestBase class and insert the mail-id in properties
@@ -145,10 +152,9 @@ public class TC003 extends TestBase {
 	}
 
 	@Test(enabled = true)
-	public void click_userfactspage_after_SignIN() throws 
-Throwable
-																	// TestaBase class and insert the mail-id in
-																	// properties file and save it
+	public void click_userfactspage_after_SignIN() throws Throwable
+	// TestaBase class and insert the mail-id in
+	// properties file and save it
 	{
 		sgn = new SigninPage();
 		sgn.verify_text12();
@@ -157,7 +163,6 @@ Throwable
 		uf.verify_text13();
 		uf.user_facts_details();
 	}
-	
 
 	@AfterMethod
 	public void tearDown() // This AfterMethod will run every time after any @Test

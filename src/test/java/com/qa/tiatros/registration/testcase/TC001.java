@@ -24,7 +24,7 @@ import com.qa.tiatros.util.CustomListener;
 @Listeners(CustomListener.class)
 public class TC001 extends TestBase {
 
-	// Global object declairation
+	// Global object declaration
 
 	RegistrationPage rp;
 	SignupPage sp;
