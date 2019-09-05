@@ -38,6 +38,10 @@
 	<classpathentry kind="lib" path="/Users/krishnendu/Downloads/poi-4.0.1/ooxml-lib/xmlbeans-3.0.2.jar"/>
 	<classpathentry kind="lib" path="/Users/krishnendu/Downloads/mysql-connector-java-8.0.15/mysql-connector-java-8.0.15.jar"/>
 	<classpathentry kind="lib" path="/Users/krishnendu/Downloads/poi-ooxml-3.11.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
