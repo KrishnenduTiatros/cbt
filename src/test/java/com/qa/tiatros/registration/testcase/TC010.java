@@ -12,14 +12,14 @@ import com.qa.tiatros.pages.Stress_inventoryPage;
 import com.qa.tiatros.util.CustomListener;
 
 @Listeners(CustomListener.class)
-public class TC004 extends TestBase {
+public class TC010 extends TestBase {
 
 	SignupPage sp;
 	SigninPage sgn;
 	DashboardPage d;
 	Stress_inventoryPage si;
 
-	public TC004() {
+	public TC010() {
 		super();
 	}
 
@@ -33,13 +33,14 @@ public class TC004 extends TestBase {
 
 	}
 
-	@Test(description = "To check the inventory stress sector message and also click on it") 
-	public void inventory_Your_Stress() throws Throwable {
+	@Test(description = "To click the  StressInventor section only ")
+	public void click_StressInventorypage_after_SignIN() throws Throwable {
+		sgn = new SigninPage();
 		sgn.verify_text12();
 		d = sgn.signin();
-		d.verify_text15();
-		d.click_inventory_your_stress();
-		d.verify_text17();
+		si = d.stress_inventoryQuestion();
+		si.verify_text12();
+		si.stress_inventory_CheckBox();
 
 		// Logout Method
 		d.logoutM();

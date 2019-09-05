@@ -63,7 +63,7 @@ public class TC003 extends TestBase {
 
 	@Test(description = "Participents who had been terminated in profile update page not completed Dashboard page activity")
 	public void direct_Dashboard() throws Throwable {
-		
+
 		// Phq9 page call
 		p9 = d.phq9Question();
 		p9.verify_text8();
@@ -104,64 +104,6 @@ public class TC003 extends TestBase {
 		// Logout Method
 		d.logoutM();
 
-	}
-
-	
-
-	
-	
-
-	
-	@Test(enabled = true)
-	public void click_phq15page_after_SignIN() throws Exception // to run this test first change the URL to URL1 in
-																// TestBase class and insert the mail-id in properties
-																// file and save it
-	{
-
-		sgn.verify_text12();
-		d = sgn.signin();
-		p15 = d.phq15Question();
-		p15.verify_text10();
-		p15.phq15_Dynamic_Click();
-	}
-
-	@Test(enabled = true)
-	public void click_gad7page_after_SignIN() throws Exception // to run this test first change the URL to URL1 in
-																// TestBase class and insert the mail-id in properties
-																// file and save it
-	{
-		sgn = new SigninPage();
-		sgn.verify_text12();
-		d = sgn.signin();
-		g7 = d.gad7Question();
-		g7.verify_text9();
-		g7.gad7_Dynamic_Click();
-	}
-
-	@Test(enabled = true)
-	public void click_StressInventorypage_after_SignIN() throws Exception // to run this test first change the URL to
-																			// URL1 in TestBase class and insert the
-																			// mail-id in properties file and save it
-	{
-		sgn = new SigninPage();
-		sgn.verify_text12();
-		d = sgn.signin();
-		si = d.stress_inventoryQuestion();
-		si.verify_text12();
-		si.stress_inventory_CheckBox();
-	}
-
-	@Test(enabled = true)
-	public void click_userfactspage_after_SignIN() throws Throwable
-	// TestaBase class and insert the mail-id in
-	// properties file and save it
-	{
-		sgn = new SigninPage();
-		sgn.verify_text12();
-		d = sgn.signin();
-		uf = d.user_factsQuestion();
-		uf.verify_text13();
-		uf.user_facts_details();
 	}
 
 	@AfterMethod

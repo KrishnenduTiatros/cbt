@@ -4,22 +4,22 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.pages.DashboardPage;
+import com.qa.tiatros.pages.Phq15Page;
 import com.qa.tiatros.pages.SigninPage;
 import com.qa.tiatros.pages.SignupPage;
-import com.qa.tiatros.pages.Stress_inventoryPage;
 import com.qa.tiatros.util.CustomListener;
 
 @Listeners(CustomListener.class)
-public class TC004 extends TestBase {
-
+public class TC008 extends TestBase {
 	SignupPage sp;
 	SigninPage sgn;
 	DashboardPage d;
-	Stress_inventoryPage si;
+	Phq15Page p15;
 
-	public TC004() {
+	public TC008() {
 		super();
 	}
 
@@ -29,20 +29,17 @@ public class TC004 extends TestBase {
 		sp = new SignupPage();
 		d = new DashboardPage();
 		sgn = new SigninPage();
-		si = new Stress_inventoryPage();
+		p15 = new Phq15Page();
 
 	}
 
-	@Test(description = "To check the inventory stress sector message and also click on it") 
-	public void inventory_Your_Stress() throws Throwable {
+	@Test(description = "To click the pss10 section only")
+	public void click_phq15page_after_SignIN() throws Exception {
 		sgn.verify_text12();
 		d = sgn.signin();
-		d.verify_text15();
-		d.click_inventory_your_stress();
-		d.verify_text17();
-
-		// Logout Method
-		d.logoutM();
+		p15 = d.phq15Question();
+		p15.verify_text10();
+		p15.phq15_Dynamic_Click();
 	}
 
 	@AfterMethod
