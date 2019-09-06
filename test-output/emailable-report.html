@@ -8,60 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Tiatros</th></tr>
-<tr><td><a href="#t0">ALL</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">2</td><td class="num">426,245</td><td></td><td></td></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">37,932</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Tiatros</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ALL &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qa.tiatros.registration.testcase.TC002</td><td><a href="#m0">dashboard_Click_All_Phone</a></td><td rowspan="1">1567680913065</td><td rowspan="1">99356</td></tr><tr class="failedodd"><td rowspan="1">com.qa.tiatros.registration.testcase.TC003</td><td><a href="#m1">direct_Dashboard</a></td><td rowspan="1">1567681022180</td><td rowspan="1">35043</td></tr><tr><th colspan="4">ALL &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.tiatros.registration.testcase.TC001</td><td><a href="#m2">registration_E2E_WithoutPhnNum</a></td><td rowspan="1">1567680643931</td><td rowspan="1">252272</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.tiatros.modertor.testcase.TC01</td><td><a href="#m0">addNewMessage</a></td><td rowspan="1">1567761198288</td><td rowspan="1">29722</td></tr></tbody>
 </table>
-<h2>ALL</h2><h3 id="m0">com.qa.tiatros.registration.testcase.TC002#dashboard_Click_All_Phone</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (122cb839562169bad5ee73584eb5704a)] -&gt; xpath: //*[starts-with(@class,&apos;col-xs-8 col-sm-7&apos;)]//following::div[@class=&apos;form-group accept-1&apos;]/div//ins] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:18c8:3292:4b21:7a04%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52629}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 122cb839562169bad5ee73584eb5704a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:68)
-	at com.qa.tiatros.pages.FromWelcomeVidPage.inputProfileDetails_PhoneNumber(FromWelcomeVidPage.java:91)
-	at com.qa.tiatros.registration.testcase.TC002.dashboard_Click_All_Phone(TC002.java:71)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.tiatros.registration.testcase.TC003#direct_Dashboard</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&apos;row nw-provider-dashboard&apos;]//following::div[1]//div[2]//div[@class=&apos;col-xs-9&apos;][1]//a[@class=&apos;btn btn-primary-blue btn-md btn-block p-sm m-b-md onclick-link&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:68)
-	at com.qa.tiatros.pages.DashboardPage.phq9Question(DashboardPage.java:99)
-	at com.qa.tiatros.registration.testcase.TC003.direct_Dashboard(TC003.java:68)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;row nw-provider-dashboard&apos;]//following::div[1]//div[2]//div[@class=&apos;col-xs-9&apos;][1]//a[@class=&apos;btn btn-primary-blue btn-md btn-block p-sm m-b-md onclick-link&apos;]&quot;}
-  (Session info: chrome=76.0.3809.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Satishs-iMac.local&apos;, ip: &apos;fe80:0:0:0:18c8:3292:4b21:7a04%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52704}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c66e96babafdfa9eb163b7b88aaee82b
-*** Element info: {Using=xpath, value=//div[@class=&apos;row nw-provider-dashboard&apos;]//following::div[1]//div[2]//div[@class=&apos;col-xs-9&apos;][1]//a[@class=&apos;btn btn-primary-blue btn-md btn-block p-sm m-b-md onclick-link&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 28 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.tiatros.registration.testcase.TC001#registration_E2E_WithoutPhnNum</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.qa.tiatros.modertor.testcase.TC01#addNewMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -495,25 +495,38 @@ public class UtilTest extends TestBase {
 		return s;
 	}
 
-	public static void returnGoalColor() {
-		String colour = driver
-				.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label"))
-				.getAttribute("style");
+	public static String returnGoalColor() {
+		
+		
+		String cC = "";
+		try {
+			
+			String colour = driver
+					.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label"))
+					.getAttribute("style");
 
-		int index1 = colour.indexOf(" ");
-		index1 = index1 + 1;
-		int index2 = colour.indexOf(";");
-		String cCode = colour.substring(index1, index2);
+			int index1 = colour.indexOf(" ");
+			index1 = index1 + 1;
+			int index2 = colour.indexOf(";");
+			String cCode = colour.substring(index1, index2);
 
-		if (cCode.equalsIgnoreCase("rgb(255, 140, 0)")) {
-			System.out.println("Goals Delay Color  = ORANGE");
-		} else if (cCode.equalsIgnoreCase("rgb(255, 0, 0)")) {
-			System.out.println("Goals Delay Color  = RED");
-		} else if (cCode.equalsIgnoreCase("rgb(0, 128, 0)")) {
-			System.out.println("Goals Delay Color  = GREEN");
-		} else if (cCode.equalsIgnoreCase("rgb(0, 0, 205)")) {
-			System.out.println("Goals Delay Color  = PURPLE");
+			if (cCode.equalsIgnoreCase("rgb(255, 140, 0)")) {
+				System.out.println("Goals Delay Color  = ORANGE");
+				cC = "Goals Delay Color  = ORANGE";
+			} else if (cCode.equalsIgnoreCase("rgb(255, 0, 0)")) {
+				System.out.println("Goals Delay Color  = RED");
+				cC = "Goals Delay Color  = RED";
+			} else if (cCode.equalsIgnoreCase("rgb(0, 128, 0)")) {
+				System.out.println("Goals Delay Color  = GREEN");
+				cC = "Goals Delay Color  = GREEN";
+			} else if (cCode.equalsIgnoreCase("rgb(0, 0, 205)")) {
+				System.out.println("Goals Delay Color  = PURPLE");
+				cC = "Goals Delay Color  = PURPLE";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		return cC;
 	}
 
 	public static void takeScreenshot(String testMethodName) {
@@ -540,12 +553,12 @@ public class UtilTest extends TestBase {
 			System.out.println("File Exception- " + e.getMessage());
 			e.printStackTrace();
 		}
-		
+
 		String imagePath = "/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png";
 		return imagePath;
 	}
 
-	public static void sendEmailNotification(String sendTo, String mailSubject, String path1) throws Throwable {
+	public static void sendEmailNotification(String sendTo, String mailSubject, String path1, String bodyText) throws Throwable {
 		// Recipient's Mail id
 		String receipientTo = sendTo;
 
@@ -582,7 +595,8 @@ public class UtilTest extends TestBase {
 		BodyPart msgBody = new MimeBodyPart();
 
 		// Setting email's message body
-		msgBody.setText("This is Automated Mail through Selenium Project.");
+		msgBody.setText(bodyText);
+		//msgBody.setText("This is Automated Mail through Selenium Project.");
 
 		// Instance of second part
 		Multipart multiPart = new MimeMultipart();
