@@ -38,7 +38,6 @@ public class TC01 extends TestBase {
 		al.verify_text2();
 		rga = al.click_Review_Goal();
 		rga.check_review();
-		
 	}
 
 	@AfterMethod

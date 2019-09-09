@@ -32,7 +32,7 @@ public class FromWelcomeVidPage extends TestBase {
 
 	@FindBy(xpath = "//span[@class='switchery switchery-default']")
 	WebElement mobile;
-	
+
 	@FindBy(xpath = "//input[@id='phone']")
 	WebElement phnNumber;
 
@@ -41,12 +41,18 @@ public class FromWelcomeVidPage extends TestBase {
 
 	@FindBy(xpath = "//*[starts-with(@class,'col-xs-8 col-sm-7')]//following::div[@class='form-group accept-1']/div//ins")
 	WebElement check_box;
-	
+
 	@FindBy(xpath = "//*[starts-with(@class,'col-xs-8 col-sm-7')]//following::div[@class='form-group action-btn-1']/div//ins")
 	WebElement notify_me;
 
 	@FindBy(xpath = "//input[@id='submit_profile']")
 	WebElement save;
+	
+	@FindBy(xpath ="//button[@class='cancel']")
+	WebElement notify_cancel_button;
+	
+	@FindBy(xpath ="//button[@class='confirm']")
+	WebElement notify_confirm_button;
 
 	// Initializing the page object
 
@@ -77,7 +83,7 @@ public class FromWelcomeVidPage extends TestBase {
 		Thread.sleep(5000);
 		return new DashboardPage();
 	}
-	
+
 	public DashboardPage inputProfileDetails_PhoneNumber() throws Throwable {
 
 		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
@@ -93,7 +99,38 @@ public class FromWelcomeVidPage extends TestBase {
 		UtilTest.element_click(driver, save);
 		Thread.sleep(5000);
 		return new DashboardPage();
-		
 	}
 	
+	public DashboardPage profile_notifycancelButton() throws Throwable {
+		
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
+		Thread.sleep(2000);
+		notify_me.click();
+		Thread.sleep(2000);
+		notify_cancel_button.click();
+		Thread.sleep(3000);
+		UtilTest.element_click(driver, save);
+		Thread.sleep(5000);
+		return new DashboardPage();
+	}
+	
+	public void profile_notifySubmitButton() throws Throwable {
+		
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
+		Thread.sleep(2000);
+		notify_me.click();
+		Thread.sleep(2000);
+		notify_confirm_button.click();
+		Thread.sleep(3000);
+	}
+	
+
 }
