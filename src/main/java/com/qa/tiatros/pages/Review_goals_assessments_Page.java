@@ -41,14 +41,20 @@ public class Review_goals_assessments_Page extends TestBase
 		// Business Component
 
 		public void  check_review() throws Throwable {
-			//UtilTest.element_click(driver,select_drop);
-			UtilTest.select_dropdown(select_drop, prop.getProperty("CourseDetails"));
-			Thread.sleep(2000);
-			UtilTest.sendkeys(driver, search_textBox, prop.getProperty("Email"));
-			Thread.sleep(5000);
-			String s1 = UtilTest.returnGoalColor();
-			String path = UtilTest.staticScreenShot("GoalReview");
-			UtilTest.sendEmailNotification(prop.getProperty("SendEmail"), prop.getProperty("EmailSubject"), path, s1);
+			try {
+				UtilTest.select_dropdown(select_drop, prop.getProperty("CourseDetails"));
+				Thread.sleep(2000);
+				UtilTest.sendkeys(driver, search_textBox, prop.getProperty("Email"));
+				Thread.sleep(5000);
+				String s1 = UtilTest.returnGoalColor();
+				String path = UtilTest.staticScreenShot("GoalReview");
+				UtilTest.sendEmailNotification(prop.getProperty("SendEmail"), prop.getProperty("EmailSubject"), path, s1);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			finally{
+				UtilTest.logout();
+				}
 		}
 	
 }

@@ -270,9 +270,20 @@ public class UtilTest extends TestBase {
 	public static void click_hambergur() {
 		driver.findElement(By.xpath("//a[@class='navbar-minimalize minimalize-styl-2 btn']")).click();
 	}
-
-	public static void logout() {
+	
+	// Logout Method for signing out user from the application.
+	public static void logout() throws Throwable {
+		if(driver.findElement(By.xpath("//a[@class='navbar-minimalize minimalize-styl-2 btn']")).isDisplayed())
+		{
+			driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
+			Thread.sleep(2000);
+		}
+		else {
+		click_hambergur();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
+		Thread.sleep(2000);
+		}
 	}
 
 	public static void loveIcon() {
@@ -495,8 +506,7 @@ public class UtilTest extends TestBase {
 		return s;
 	}
 
-	public static String returnGoalColor() {
-		
+	public static String returnGoalColor() throws Throwable {
 		
 		String cC = "";
 		try {
@@ -526,6 +536,7 @@ public class UtilTest extends TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		return cC;
 	}
 

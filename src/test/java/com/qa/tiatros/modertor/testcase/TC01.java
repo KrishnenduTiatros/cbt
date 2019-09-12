@@ -24,7 +24,7 @@ public class TC01 extends TestBase {
 	}
 
 	@BeforeMethod
-	public void initobjects() throws Exception { // This Before Method will run always````````` before any @Test.
+	public void initobjects() throws Exception { // This Before Method will run always before any @Test.
 		init();
 		sgn = new SigninPage();
 		al = new All_moderator_Page();
@@ -32,7 +32,7 @@ public class TC01 extends TestBase {
 	}
 
 	@Test(description = "To check the review goal setting section colour")
-	public void addNewMessage() throws Throwable {
+	public void review_goal_setting_color() throws Throwable {
 		sgn.verify_text12();
 		al = sgn.signin_Moderator();
 		al.verify_text2();
