@@ -10,15 +10,17 @@ import com.qa.tiatros.util.UtilTest;
 import Thread.ResilienceDiscussion_T_Page;
 
 public class Course_Sessions_page extends TestBase {
+	
 	// Page factory - OR
 
-	@FindBy(xpath = "//div[@class='row wrapper border-bottom white-bg page-heading']/div//li[2]//strong[contains(text(),'course')][2]")
-	WebElement verification_text18;
+	@FindBy(xpath = "//i[@class='fa fa-angle-up fa-2x more-less']")
+	WebElement openSession;
+	
+	@FindBy(xpath = "//strong[@class='hidden-xs-cbt']")
+	WebElement verification_text_CoursePage;
 
 	@FindBy(xpath = "//div[@class='col-lg-11 pull-center dashboard-new']/div[2]/div/div/div/div[1]/div[@id='heading0']")
 	WebElement session1;
-	
-	//h2[contains(text(),'Session 1: Recognizing the Power in Your Story')]
 
 	@FindBy(xpath = "//div[@class='col-lg-11 pull-center dashboard-new']/div[2]/div/div/div/div[2]/div[@id='heading1']")
 	WebElement session2;
@@ -82,84 +84,19 @@ public class Course_Sessions_page extends TestBase {
 
 	// All Verifications and Validations
 
-	public void verify_text18() {
-		boolean vt = verification_text18.isDisplayed();
+	public void verify_CoursePage() {
+		boolean vt = verification_text_CoursePage.isDisplayed();
 		Assert.assertEquals(vt, true);
 	}
 	
-	public void verify_complete_message() {
-		
-		boolean vt = peer_validation_message.isDisplayed();
-		String Text = peer_validation_message.getText();
-		System.out.println("Inner text is :" + Text);
-		int index = Text.indexOf("d");
-		String ret = Text.substring(3, index);
-		if (ret == "Completed")
-		{
-			Assert.assertEquals(vt, true);
-		}
-		else 
-		{
-			Assert.assertEquals(vt, false);	
-		}
-	}
+	
+
 
 	// Business Component
 
-	public TeamCheckIn_T_Page click_1() throws Throwable {
-		Thread.sleep(3000);
-		UtilTest.element_click(driver, team_check_IN);
-		Thread.sleep(10000);
-		return new TeamCheckIn_T_Page();
-	}
-
-	public ResilienceDiscussion_T_Page click_2() throws Throwable {
-		Thread.sleep(5000);
-		UtilTest.element_click(driver, resilience_Discussion);
-		Thread.sleep(10000);
-		return new ResilienceDiscussion_T_Page();
-	}
-
-	public PsychoeducationLecture_T_Page click_3() throws Throwable {
-		Thread.sleep(5000);
-		UtilTest.element_click(driver, psychoeducation_Lecture);
-		if(scale_click.isDisplayed()== true)
-		{
-			cancel.click();
-		}
-		else 
-		
-		Thread.sleep(10000);
-		return new PsychoeducationLecture_T_Page();
-	}
-
-	public PersonalCharacter_T_Page click_4() throws Throwable {
-		Thread.sleep(5000);
-		UtilTest.element_click(driver, personal_Character);
-		Thread.sleep(10000);
-		//UtilTest.element_click(driver, cross);
-		Thread.sleep(5000);
-		return new PersonalCharacter_T_Page();
-	}
-
-	public FinalExercise_T_Page click_5() throws Throwable {
-		Thread.sleep(5000);
-		UtilTest.element_click(driver, final_Exercise);
-		Thread.sleep(10000);
-		return new FinalExercise_T_Page();
-	}
-	
-	public PeerReviewPage click_6() throws Throwable {
-		Thread.sleep(5000);
-		UtilTest.element_click(driver, Peer_Review);
-		Thread.sleep(10000);
-		return new PeerReviewPage();
-	}
-	
-	public void clickOn_Session1() throws Throwable
+	public void currentOpenSession() throws Throwable
 	{
-		Thread.sleep(5000);
-		UtilTest.element_click(driver, session1);
+		CommonPage.sessionSteps();
 	}
 
 }

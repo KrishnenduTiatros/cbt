@@ -121,6 +121,7 @@ public class CourseDashboardPage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'peer')]")
 	WebElement peerDetails;
+	
 
 	// Initializing the page object
 
@@ -277,7 +278,15 @@ public class CourseDashboardPage extends TestBase {
 		UtilTest.element_click(driver, peer_review);
 		Thread.sleep(5000);
 		UtilTest.element_click(driver, peerDetails);
-		Thread.sleep(5000);		
+		Thread.sleep(5000);
+	}
+	
+	public Course_Sessions_page checkInCourse()
+	{
+		UtilTest.element_click(driver, hambarger);
+		UtilTest.element_click(driver, myPrograms);
+		UtilTest.element_click(driver, programOverview);
+		return new Course_Sessions_page();
 	}
 
 }
