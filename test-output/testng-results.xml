@@ -2,47 +2,19 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24075" started-at="2019-09-20T09:42:38Z" finished-at="2019-09-20T09:43:02Z">
+  <suite name="Default suite" duration-ms="38574" started-at="2019-09-20T11:09:01Z" finished-at="2019-09-20T11:09:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24075" started-at="2019-09-20T09:42:38Z" finished-at="2019-09-20T09:43:02Z">
+    <test name="Default test" duration-ms="38574" started-at="2019-09-20T11:09:01Z" finished-at="2019-09-20T11:09:40Z">
       <class name="com.qa.tiatros.course.testcase.TC001">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.course.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="7268" started-at="2019-09-20T09:42:38Z" finished-at="2019-09-20T09:42:46Z">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.course.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="6986" started-at="2019-09-20T11:09:01Z" finished-at="2019-09-20T11:09:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="FAIL" signature="clickAllSession()[pri:0, instance:com.qa.tiatros.course.testcase.TC001@4b952a2d]" name="clickAllSession" duration-ms="16290" started-at="2019-09-20T09:42:46Z" finished-at="2019-09-20T09:43:02Z">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <span class="media-object sessions-number">...</span> is not clickable at point (340, 744). Other element would receive the click: <div class="spiner-example"></div>
-  (Session info: chrome=76.0.3809.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:49f:e6de:7b33:33d0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:53183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6dd0b3cedcbeed54455bbe0a5ae87c18]]>
-            </message>
+        <test-method status="FAIL" signature="clickAllSession()[pri:0, instance:com.qa.tiatros.course.testcase.TC001@4b952a2d]" name="clickAllSession" duration-ms="31100" started-at="2019-09-20T11:09:08Z" finished-at="2019-09-20T11:09:39Z">
+          <exception class="java.lang.ExceptionInInitializerError">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="media-object sessions-number">...</span> is not clickable at point (340, 744). Other element would receive the click: <div class="spiner-example"></div>
-  (Session info: chrome=76.0.3809.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:49f:e6de:7b33:33d0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:53183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6dd0b3cedcbeed54455bbe0a5ae87c18
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at com.qa.tiatros.pages.CommonPage.sessionSteps(CommonPage.java:94)
+              <![CDATA[java.lang.ExceptionInInitializerError
 at com.qa.tiatros.pages.Course_Sessions_page.currentOpenSession(Course_Sessions_page.java:99)
 at com.qa.tiatros.course.testcase.TC001.clickAllSession(TC001.java:41)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -70,13 +42,38 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Next')]"}
+  (Session info: chrome=76.0.3809.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:49f:e6de:7b33:33d0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:58097}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 866bc033da9ef5c1094628d18886cc28
+*** Element info: {Using=xpath, value=//a[contains(text(),'Next')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.qa.tiatros.pages.CommonPage.<clinit>(CommonPage.java:19)
+... 27 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.ExceptionInInitializerError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickAllSession -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.course.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="83" started-at="2019-09-20T09:43:02Z" finished-at="2019-09-20T09:43:02Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.course.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="89" started-at="2019-09-20T11:09:40Z" finished-at="2019-09-20T11:09:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

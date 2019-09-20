@@ -16,10 +16,7 @@ public class CommonPage extends TestBase {
 
 	// Page factory - OR
 
-	@FindBy(xpath = "//a[contains(text(),'Next')]")
-	WebElement cNext;
-	
-	By cNext1 = By.xpath("//a[contains(text(),'Next')]");
+	public static WebElement cNext = driver.findElement(By.xpath("//a[contains(text(),'Next')]"));
 
 	// Initializing the page object
 
@@ -86,23 +83,27 @@ public class CommonPage extends TestBase {
 						"//div[@id='collapse3']//span[@class='media-object sessions-number'][contains(text(),'')]"))
 				.size();
 
-		// This loop will run till as per the total steps accured
+		// This loop will run till as per the total steps accrued
 		for (int i = 1; i <= steps; i++) {
+			Thread.sleep(2000);
 			driver.findElement(
 					By.xpath("//div[@id='collapse3']//span[@class='media-object sessions-number'][contains(text(),'" + i
 							+ "')]"))
 					.click();
 			
-			CommonPage cp = new CommonPage();
-			cp.courseActivity();
+			UtilTest.scrollDown();
+			Thread.sleep(2000);
+			if (cNext.isDisplayed()) {
+				cNext.click();
+
+			}
 
 		}
-
 	}
 
-	public void courseActivity() throws Throwable {
+	public static void courseActivity() throws Throwable {
 		Thread.sleep(4000);
-		UtilTest.element_click(driver, cNext);
+		// UtilTest.element_click(driver, cNext);
 
 	}
 
