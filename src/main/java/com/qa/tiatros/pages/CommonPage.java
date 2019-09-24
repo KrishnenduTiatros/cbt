@@ -16,7 +16,7 @@ public class CommonPage extends TestBase {
 
 	// Page factory - OR
 
-	public static WebElement cNext = driver.findElement(By.xpath("//a[contains(text(),'Next')]"));
+	//public static WebElement cNext = driver.findElement(By.xpath("//a[contains(text(),'Next')]"));
 
 	// Initializing the page object
 
@@ -93,13 +93,13 @@ public class CommonPage extends TestBase {
 			
 			UtilTest.scrollDown();
 			Thread.sleep(2000);
-			if (cNext.isDisplayed()) {
-				cNext.click();
+		//	if (cNext.isDisplayed()) {
+		//		cNext.click();
 
 			}
 
 		}
-	}
+	
 
 	public static void courseActivity() throws Throwable {
 		Thread.sleep(4000);

@@ -173,6 +173,7 @@ public class DashboardPage extends TestBase {
 	}
 
 	public void logoutM() throws Throwable {
+		Thread.sleep(2000);
 		UtilTest.logout();
 	}
 }

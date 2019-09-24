@@ -487,7 +487,7 @@ public class UtilTest extends TestBase {
 		Thread.sleep(3000);
 		String s = driver
 				.findElement(
-						By.xpath("//span[contains(text(),'Your pin:')]/following-sibling::span[starts-with(@id,'m_')]"))
+						By.xpath("//span[contains(text(),'Your PIN:')]/following-sibling::span[starts-with(@id,'m_')]"))
 				.getText();
 		System.out.println(s);
 		try {
