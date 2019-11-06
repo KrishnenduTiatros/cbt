@@ -1,15 +1,11 @@
 package com.qa.tiatros.base;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import com.qa.tiatros.util.UtilTest;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -43,7 +39,7 @@ public class TestBase {
 		// Browser Initialization
 		String browser = prop.getProperty("Browser");
 		if (browser.equals("CHROME")) {
-			System.setProperty("webdriver.chrome.driver", "/Users/krishnendu/Selenium/chromedriver 4");
+			System.setProperty("webdriver.chrome.driver", "/Users/krishnendu/Selenium/chromedriver 6");
 			
 			 ChromeOptions options = new ChromeOptions();
 			 options.addArguments("--incognito");

@@ -273,16 +273,16 @@ public class UtilTest extends TestBase {
 	
 	// Logout Method for signing out user from the application.
 	public static void logout() throws Throwable {
-		if(driver.findElement(By.xpath("//a[@class='navbar-minimalize minimalize-styl-2 btn']")).isDisplayed())
+		if(driver.findElement(By.xpath("//li[@class='nav-header']")).isDisplayed())
 		{
 			driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
-			Thread.sleep(2000);
+			
 		}
 		else {
 		click_hambergur();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
-		Thread.sleep(2000);
+		
 		}
 	}
 

@@ -128,11 +128,10 @@ public class DashboardPage extends TestBase {
 		UtilTest.element_click(driver, Pledge);
 		Thread.sleep(5000);
 		UtilTest.element_click(driver, play_video);
-		Thread.sleep(20000);
+		Thread.sleep(7000);
 		UtilTest.sendkeys(driver, text1, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "PledgeName")); // prop.getProperty("PledgeName")
 		Thread.sleep(2000);
 		UtilTest.element_click(driver, accept_button);
-
 	}
 
 	public Stress_inventoryPage stress_inventoryQuestion() throws Exception {
