@@ -103,7 +103,7 @@ public class TC002 extends TestBase {
 		si.stress_inventory_CheckBox();
 
 		// Pledge call
-		d.pledge();
+		//d.pledge();
 
 		d.scale_click();
 		d.course_complete();

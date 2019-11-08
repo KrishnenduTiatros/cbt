@@ -45,7 +45,7 @@ public class DashboardPage extends TestBase {
 	@FindBy(xpath = "//input[@id='user_pledge']")
 	WebElement text1;
 
-	@FindBy(xpath = "//button[@id='pledge_accept_btn']")
+	@FindBy(xpath = "//button[@type='button']") //button[@id='pledge_accept_btn']
 	WebElement accept_button;
 
 	@FindBy(xpath = "//div[@class='i-checks clearfix accept-9']/div/ins[@class='iCheck-helper']")
@@ -124,14 +124,14 @@ public class DashboardPage extends TestBase {
 
 	public void pledge() throws Throwable {
 
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		UtilTest.element_click(driver, Pledge);
 		Thread.sleep(5000);
 		UtilTest.element_click(driver, play_video);
-		Thread.sleep(7000);
-		UtilTest.sendkeys(driver, text1, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "PledgeName")); // prop.getProperty("PledgeName")
-		Thread.sleep(2000);
-		UtilTest.element_click(driver, accept_button);
+		Thread.sleep(3000);
+		//UtilTest.sendkeys(driver, text1, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "PledgeName")); // prop.getProperty("PledgeName")
+		//Thread.sleep(2000);
+		//UtilTest.element_click(driver, accept_button);
 	}
 
 	public Stress_inventoryPage stress_inventoryQuestion() throws Exception {

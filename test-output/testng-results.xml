@@ -1,57 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="971959" started-at="2019-11-06T05:24:19Z" finished-at="2019-11-06T05:40:31Z">
+  <suite name="Default suite" duration-ms="471565" started-at="2019-11-07T08:50:11Z" finished-at="2019-11-07T08:58:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="971959" started-at="2019-11-06T05:24:19Z" finished-at="2019-11-06T05:40:31Z">
+    <test name="Default test" duration-ms="471565" started-at="2019-11-07T08:50:11Z" finished-at="2019-11-07T08:58:02Z">
       <class name="com.qa.tiatros.registration.testcase.TC001">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="8012" started-at="2019-11-06T05:24:19Z" finished-at="2019-11-06T05:24:27Z">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="13273" started-at="2019-11-07T08:50:11Z" finished-at="2019-11-07T08:50:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="registration_E2E_WithoutPhnNum()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="registration_E2E_WithoutPhnNum" duration-ms="240543" started-at="2019-11-06T05:24:27Z" description="This Test case will run End to END Registration without phn number" finished-at="2019-11-06T05:28:28Z">
+        <test-method status="PASS" signature="registration_E2E_WithoutPhnNum()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="registration_E2E_WithoutPhnNum" duration-ms="224157" started-at="2019-11-07T08:50:24Z" description="This Test case will run End to END Registration without phn number" finished-at="2019-11-07T08:54:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registration_E2E_WithoutPhnNum -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="83" started-at="2019-11-06T05:28:28Z" finished-at="2019-11-06T05:28:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="223" started-at="2019-11-07T08:54:08Z" finished-at="2019-11-07T08:54:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="6115" started-at="2019-11-06T05:28:28Z" finished-at="2019-11-06T05:28:34Z">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="10220" started-at="2019-11-07T08:54:08Z" finished-at="2019-11-07T08:54:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="registration_E2E_WithoutPhnNum()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="registration_E2E_WithoutPhnNum" duration-ms="234839" started-at="2019-11-06T05:28:34Z" description="This Test case will run End to END Registration without phn number" finished-at="2019-11-06T05:32:29Z">
+        <test-method status="PASS" signature="registration_E2E_WithoutPhnNum()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="registration_E2E_WithoutPhnNum" duration-ms="223461" started-at="2019-11-07T08:54:18Z" description="This Test case will run End to END Registration without phn number" finished-at="2019-11-07T08:58:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registration_E2E_WithoutPhnNum -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="97" started-at="2019-11-06T05:32:29Z" finished-at="2019-11-06T05:32:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="5876" started-at="2019-11-06T05:32:29Z" finished-at="2019-11-06T05:32:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="registration_E2E_WithoutPhnNum()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="registration_E2E_WithoutPhnNum" duration-ms="234725" started-at="2019-11-06T05:32:35Z" description="This Test case will run End to END Registration without phn number" finished-at="2019-11-06T05:36:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registration_E2E_WithoutPhnNum -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="81" started-at="2019-11-06T05:36:30Z" finished-at="2019-11-06T05:36:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="initobjects" is-config="true" duration-ms="6560" started-at="2019-11-06T05:36:30Z" finished-at="2019-11-06T05:36:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="registration_E2E_WithoutPhnNum()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="registration_E2E_WithoutPhnNum" duration-ms="234911" started-at="2019-11-06T05:36:36Z" description="This Test case will run End to END Registration without phn number" finished-at="2019-11-06T05:40:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registration_E2E_WithoutPhnNum -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="84" started-at="2019-11-06T05:40:31Z" finished-at="2019-11-06T05:40:31Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.registration.testcase.TC001@4b952a2d]" name="tearDown" is-config="true" duration-ms="203" started-at="2019-11-07T08:58:02Z" finished-at="2019-11-07T08:58:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
