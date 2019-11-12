@@ -67,10 +67,10 @@ public class SignupPage extends TestBase
 		
 		// Inserting all Data through xcel file for signup page
 		Thread.sleep(2000);
-		UtilTest.sendkeys(driver, first_name, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "FirstName"));   //  prop.getProperty("FirstName")
-		UtilTest.sendkeys(driver, last_name, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "LastName") );    //  prop.getProperty("LastName")
+		UtilTest.sendkeys(driver, first_name, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "FirstName"));   //  prop.getProperty("FirstName") // prop.getProperty("TestCase")
+		UtilTest.sendkeys(driver, last_name, UtilTest.readExcel("SignUP",UtilTest.dYnamicTestCaseGeneration() , "LastName") );    //  prop.getProperty("LastName") //prop.getProperty("TestCase")
 		UtilTest.sendkeys(driver, user_email, UtilTest.emailidgenerate());
-		UtilTest.sendkeys(driver, user_pass, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Password"));     // prop.getProperty("Password")
+		UtilTest.sendkeys(driver, user_pass, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "Password"));     // prop.getProperty("Password") //prop.getProperty("TestCase")
 		UtilTest.sendkeys(driver, user_token, prop.getProperty("Coupon"));	  //  prop.getProperty("Coupon") UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Coupon")
 		Thread.sleep(3000);
 		// UtilTest.click(driver, user_checkbox);

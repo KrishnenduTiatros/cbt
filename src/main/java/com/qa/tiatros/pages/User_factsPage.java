@@ -39,7 +39,7 @@ public class User_factsPage extends TestBase {
 
 	public void user_facts_details() throws Throwable {
 
-		UtilTest.sendkeys(driver, input_text, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "User_facts"));
+		UtilTest.sendkeys(driver, input_text, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "User_facts")); //prop.getProperty("TestCase")
 		Thread.sleep(2000);
 		UtilTest.element_click(driver, click_save);
 		Thread.sleep(2000);

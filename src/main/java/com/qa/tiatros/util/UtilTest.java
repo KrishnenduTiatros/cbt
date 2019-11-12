@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Random;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -49,12 +50,11 @@ public class UtilTest extends TestBase {
 
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 15;
-
 	public static String t = "";
 	public static String demail = "";
-
 	public static WebDriverWait wait;
-
+	public static String testCaseID = "";
+	
 	// This Method used to type any given word in fields
 	public static void sendkeys(WebDriver driver, WebElement element, String value) {
 		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
@@ -102,6 +102,20 @@ public class UtilTest extends TestBase {
 		demail = beforet.concat(t).concat(aftert);
 		System.out.println(demail);
 		return demail;
+	}
+
+	// This method will return dynamic testcase id for fetching data
+	public static String dYnamicTestCaseGeneration() {
+		// creating object for Random Class
+		Random r = new Random();
+		int totaltc = 20;
+		
+		// Generating Random TestCase
+		int testCaseGeneration = r.nextInt((totaltc - 1) + 1) + 1;
+		String tcadd = "TD";
+		testCaseID = tcadd + testCaseGeneration;
+		return testCaseID;
+
 	}
 
 	public static void by_click(WebDriver driver, By element1) {
@@ -270,19 +284,17 @@ public class UtilTest extends TestBase {
 	public static void click_hambergur() {
 		driver.findElement(By.xpath("//a[@class='navbar-minimalize minimalize-styl-2 btn']")).click();
 	}
-	
+
 	// Logout Method for signing out user from the application.
 	public static void logout() throws Throwable {
-		if(driver.findElement(By.xpath("//li[@class='nav-header']")).isDisplayed())
-		{
+		if (driver.findElement(By.xpath("//li[@class='nav-header']")).isDisplayed()) {
 			driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
-			
-		}
-		else {
-		click_hambergur();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
-		
+
+		} else {
+			click_hambergur();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
+
 		}
 	}
 
@@ -507,10 +519,10 @@ public class UtilTest extends TestBase {
 	}
 
 	public static String returnGoalColor() throws Throwable {
-		
+
 		String cC = "";
 		try {
-			
+
 			String colour = driver
 					.findElement(By.xpath("//table[starts-with(@id,'DataTables_Table_0')]/tbody/tr/td[6]/label"))
 					.getAttribute("style");
@@ -536,7 +548,7 @@ public class UtilTest extends TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return cC;
 	}
 
@@ -569,7 +581,8 @@ public class UtilTest extends TestBase {
 		return imagePath;
 	}
 
-	public static void sendEmailNotification(String sendTo, String mailSubject, String path1, String bodyText) throws Throwable {
+	public static void sendEmailNotification(String sendTo, String mailSubject, String path1, String bodyText)
+			throws Throwable {
 		// Recipient's Mail id
 		String receipientTo = sendTo;
 
@@ -607,7 +620,7 @@ public class UtilTest extends TestBase {
 
 		// Setting email's message body
 		msgBody.setText(bodyText);
-		//msgBody.setText("This is Automated Mail through Selenium Project.");
+		// msgBody.setText("This is Automated Mail through Selenium Project.");
 
 		// Instance of second part
 		Multipart multiPart = new MimeMultipart();

@@ -153,7 +153,7 @@ public class DashboardPage extends TestBase {
 		// UtilTest.element_click(driver, scale_click);
 		scale_click.click();
 		UtilTest.sendkeys(driver, nps_textarea,
-				UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "PledgeName"));
+				UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "PledgeName")); //prop.getProperty("TestCase")
 		submit.click();
 		Thread.sleep(3000);
 		// UtilTest.element_click(driver, cancel);

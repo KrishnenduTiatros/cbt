@@ -71,11 +71,11 @@ public class FromWelcomeVidPage extends TestBase {
 
 	public DashboardPage inputProfileDetails() throws Throwable {
 
-		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
-		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
-		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
-		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
-		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "Zip")); // prop.getProperty("Zip") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Month")); // prop.getProperty("Month") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "Day")); // prop.getProperty("Day") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Year")); // prop.getProperty("TestCase")
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Gender")); //prop.getProperty("TestCase")
 		Thread.sleep(2000);
 		check_box.click();
 		Thread.sleep(2000);
@@ -86,11 +86,11 @@ public class FromWelcomeVidPage extends TestBase {
 
 	public DashboardPage inputProfileDetails_PhoneNumber() throws Throwable {
 
-		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
-		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
-		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
-		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
-		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Zip")); // prop.getProperty("Zip") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Month")); // prop.getProperty("Month") // prop.getProperty("TestCase")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Day")); // prop.getProperty("Day") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Year")); //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Gender")); //prop.getProperty("TestCase")
 		Thread.sleep(1000);
 		UtilTest.element_click(driver, mobile);
 		Thread.sleep(1000);
@@ -103,11 +103,11 @@ public class FromWelcomeVidPage extends TestBase {
 	
 	public DashboardPage profile_notifycancelButton() throws Throwable {
 		
-		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
-		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
-		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
-		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
-		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Zip")); // prop.getProperty("Zip") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Month")); // prop.getProperty("Month") // prop.getProperty("TestCase")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Day")); // prop.getProperty("Day") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Year")); //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Gender")); //prop.getProperty("TestCase")
 		Thread.sleep(2000);
 		notify_me.click();
 		Thread.sleep(2000);
@@ -120,11 +120,11 @@ public class FromWelcomeVidPage extends TestBase {
 	
 	public void profile_notifySubmitButton() throws Throwable {
 		
-		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Zip")); // prop.getProperty("Zip")
-		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Month")); // prop.getProperty("Month")
-		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Day")); // prop.getProperty("Day")
-		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Year"));
-		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Gender"));
+		UtilTest.sendkeys(driver, zip, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Zip")); // prop.getProperty("Zip") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(month, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Month")); // prop.getProperty("Month") // prop.getProperty("TestCase")
+		UtilTest.select_dropdown(day, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Day")); // prop.getProperty("Day") //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(year, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Year")); //prop.getProperty("TestCase")
+		UtilTest.select_dropdown(gender, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration() , "Gender")); //prop.getProperty("TestCase")
 		Thread.sleep(2000);
 		notify_me.click();
 		Thread.sleep(2000);

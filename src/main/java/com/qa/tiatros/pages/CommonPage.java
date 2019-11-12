@@ -21,6 +21,8 @@ public class CommonPage extends TestBase {
 
 	// Initializing the page object
 
+	
+
 	public CommonPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -106,12 +108,6 @@ public class CommonPage extends TestBase {
 		// UtilTest.element_click(driver, cNext);
 	}
 
-	public static void dYnamicTestCaseGeneration() {
-		// creating object for Random Class
-		Random r = new Random();
-		
-		
-
-	}
+	
 
 }
