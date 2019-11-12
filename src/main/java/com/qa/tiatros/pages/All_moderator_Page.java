@@ -36,8 +36,9 @@ public class All_moderator_Page extends TestBase {
 	// Business Component
 
 	public Review_goals_assessments_Page click_Review_Goal() throws Throwable {
+		Thread.sleep(3000);
 		UtilTest.element_click(driver, faci_tool);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		UtilTest.element_click(driver, r_goal_ass);
 		Thread.sleep(1000);
 		return new Review_goals_assessments_Page();

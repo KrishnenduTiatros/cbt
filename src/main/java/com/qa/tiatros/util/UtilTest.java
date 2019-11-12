@@ -542,8 +542,8 @@ public class UtilTest extends TestBase {
 				System.out.println("Goals Delay Color  = GREEN");
 				cC = "Goals Delay Color  = GREEN";
 			} else if (cCode.equalsIgnoreCase("rgb(0, 0, 205)")) {
-				System.out.println("Goals Delay Color  = PURPLE");
-				cC = "Goals Delay Color  = PURPLE";
+				System.out.println("Goals Delay Color  = BLUE");
+				cC = "Goals Delay Color  = BLUE";
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
