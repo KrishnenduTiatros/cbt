@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45485" started-at="2019-11-12T09:01:07Z" finished-at="2019-11-12T09:01:53Z">
+  <suite name="Default suite" duration-ms="44847" started-at="2019-11-15T06:27:54Z" finished-at="2019-11-15T06:28:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45485" started-at="2019-11-12T09:01:07Z" finished-at="2019-11-12T09:01:53Z">
+    <test name="Default test" duration-ms="44847" started-at="2019-11-15T06:27:54Z" finished-at="2019-11-15T06:28:39Z">
       <class name="com.qa.tiatros.modertor.testcase.TC01">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@4b952a2d]" name="initobjects" is-config="true" duration-ms="7226" started-at="2019-11-12T09:01:07Z" finished-at="2019-11-12T09:01:15Z">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@4b952a2d]" name="initobjects" is-config="true" duration-ms="6887" started-at="2019-11-15T06:27:54Z" finished-at="2019-11-15T06:28:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="review_goal_setting_color()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@4b952a2d]" name="review_goal_setting_color" duration-ms="38091" started-at="2019-11-12T09:01:15Z" description="To check the review goal setting section colour" finished-at="2019-11-12T09:01:53Z">
+        <test-method status="PASS" signature="review_goal_setting_color()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@4b952a2d]" name="review_goal_setting_color" duration-ms="37839" started-at="2019-11-15T06:28:01Z" description="To check the review goal setting section colour" finished-at="2019-11-15T06:28:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- review_goal_setting_color -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@4b952a2d]" name="tearDown" is-config="true" duration-ms="138" started-at="2019-11-12T09:01:53Z" finished-at="2019-11-12T09:01:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.modertor.testcase.TC01@4b952a2d]" name="tearDown" is-config="true" duration-ms="93" started-at="2019-11-15T06:28:39Z" finished-at="2019-11-15T06:28:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
