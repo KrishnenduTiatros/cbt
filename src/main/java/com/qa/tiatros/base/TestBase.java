@@ -58,5 +58,6 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(UtilTest.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(UtilTest.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		
 	}
 }

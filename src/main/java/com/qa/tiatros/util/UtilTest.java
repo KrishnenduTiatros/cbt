@@ -35,6 +35,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -68,6 +69,8 @@ public class UtilTest extends TestBase {
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
+	
+	
 
 	// This method used to scroll down a web page
 	public static void scrollDown(WebDriver driver, WebElement element) {
@@ -120,8 +123,8 @@ public class UtilTest extends TestBase {
 
 	public static void by_click(WebDriver driver, By element1) {
 		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOfElementLocated(element1));
 		WebElement element = driver.findElement(element1);
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
 		element.click();
 	}
 

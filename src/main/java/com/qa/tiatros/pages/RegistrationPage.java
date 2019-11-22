@@ -1,11 +1,13 @@
 package com.qa.tiatros.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.util.UtilTest;
+import com.qa.tiatros.util.WaitCondition;
 
 public class RegistrationPage extends TestBase {
 
@@ -50,6 +52,8 @@ public class RegistrationPage extends TestBase {
 
 	public SignupPage click_signupLink() throws Exception {
 		Thread.sleep(2000);
+		//UtilTest.by_click(driver, By.linkText("Sign Up"));
+		
 		UtilTest.element_click(driver, signup_link);
 		return new SignupPage();
 
