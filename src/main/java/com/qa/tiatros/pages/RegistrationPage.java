@@ -51,10 +51,7 @@ public class RegistrationPage extends TestBase {
 	// Business Component
 
 	public SignupPage click_signupLink() throws Exception {
-		Thread.sleep(2000);
-		//UtilTest.by_click(driver, By.linkText("Sign Up"));
-		
-		UtilTest.element_click(driver, signup_link);
+		UtilTest.click_js(signup_link);
 		return new SignupPage();
 
 	}

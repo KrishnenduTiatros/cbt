@@ -55,7 +55,9 @@ public class UtilTest extends TestBase {
 	public static String demail = "";
 	public static WebDriverWait wait;
 	public static String testCaseID = "";
-	
+
+	/***** Methods for click and sendKeys using explicit wait and JsExecutor *****/
+
 	// This Method used to type any given word in fields
 	public static void sendkeys(WebDriver driver, WebElement element, String value) {
 		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
@@ -69,8 +71,11 @@ public class UtilTest extends TestBase {
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
-	
-	
+
+	public static void click_js(WebElement locator) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", locator);
+	}
 
 	// This method used to scroll down a web page
 	public static void scrollDown(WebDriver driver, WebElement element) {
@@ -95,6 +100,8 @@ public class UtilTest extends TestBase {
 		}
 	}
 
+	/** ****************************************** **/
+
 	// This method will generate dynamic mail id with the help of current time
 	public static String emailidgenerate() {
 		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
@@ -112,7 +119,7 @@ public class UtilTest extends TestBase {
 		// creating object for Random Class
 		Random r = new Random();
 		int totaltc = 20;
-		
+
 		// Generating Random TestCase
 		int testCaseGeneration = r.nextInt((totaltc - 1) + 1) + 1;
 		String tcadd = "TD";

@@ -65,19 +65,18 @@ public class SignupPage extends TestBase
 	public PinPage signup_Details() throws Throwable
 	{
 		
-		// Inserting all Data through xcel file for signup page
-		Thread.sleep(2000);
-		UtilTest.sendkeys(driver, first_name, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "FirstName"));   //  prop.getProperty("FirstName") // prop.getProperty("TestCase")
-		UtilTest.sendkeys(driver, last_name, UtilTest.readExcel("SignUP",UtilTest.dYnamicTestCaseGeneration() , "LastName") );    //  prop.getProperty("LastName") //prop.getProperty("TestCase")
+		// Inserting all Data through excel file for signup page
+		
+		UtilTest.sendkeys(driver, first_name, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(),"FirstName"));   //  prop.getProperty("FirstName") // prop.getProperty("TestCase")
+		UtilTest.sendkeys(driver, last_name, UtilTest.readExcel("SignUP",UtilTest.dYnamicTestCaseGeneration() ,"LastName") );    //  prop.getProperty("LastName") //prop.getProperty("TestCase")
 		UtilTest.sendkeys(driver, user_email, UtilTest.emailidgenerate());
-		UtilTest.sendkeys(driver, user_pass, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(), "Password"));     // prop.getProperty("Password") //prop.getProperty("TestCase")
+		UtilTest.sendkeys(driver, user_pass, UtilTest.readExcel("SignUP", UtilTest.dYnamicTestCaseGeneration(),"Password"));     // prop.getProperty("Password") //prop.getProperty("TestCase")
 		UtilTest.sendkeys(driver, user_token, prop.getProperty("Coupon"));	  //  prop.getProperty("Coupon") UtilTest.readExcel("SignUP", prop.getProperty("TestCase"), "Coupon")
 		Thread.sleep(3000);
 		// UtilTest.click(driver, user_checkbox);
 		user_checkbox.click();
-		UtilTest.element_click(driver, term_use);
-		Thread.sleep(3000);
-		UtilTest.element_click(driver, user_register);
+		UtilTest.element_click(driver,term_use);
+		UtilTest.element_click(driver,user_register);
 		Thread.sleep(7000);
 		return new PinPage();
 	}
