@@ -63,6 +63,10 @@ public class TC003 extends TestBase {
 
 	@Test(description = "Participents who had been terminated in profile update page not completed Dashboard page activity")
 	public void direct_Dashboard() throws Throwable {
+		
+		sgn.verify_text12();
+		d = sgn.signin();
+		d.verify_text15();
 
 		// Phq9 page call
 		p9 = d.phq9Question();

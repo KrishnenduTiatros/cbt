@@ -76,7 +76,7 @@ public class SignupPage extends TestBase
 		// UtilTest.click(driver, user_checkbox);
 		user_checkbox.click();
 		UtilTest.element_click(driver,term_use);
-		UtilTest.element_click(driver,user_register);
+		UtilTest.click_js(user_register);
 		Thread.sleep(7000);
 		return new PinPage();
 	}

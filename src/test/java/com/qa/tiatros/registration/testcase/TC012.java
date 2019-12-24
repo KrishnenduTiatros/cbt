@@ -62,6 +62,7 @@ public class TC012 extends TestBase {
 
 	@Test(description = "Registering a new user in the application with end to end process [Notify Cancel Button]")
 	public void registration_E2E_With_NotifyCancelButton() throws Throwable {
+		
 		sp = rp.click_signupLink();
 		p = sp.signup_Details();
 		pp = p.verifyPin();
