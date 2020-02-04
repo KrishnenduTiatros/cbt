@@ -121,7 +121,12 @@ public class CourseDashboardPage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'peer')]")
 	WebElement peerDetails;
-	
+
+	@FindBy(xpath = "//input[@id='gratitude_journal_message_body']")
+	WebElement gratitude_textBox;
+
+	@FindBy(xpath = "//span[@class='input-group-btn']/input[@type='submit']")
+	WebElement post_TO;
 
 	// Initializing the page object
 
@@ -280,13 +285,17 @@ public class CourseDashboardPage extends TestBase {
 		UtilTest.element_click(driver, peerDetails);
 		Thread.sleep(5000);
 	}
-	
-	public Course_Sessions_page checkInCourse()
-	{
+
+	public Course_Sessions_page checkInCourse() {
 		UtilTest.element_click(driver, hambarger);
 		UtilTest.element_click(driver, myPrograms);
 		UtilTest.element_click(driver, programOverview);
 		return new Course_Sessions_page();
+	}
+
+	public void addGratitudeInDashboard() {
+		UtilTest.sendkeys(driver, gratitude_textBox, UtilTest.generate_message_subject());
+		UtilTest.element_click(driver, post_TO);
 	}
 
 }

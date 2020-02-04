@@ -260,7 +260,7 @@ public class UtilTest extends TestBase {
 		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
 		Date date = new Date();
 		String t = dateFormat.format(date);
-		String beforet = "My Dear Messengers .... ";
+		String beforet = "My Dear Gratitue Messanger....";
 		String messageSub = beforet.concat(t);
 		return messageSub;
 	}

@@ -68,6 +68,7 @@ public class DashboardPage extends TestBase {
 
 	@FindBy(xpath = "//textarea[@id='nps_score_comment']")
 	WebElement nps_textarea;
+	
 
 	// Initializing the page object
 
@@ -175,4 +176,6 @@ public class DashboardPage extends TestBase {
 		Thread.sleep(2000);
 		UtilTest.logout();
 	}
+	
+	
 }
