@@ -302,7 +302,7 @@ public class UtilTest extends TestBase {
 
 		} else {
 			click_hambergur();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("//span[@class='nav-label text-danger']")).click();
 
 		}
@@ -499,7 +499,7 @@ public class UtilTest extends TestBase {
 
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("q1w2e3R$");
 		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 		driver.findElement(By.xpath("//input[@aria-label='Search mail']")).sendKeys(demail);
 		Thread.sleep(4000);
@@ -513,9 +513,9 @@ public class UtilTest extends TestBase {
 				.getText();
 		System.out.println(s);
 		try {
-			Thread.sleep(2000);
+			
 			driver.findElement(By.xpath("//div[starts-with(@class,'gb_ja') and @role='button']")).click();
-			Thread.sleep(2000);
+		
 			driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
 			Alert alert = driver.switchTo().alert();
 			driver.switchTo().alert().accept();

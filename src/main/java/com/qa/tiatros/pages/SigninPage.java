@@ -9,7 +9,7 @@ import com.qa.tiatros.util.UtilTest;
 
 public class SigninPage extends TestBase {
 
-	String Url1 = "https://cbtfuture.tiatros.com/users/sign_in";
+	//String Url1 = "https://cbtfuture.tiatros.com/users/sign_in";
 
 	/** Page factory - OR **/
 
@@ -55,7 +55,7 @@ public class SigninPage extends TestBase {
 	/** All Verifications and Validations **/
 
 	public void verify_text12() throws Exception {
-		driver.navigate().to(Url1);
+		driver.navigate().to(prop.getProperty("Url1"));
 		Thread.sleep(2000);
 		boolean vt = verification_text12.isDisplayed();
 		Assert.assertEquals(vt, true);
