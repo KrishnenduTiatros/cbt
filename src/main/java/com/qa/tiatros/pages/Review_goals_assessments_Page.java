@@ -10,9 +10,7 @@ import com.qa.tiatros.util.UtilTest;
 
 public class Review_goals_assessments_Page extends TestBase 
 {
-
-	
-	// Page factory - OR
+		// Page factory - OR
 
 		@FindBy(xpath = "//small[contains(text(),'Review Goals Assessments')]")
 		WebElement verification_text;
@@ -22,7 +20,6 @@ public class Review_goals_assessments_Page extends TestBase
 		
 		@FindBy(xpath = "//input[contains(@class,'form-control input-sm')]")
 		WebElement search_textBox;
-		
 		
 
 		// Initializing the page object

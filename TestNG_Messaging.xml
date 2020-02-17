@@ -9,7 +9,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="com.qa.tiatros.messaging.testcase.TC001" />
-		  <!--  <class name="com.qa.tiatros.messaging.testcase.TC002" />
+		    <class name="com.qa.tiatros.messaging.testcase.TC002" />
 			<class name="com.qa.tiatros.messaging.testcase.TC003" />
 			<class name="com.qa.tiatros.messaging.testcase.TC004" />
 			<class name="com.qa.tiatros.messaging.testcase.TC005" />
@@ -19,7 +19,7 @@
 			<class name="com.qa.tiatros.messaging.testcase.TC009" />
 			<class name="com.qa.tiatros.messaging.testcase.TC010" />
 			<class name="com.qa.tiatros.messaging.testcase.TC011" />
-			<class name="com.qa.tiatros.messaging.testcase.TC012" /> -->
+			<class name="com.qa.tiatros.messaging.testcase.TC012" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

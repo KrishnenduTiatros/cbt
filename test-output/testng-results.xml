@@ -1,25 +1,605 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="8" ignored="0" total="12" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="56808" started-at="2020-02-17T08:34:30Z" finished-at="2020-02-17T08:35:27Z">
+  <suite name="Suite" duration-ms="694499" started-at="2020-02-17T09:57:35Z" finished-at="2020-02-17T10:09:10Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="56808" started-at="2020-02-17T08:34:30Z" finished-at="2020-02-17T08:35:27Z">
-      <class name="com.qa.tiatros.messaging.testcase.TC001">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC001@436813f3]" name="initobjects" is-config="true" duration-ms="11017" started-at="2020-02-17T08:34:30Z" finished-at="2020-02-17T08:34:41Z">
+    <test name="Test" duration-ms="694499" started-at="2020-02-17T09:57:35Z" finished-at="2020-02-17T10:09:10Z">
+      <class name="com.qa.tiatros.messaging.testcase.TC011">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC011@185d8b6]" name="initobjects" is-config="true" duration-ms="6240" started-at="2020-02-17T10:07:59Z" finished-at="2020-02-17T10:08:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addNewMessage()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC001@436813f3]" name="addNewMessage" duration-ms="45513" started-at="2020-02-17T08:34:41Z" description="To add message post in Messaging section" finished-at="2020-02-17T08:35:27Z">
+        <test-method status="PASS" signature="myGroupSection()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC011@185d8b6]" name="myGroupSection" duration-ms="27976" started-at="2020-02-17T10:08:05Z" finished-at="2020-02-17T10:08:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myGroupSection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC011@185d8b6]" name="tearDown" is-config="true" duration-ms="85" started-at="2020-02-17T10:08:33Z" finished-at="2020-02-17T10:08:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC011 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC012">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC012@67784306]" name="initobjects" is-config="true" duration-ms="5836" started-at="2020-02-17T10:08:33Z" finished-at="2020-02-17T10:08:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="myGroupSection()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC012@67784306]" name="myGroupSection" duration-ms="30151" started-at="2020-02-17T10:08:39Z" finished-at="2020-02-17T10:09:09Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[-----Notification Message not reduced----- expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: -----Notification Message not reduced----- expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:568)
+at com.qa.tiatros.util.UtilTest.counterCheck(UtilTest.java:417)
+at com.qa.tiatros.pages.CourseDashboardPage.notificationCounterCheck(CourseDashboardPage.java:253)
+at com.qa.tiatros.messaging.testcase.TC012.myGroupSection(TC012.java:42)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myGroupSection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC012@67784306]" name="tearDown" is-config="true" duration-ms="81" started-at="2020-02-17T10:09:10Z" finished-at="2020-02-17T10:09:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC001">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC001@370736d9]" name="initobjects" is-config="true" duration-ms="7051" started-at="2020-02-17T09:57:35Z" finished-at="2020-02-17T09:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="addNewMessage()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC001@370736d9]" name="addNewMessage" duration-ms="49756" started-at="2020-02-17T09:57:43Z" description="To add message post in Messaging section" finished-at="2020-02-17T09:58:32Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=80.0.3987.106)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52089}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7c0d1807a11fd06512d1b0e5f3e831ef]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=80.0.3987.106)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52089}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7c0d1807a11fd06512d1b0e5f3e831ef
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.qa.tiatros.util.UtilTest.logout(UtilTest.java:306)
+at com.qa.tiatros.pages.MessagePostPage.check_messagePost(MessagePostPage.java:46)
+at com.qa.tiatros.messaging.testcase.TC001.addNewMessage(TC001.java:43)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewMessage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC001@436813f3]" name="tearDown" is-config="true" duration-ms="164" started-at="2020-02-17T08:35:27Z" finished-at="2020-02-17T08:35:27Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC001@370736d9]" name="tearDown" is-config="true" duration-ms="109" started-at="2020-02-17T09:58:33Z" finished-at="2020-02-17T09:58:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.tiatros.messaging.testcase.TC001 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC002">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC002@5f9d02cb]" name="initobjects" is-config="true" duration-ms="11574" started-at="2020-02-17T09:58:33Z" finished-at="2020-02-17T09:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="upLoadImage()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC002@5f9d02cb]" name="upLoadImage" duration-ms="57390" started-at="2020-02-17T09:58:44Z" finished-at="2020-02-17T09:59:42Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='snap']' (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //button[@id='snap']' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:71)
+at com.qa.tiatros.pages.CourseDashboardPage.add_JoyfulMoments(CourseDashboardPage.java:186)
+at com.qa.tiatros.messaging.testcase.TC002.upLoadImage(TC002.java:41)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='snap']"}
+  (Session info: chrome=80.0.3987.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52125}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3be83da55a22d597c26f805eac37f75d
+*** Element info: {Using=xpath, value=//button[@id='snap']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upLoadImage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC002@5f9d02cb]" name="tearDown" is-config="true" duration-ms="116" started-at="2020-02-17T09:59:42Z" finished-at="2020-02-17T09:59:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC002 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC003">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC003@63753b6d]" name="initobjects" is-config="true" duration-ms="5956" started-at="2020-02-17T09:59:42Z" finished-at="2020-02-17T09:59:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="PASS" signature="addReplyComments()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC003@63753b6d]" name="addReplyComments" duration-ms="38853" started-at="2020-02-17T09:59:48Z" finished-at="2020-02-17T10:00:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addReplyComments -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC003@63753b6d]" name="tearDown" is-config="true" duration-ms="81" started-at="2020-02-17T10:00:27Z" finished-at="2020-02-17T10:00:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC003 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC004">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC004@6b09bb57]" name="initobjects" is-config="true" duration-ms="6052" started-at="2020-02-17T10:00:27Z" finished-at="2020-02-17T10:00:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="heartIconClick()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC004@6b09bb57]" name="heartIconClick" duration-ms="48097" started-at="2020-02-17T10:00:33Z" finished-at="2020-02-17T10:01:21Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=80.0.3987.106)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7d9aa287c78e9a12419ac139e6fc5dec]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=80.0.3987.106)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7d9aa287c78e9a12419ac139e6fc5dec
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.qa.tiatros.util.UtilTest.logout(UtilTest.java:306)
+at com.qa.tiatros.pages.CourseDashboardPage.click_HeartIconAll(CourseDashboardPage.java:197)
+at com.qa.tiatros.messaging.testcase.TC004.heartIconClick(TC004.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- heartIconClick -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC004@6b09bb57]" name="tearDown" is-config="true" duration-ms="82" started-at="2020-02-17T10:01:22Z" finished-at="2020-02-17T10:01:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC004 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC005">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC005@6536e911]" name="initobjects" is-config="true" duration-ms="7206" started-at="2020-02-17T10:01:22Z" finished-at="2020-02-17T10:01:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="clickAll4Notification()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC005@6536e911]" name="clickAll4Notification" duration-ms="43764" started-at="2020-02-17T10:01:29Z" finished-at="2020-02-17T10:02:13Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (65a6f1abf14e7d8b95462d381dcf571b)] -> xpath: //li[4]//a[1]//img[1]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52232}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 65a6f1abf14e7d8b95462d381dcf571b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (65a6f1abf14e7d8b95462d381dcf571b)] -> xpath: //li[4]//a[1]//img[1]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52232}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 65a6f1abf14e7d8b95462d381dcf571b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:71)
+at com.qa.tiatros.pages.CourseDashboardPage.click_all_notificationIcons(CourseDashboardPage.java:208)
+at com.qa.tiatros.messaging.testcase.TC005.clickAll4Notification(TC005.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAll4Notification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC005@6536e911]" name="tearDown" is-config="true" duration-ms="83" started-at="2020-02-17T10:02:13Z" finished-at="2020-02-17T10:02:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC005 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC006">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC006@520a3426]" name="initobjects" is-config="true" duration-ms="5814" started-at="2020-02-17T10:02:13Z" finished-at="2020-02-17T10:02:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="PASS" signature="clickAllTilesInMessages()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC006@520a3426]" name="clickAllTilesInMessages" duration-ms="109636" started-at="2020-02-17T10:02:19Z" finished-at="2020-02-17T10:04:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllTilesInMessages -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC006@520a3426]" name="tearDown" is-config="true" duration-ms="94" started-at="2020-02-17T10:04:09Z" finished-at="2020-02-17T10:04:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC006 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC007">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC007@18eed359]" name="initobjects" is-config="true" duration-ms="5990" started-at="2020-02-17T10:04:09Z" finished-at="2020-02-17T10:04:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="myGroupSection()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC007@18eed359]" name="myGroupSection" duration-ms="26477" started-at="2020-02-17T10:04:15Z" finished-at="2020-02-17T10:04:41Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (b40f33d46e56e29d61d7f9b3ed9675f3)] -> xpath: //a[contains(text(),'My Group')]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52313}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b40f33d46e56e29d61d7f9b3ed9675f3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (b40f33d46e56e29d61d7f9b3ed9675f3)] -> xpath: //a[contains(text(),'My Group')]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52313}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b40f33d46e56e29d61d7f9b3ed9675f3
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:71)
+at com.qa.tiatros.pages.CourseDashboardPage.clickMyGroup(CourseDashboardPage.java:230)
+at com.qa.tiatros.messaging.testcase.TC007.myGroupSection(TC007.java:42)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myGroupSection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC007@18eed359]" name="tearDown" is-config="true" duration-ms="82" started-at="2020-02-17T10:04:42Z" finished-at="2020-02-17T10:04:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC007 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC008">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC008@3e9b1010]" name="initobjects" is-config="true" duration-ms="6426" started-at="2020-02-17T10:04:42Z" finished-at="2020-02-17T10:04:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="messagePostFromJMFSection()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC008@3e9b1010]" name="messagePostFromJMFSection" duration-ms="25865" started-at="2020-02-17T10:04:48Z" finished-at="2020-02-17T10:05:14Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (81d8579118c22c6187cf65935744c01d)] -> xpath: //a[contains(text(),'Joyful Moments')]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52342}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 81d8579118c22c6187cf65935744c01d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on MAC (81d8579118c22c6187cf65935744c01d)] -> xpath: //a[contains(text(),'Joyful Moments')]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Satishs-iMac.local', ip: 'fe80:0:0:0:10c6:b85d:4011:a23e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/by/zcvmnm0n0gg...}, goog:chromeOptions: {debuggerAddress: localhost:52342}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 81d8579118c22c6187cf65935744c01d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.tiatros.util.UtilTest.element_click(UtilTest.java:71)
+at com.qa.tiatros.pages.CourseDashboardPage.addMessageFromJMF(CourseDashboardPage.java:237)
+at com.qa.tiatros.messaging.testcase.TC008.messagePostFromJMFSection(TC008.java:40)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- messagePostFromJMFSection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC008@3e9b1010]" name="tearDown" is-config="true" duration-ms="82" started-at="2020-02-17T10:05:15Z" finished-at="2020-02-17T10:05:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC008 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC009">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC009@6c3708b3]" name="initobjects" is-config="true" duration-ms="6697" started-at="2020-02-17T10:05:15Z" finished-at="2020-02-17T10:05:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="FAIL" signature="myGroupSection()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC009@6c3708b3]" name="myGroupSection" duration-ms="27489" started-at="2020-02-17T10:05:21Z" finished-at="2020-02-17T10:05:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[-----Notification Message not reduced----- expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: -----Notification Message not reduced----- expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:568)
+at com.qa.tiatros.util.UtilTest.counterCheck(UtilTest.java:417)
+at com.qa.tiatros.pages.CourseDashboardPage.groupMessageCounterCheck(CourseDashboardPage.java:257)
+at com.qa.tiatros.messaging.testcase.TC009.myGroupSection(TC009.java:42)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myGroupSection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC009@6c3708b3]" name="tearDown" is-config="true" duration-ms="83" started-at="2020-02-17T10:05:49Z" finished-at="2020-02-17T10:05:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC009 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC010">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC010@6f1fba17]" name="initobjects" is-config="true" duration-ms="5989" started-at="2020-02-17T10:05:49Z" finished-at="2020-02-17T10:05:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initobjects -->
+        <test-method status="PASS" signature="addMultipleMessagePost()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC010@6f1fba17]" name="addMultipleMessagePost" duration-ms="123792" started-at="2020-02-17T10:05:55Z" finished-at="2020-02-17T10:07:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMultipleMessagePost -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.messaging.testcase.TC010@6f1fba17]" name="tearDown" is-config="true" duration-ms="101" started-at="2020-02-17T10:07:59Z" finished-at="2020-02-17T10:07:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC010 -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

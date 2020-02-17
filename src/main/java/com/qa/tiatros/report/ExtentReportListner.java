@@ -14,8 +14,6 @@ import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
-
-import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.util.UtilTest;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -79,7 +77,6 @@ public class ExtentReportListner extends UtilTest implements IReporter
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
-
 	}
 	
 	public void sendEMailReport() throws Throwable
@@ -88,7 +85,4 @@ public class ExtentReportListner extends UtilTest implements IReporter
 		String s1 = "Please find the attached updated report for the TestCase Runned on " + d + ".";
 		UtilTest.sendEmailNotification(prop.getProperty("SendEmail"), prop.getProperty("EmailSubject"), reportPath, s1);
 	}
-	
-	
-	
 }
