@@ -39,7 +39,7 @@ public class TestBase {
 		// Browser Initialization
 		String browser = prop.getProperty("Browser");
 		if (browser.equals("CHROME")) {
-			System.setProperty("webdriver.chrome.driver", "/Users/krishnendu/Selenium/chromedriver 6");
+			System.setProperty("webdriver.chrome.driver", "/Users/krishnendu/Selenium/chromedriver 7");
 			
 			 ChromeOptions options = new ChromeOptions();
 			 options.addArguments("--incognito");

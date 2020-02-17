@@ -1,6 +1,8 @@
 package com.qa.tiatros.report;
 
 import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -12,20 +14,28 @@ import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
+
+import com.qa.tiatros.base.TestBase;
+import com.qa.tiatros.util.UtilTest;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 
-public class ExtentReportListner implements IReporter
+public class ExtentReportListner extends UtilTest implements IReporter 
 {
 	private ExtentReports extent;
-
+	
+	
+	DateFormat sdf = new SimpleDateFormat("ddMMyyyy HH:mm");
+	Date date = new Date();
+	public String d = sdf.format(date);
+	
+	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator
-				+ "TiatrosReport.html", true);
-
+				+ "TiatrosReport_"+ d +".html", true);
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
 
@@ -71,4 +81,14 @@ public class ExtentReportListner implements IReporter
 		return calendar.getTime();
 
 	}
+	
+	public void sendEMailReport() throws Throwable
+	{
+		String reportPath = "/Users/krishnendu/eclipse-workspace/Tiatros/test-output/TiatrosReport_"+ d +".html"; // Creating Extend Report path for sending Mail.
+		String s1 = "Please find the attached updated report for the TestCase Runned on " + d + ".";
+		UtilTest.sendEmailNotification(prop.getProperty("SendEmail"), prop.getProperty("EmailSubject"), reportPath, s1);
+	}
+	
+	
+	
 }

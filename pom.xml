@@ -17,8 +17,7 @@
 	</properties>
 
 	<build>
-		<!-- Source directory configuration 
-		<sourceDirectory>src</sourceDirectory>-->
+		<!-- Source directory configuration <sourceDirectory>src</sourceDirectory> -->
 		<plugins>
 			<!-- Following plugin executes the testng tests -->
 			<plugin>
@@ -40,6 +39,65 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
+			</plugin>
+
+
+			<!-- Post-Man plugin -->
+			<plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<executions>
+					<execution>
+
+						<id>send a mail</id>
+						<phase>test</phase>
+						<goals>
+							<goal>send-mail</goal>
+						</goals>
+						<inherited>true</inherited>
+
+						<configuration>
+							<!-- From Email address -->
+							<from>krishnendu@gmail.com</from>
+
+							<!-- Email subject -->
+							<subject>Test Automation Report</subject>
+
+							<!-- Fail the build if the mail doesnt reach -->
+							<failonerror>true</failonerror>
+
+							<!-- host -->
+							<mailhost>smtp.gmail.com</mailhost>
+							<!-- port of the host -->
+							<mailport>465</mailport>
+							<mailssl>true</mailssl>
+							<mailAltConfig>true</mailAltConfig>
+
+							<!-- Email Authentication(USername and Password) -->
+							<mailuser>krishnendu@mail.com</mailuser>
+							<mailpassword>q1w2e3R$</mailpassword>
+
+							<receivers>
+								<!-- To Email address -->
+								<receiver>krishnendu@gmail.com</receiver>
+							</receivers>
+
+							<fileSets>
+								<fileSet>
+									<!-- Report directory Path -->
+									<directory>/Users/krishnendu/eclipse-workspace/Tiatros/target/surefire-reports/</directory>
+									<includes>
+										<!-- Report file name -->
+										<include>index.html</include>
+									</includes>
+									<!-- Use Regular Expressions like **/*.html if you want all the 
+										html files to send -->
+								</fileSet>
+							</fileSets>
+
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

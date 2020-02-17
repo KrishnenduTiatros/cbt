@@ -572,7 +572,8 @@ public class UtilTest extends TestBase {
 	}
 
 	// Screenshot Capture on a particular situation
-	public static String staticScreenShot(String imageName) {
+	public static String staticScreenShot(String imageName) { // imageName represent what will be the starting name of the image, it can be testcase/projectname/etc as per user requirement 
+		
 		// Fetching current system time for unique image identification
 		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
 		Date date = new Date();
@@ -590,6 +591,7 @@ public class UtilTest extends TestBase {
 		String imagePath = "/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png";
 		return imagePath;
 	}
+	
 
 	public static void sendEmailNotification(String sendTo, String mailSubject, String path1, String bodyText)
 			throws Throwable {
