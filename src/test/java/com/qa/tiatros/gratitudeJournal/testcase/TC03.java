@@ -1,6 +1,8 @@
 package com.qa.tiatros.gratitudeJournal.testcase;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,10 +33,11 @@ public class TC03 extends TestBase
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.courseDashboardVerification();
-		cdp.addGratitudeInDashboard_Group();
+		cdp.addGratitudeInDashboard_MyOrganisation();
 		cdp.logoutM();
 	}
 
+	
 	@AfterMethod
 	public void tearDown() // This AfterMethod will run every time after any @Test
 	{

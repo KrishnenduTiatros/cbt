@@ -131,6 +131,12 @@ public class CourseDashboardPage extends TestBase {
 	@FindBy(xpath = "//div[@class='ibox-title clearfix message-ibox-title']/form/div/div[2]/child::ins")
 	WebElement groupIcon;
 	
+	@FindBy(xpath = "//div[@class='ibox-title clearfix message-ibox-title']/form/div/div[3]/child::ins")
+	WebElement mYOrganisationIcon;
+	
+	@FindBy(xpath = "//div[@class='ibox-title clearfix message-ibox-title']/form/div/div[4]/child::ins")
+	WebElement worldIcon;
+	
 
 	// Initializing the page object
 
@@ -314,7 +320,14 @@ public class CourseDashboardPage extends TestBase {
 		UtilTest.verifyGratitudeText(mS);
 	}
 
-	
+	public void addGratitudeInDashboard_MyOrganisation() throws Throwable {
+		String mS = UtilTest.generate_message_subject();
+		UtilTest.click_js(mYOrganisationIcon);
+		UtilTest.sendkeys(driver, gratitude_textBox, mS);
+		UtilTest.element_click(driver, post_TO);
+		Thread.sleep(3000);
+		UtilTest.verifyGratitudeText(mS);
+	}
 	
 	
 }
