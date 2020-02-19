@@ -3,17 +3,19 @@ package com.qa.tiatros.gratitudeJournal.testcase;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.pages.CourseDashboardPage;
 import com.qa.tiatros.pages.SigninPage;
 import com.qa.tiatros.pages.SignupPage;
 
-public class TC01 extends TestBase {
+public class TC03 extends TestBase 
+{
 	SignupPage sp;
 	SigninPage sgn;
 	CourseDashboardPage cdp;
 
-	public TC01() {
+	public TC03() {
 		super();
 	}
 
@@ -24,12 +26,12 @@ public class TC01 extends TestBase {
 		cdp = new CourseDashboardPage();
 	}
 
-	@Test(invocationCount=0, description = "Add Gratitude Journal selecting ME tag and check the comments which had been added. ")
-	public void addMultiPost_ME() throws Throwable {
+	@Test(invocationCount=1, description = "Add Gratitude Journal selecting MyOrganisation tag and check the comments which had been added. ")
+	public void addMultiPost_GROUP() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.courseDashboardVerification();
-		cdp.addGratitudeInDashboard_ME();
+		cdp.addGratitudeInDashboard_Group();
 		cdp.logoutM();
 	}
 

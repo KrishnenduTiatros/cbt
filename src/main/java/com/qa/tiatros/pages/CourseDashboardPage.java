@@ -127,6 +127,10 @@ public class CourseDashboardPage extends TestBase {
 
 	@FindBy(xpath = "//span[@class='input-group-btn']/input[@type='submit']")
 	WebElement post_TO;
+	
+	@FindBy(xpath = "//div[@class='ibox-title clearfix message-ibox-title']/form/div/div[2]/child::ins")
+	WebElement groupIcon;
+	
 
 	// Initializing the page object
 
@@ -293,9 +297,24 @@ public class CourseDashboardPage extends TestBase {
 		return new Course_Sessions_page();
 	}
 
-	public void addGratitudeInDashboard() {
-		UtilTest.sendkeys(driver, gratitude_textBox, UtilTest.generate_message_subject());
+	public void addGratitudeInDashboard_ME() throws Throwable {
+		String mS = UtilTest.generate_message_subject();
+		UtilTest.sendkeys(driver, gratitude_textBox, mS);
 		UtilTest.element_click(driver, post_TO);
+		Thread.sleep(3000);
+		UtilTest.verifyGratitudeText(mS);
 	}
 
+	public void addGratitudeInDashboard_Group() throws Throwable {
+		String mS = UtilTest.generate_message_subject();
+		UtilTest.click_js(groupIcon);
+		UtilTest.sendkeys(driver, gratitude_textBox, mS);
+		UtilTest.element_click(driver, post_TO);
+		Thread.sleep(3000);
+		UtilTest.verifyGratitudeText(mS);
+	}
+
+	
+	
+	
 }

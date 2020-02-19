@@ -28,7 +28,16 @@
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
 						<suiteXmlFile>TestNG_Messaging.xml</suiteXmlFile>
+						
 					</suiteXmlFiles>
+
+					<!-- TestNG 6.9.8 (JRE 1.7) and plugin version 2.19 or higher allows you to run suites in parallel.
+					<properties>
+						<property>
+							<name>suitethreadpoolsize</name>
+							<value>2</value>
+						</property>
+					</properties>-->
 				</configuration>
 			</plugin>
 			<!-- Compiler plugin configures the java version to be used for compiling 
@@ -79,8 +88,7 @@
 
 							<receivers>
 								<!-- To Email address -->
-								<receiver>dipanjan.chakraborty@tiatros.com </receiver>
-								
+								<receiver>krishnendu@tiatros.com </receiver>
 							</receivers>
 
 							<fileSets>
@@ -95,7 +103,6 @@
 										html files to send -->
 								</fileSet>
 							</fileSets>
-
 						</configuration>
 					</execution>
 				</executions>

@@ -513,9 +513,9 @@ public class UtilTest extends TestBase {
 				.getText();
 		System.out.println(s);
 		try {
-			
+
 			driver.findElement(By.xpath("//div[starts-with(@class,'gb_ja') and @role='button']")).click();
-		
+
 			driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
 			Alert alert = driver.switchTo().alert();
 			driver.switchTo().alert().accept();
@@ -572,8 +572,10 @@ public class UtilTest extends TestBase {
 	}
 
 	// Screenshot Capture on a particular situation
-	public static String staticScreenShot(String imageName) { // imageName represent what will be the starting name of the image, it can be testcase/projectname/etc as per user requirement 
-		
+	public static String staticScreenShot(String imageName) { // imageName represent what will be the starting name of
+																// the image, it can be testcase/projectname/etc as per
+																// user requirement
+
 		// Fetching current system time for unique image identification
 		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
 		Date date = new Date();
@@ -591,7 +593,6 @@ public class UtilTest extends TestBase {
 		String imagePath = "/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png";
 		return imagePath;
 	}
-	
 
 	public static void sendEmailNotification(String sendTo, String mailSubject, String path1, String bodyText)
 			throws Throwable {
@@ -655,7 +656,19 @@ public class UtilTest extends TestBase {
 		transport.sendMessage(msg, msg.getAllRecipients());
 		transport.close();
 		System.out.println("Mail Sent successfully");
-
 	}
 
+	public static void verifyGratitudeText(String ms1) {
+		// Message posted
+		String expect = ms1;
+
+		// This will capture the message to validate the actual message
+		String actual_msg = driver.findElement(By.xpath(
+				"//div[@class=\"feed-activity-list journal-list\"][1]/div/div/span[1]"))
+				.getText();
+
+		// Verify error message
+		Assert.assertEquals(actual_msg, expect);
+
+	}
 }
