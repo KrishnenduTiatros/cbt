@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC01">
+      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC08">
         <methods>
-          <include name="addMultipleMessagePost"/>
-          <include name="tearDown"/>
           <include name="initobjects"/>
+          <include name="tearDown"/>
+          <include name="eDit_Journal_Group"/>
         </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC01 -->
+      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC08 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

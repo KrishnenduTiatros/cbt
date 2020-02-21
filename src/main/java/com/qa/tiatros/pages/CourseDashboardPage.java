@@ -137,6 +137,10 @@ public class CourseDashboardPage extends TestBase {
 
 	@FindBy(xpath = "//div[@class='input-group gratitude-form']//label")
 	WebElement validationMessage;
+	
+	@FindBy(xpath = "//span[@class=\"col-xs-12 text-center\"]/a/i")
+	WebElement seeAll;
+	
 
 	// Initializing the page object
 
@@ -152,6 +156,7 @@ public class CourseDashboardPage extends TestBase {
 		boolean vt1 = home_Icon.isDisplayed();
 		Assert.assertEquals(vt1, true, "Home Icon Not Found");
 	}
+	
 
 	// Business Component
 
@@ -345,5 +350,11 @@ public class CourseDashboardPage extends TestBase {
 		// Verify error message
 		Assert.assertEquals(actual_msg, expect_msg);
 	}
-
+	
+	public Gratitudes_Page seeAllMessage ()
+	{
+		UtilTest.click_js(seeAll);
+		return new Gratitudes_Page();
+	}
+	
 }

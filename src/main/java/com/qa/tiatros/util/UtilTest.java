@@ -663,12 +663,52 @@ public class UtilTest extends TestBase {
 		String expect = ms1;
 
 		// This will capture the message to validate the actual message
-		String actual_msg = driver.findElement(By.xpath(
-				"//div[@class=\"feed-activity-list journal-list\"][1]/div/div/span[1]"))
+		String actual_msg = driver
+				.findElement(By.xpath("//div[@class=\"feed-activity-list journal-list\"][1]/div/div/span[1]"))
 				.getText();
 
 		// Verify error message
 		Assert.assertEquals(actual_msg, expect);
+	}
+
+	// Method used for verification text, message on any web page.
+	public static void textMessageValidation(WebElement we, String s) {
+		WebElement we1 = we;
+		String actual_Text = we1.getText();
+		String expected_Text = s;
+		Assert.assertEquals(actual_Text, expected_Text);
+	}
+
+	// Check edit button present and update the existing text.
+	public static void editJournalcomments() throws Throwable {
+		// Take the total count of the edit option present in the page
+		int totaledit = driver
+				.findElements(By.xpath("//div[@class=\"ibox-content gratitude-box-content\"]//div/div/div/span[2]/a/i"))
+				.size();
+
+		// This loop will run till the number of edit buttons found in the page
+		for (int j = 2; j <= totaledit+1; j++) {
+			try {
+				driver.findElement(By.xpath(
+						"//div[@class=\"ibox-content gratitude-box-content\"]//div[" + j + "]/div/div/span[2]/a/i"))
+						.click();
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			// add extra comments in the textbox
+			DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+			Date date = new Date();
+			String d = sdf.format(date);
+			driver.findElement(By.xpath("//div[@class=\"modal-body\"]/textarea")).clear();
+			driver.findElement(By.xpath("//div[@class=\"modal-body\"]/textarea")).sendKeys(prop.getProperty("JournalEdit")+ "_"+d);
+			Thread.sleep(2000);
+			// Click on the Save button
+			driver.findElement(By.xpath("//div[@class=\"modal-footer\"]/div/input[@type='submit']")).click();
+			Thread.sleep(5000);
+
+		}
 
 	}
+
 }
