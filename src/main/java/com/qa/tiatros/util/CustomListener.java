@@ -24,6 +24,7 @@ public class CustomListener extends UtilTest implements ITestListener
 		
 		System.out.println("Failed Test");
 		takeScreenshot(result.getMethod().getMethodName());
+	
 		
 	}
 

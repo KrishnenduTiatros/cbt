@@ -28,7 +28,7 @@ public class TC05 extends TestBase {
 		cdp = new CourseDashboardPage();
 	}
 
-	@Test(invocationCount = 3, description = "Check validation message when user tries to post blank journal entry.")
+	@Test(invocationCount = 1, description = "Check validation message when user tries to post blank journal entry.")
 	public void validateBlankPost() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

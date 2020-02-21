@@ -33,7 +33,7 @@ public class TC010 extends TestBase
 	}
 
 	@Test(invocationCount = 1, description = "Click on \"See all messages\" and navigate to all the journal sections")
-	public void eDit_Journal_World() throws Throwable {
+	public void eDit_Journal_World_TC010() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.courseDashboardVerification();

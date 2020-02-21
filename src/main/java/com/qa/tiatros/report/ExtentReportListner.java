@@ -24,11 +24,9 @@ public class ExtentReportListner extends UtilTest implements IReporter
 {
 	private ExtentReports extent;
 	
-	
 	DateFormat sdf = new SimpleDateFormat("ddMMyyyy HH:mm");
 	Date date = new Date();
 	public String d = sdf.format(date);
-	
 	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {

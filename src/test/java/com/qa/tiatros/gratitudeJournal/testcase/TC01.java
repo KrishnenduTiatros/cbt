@@ -27,7 +27,7 @@ public class TC01 extends TestBase {
 		cdp = new CourseDashboardPage();
 	}
 
-	@Test(invocationCount=3, description = "Add Gratitude Journal selecting ME tag and check the comments which had been added. ")
+	@Test(invocationCount=1, description = "Add Gratitude Journal selecting ME tag and check the comments which had been added. ")
 	public void addMultiPost_ME() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
