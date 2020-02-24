@@ -1,199 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="780593" started-at="2020-02-21T05:48:50Z" finished-at="2020-02-21T06:01:51Z">
+  <suite name="Default suite" duration-ms="28336" started-at="2020-02-24T06:47:10Z" finished-at="2020-02-24T06:47:39Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="780593" started-at="2020-02-21T05:48:50Z" finished-at="2020-02-21T06:01:51Z">
+    <test name="Default test" duration-ms="28336" started-at="2020-02-24T06:47:10Z" finished-at="2020-02-24T06:47:39Z">
       <class name="com.qa.tiatros.gratitudeJournal.testcase.TC01">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC01@43ee72e6]" name="initobjects" is-config="true" duration-ms="9426" started-at="2020-02-21T05:52:23Z" finished-at="2020-02-21T05:52:32Z">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC01@6adede5]" name="initobjects" is-config="true" duration-ms="7099" started-at="2020-02-24T06:47:10Z" finished-at="2020-02-24T06:47:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_ME()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC01@43ee72e6]" name="addMultiPost_ME" duration-ms="20765" started-at="2020-02-21T05:52:32Z" description="Add Gratitude Journal selecting ME tag and check the comments which had been added. " finished-at="2020-02-21T05:52:53Z">
+        <test-method status="PASS" signature="addMultiPost_ME()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC01@6adede5]" name="addMultiPost_ME" duration-ms="21071" started-at="2020-02-24T06:47:18Z" description="Add Gratitude Journal selecting ME tag and check the comments which had been added. " finished-at="2020-02-24T06:47:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addMultiPost_ME -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC01@43ee72e6]" name="tearDown" is-config="true" duration-ms="82" started-at="2020-02-21T05:52:53Z" finished-at="2020-02-21T05:52:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC01@6adede5]" name="tearDown" is-config="true" duration-ms="138" started-at="2020-02-24T06:47:39Z" finished-at="2020-02-24T06:47:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC01 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC02">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC02@75f32542]" name="initobjects" is-config="true" duration-ms="7400" started-at="2020-02-21T05:50:27Z" finished-at="2020-02-21T05:50:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_GROUP()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC02@75f32542]" name="addMultiPost_GROUP" duration-ms="20877" started-at="2020-02-21T05:50:34Z" description="Add Gratitude Journal selecting Group tag and check the comments which had been added." finished-at="2020-02-21T05:50:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_GROUP -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC02@75f32542]" name="tearDown" is-config="true" duration-ms="86" started-at="2020-02-21T05:50:55Z" finished-at="2020-02-21T05:50:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC02 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC03">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="initobjects" is-config="true" duration-ms="10514" started-at="2020-02-21T05:50:55Z" finished-at="2020-02-21T05:51:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_MyOrganisation()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="addMultiPost_MyOrganisation" duration-ms="22301" started-at="2020-02-21T05:51:06Z" description="Add Gratitude Journal selecting MyOrganisation tag and check the comments which had been added. " finished-at="2020-02-21T05:51:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_MyOrganisation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="tearDown" is-config="true" duration-ms="87" started-at="2020-02-21T05:51:28Z" finished-at="2020-02-21T05:51:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="initobjects" is-config="true" duration-ms="6024" started-at="2020-02-21T05:51:28Z" finished-at="2020-02-21T05:51:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_MyOrganisation()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="addMultiPost_MyOrganisation" duration-ms="20637" started-at="2020-02-21T05:51:34Z" description="Add Gratitude Journal selecting MyOrganisation tag and check the comments which had been added. " finished-at="2020-02-21T05:51:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_MyOrganisation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="tearDown" is-config="true" duration-ms="101" started-at="2020-02-21T05:51:55Z" finished-at="2020-02-21T05:51:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="initobjects" is-config="true" duration-ms="7174" started-at="2020-02-21T05:51:55Z" finished-at="2020-02-21T05:52:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_MyOrganisation()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="addMultiPost_MyOrganisation" duration-ms="20979" started-at="2020-02-21T05:52:02Z" description="Add Gratitude Journal selecting MyOrganisation tag and check the comments which had been added. " finished-at="2020-02-21T05:52:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_MyOrganisation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC03@7f1302d6]" name="tearDown" is-config="true" duration-ms="87" started-at="2020-02-21T05:52:23Z" finished-at="2020-02-21T05:52:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC03 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC04">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="initobjects" is-config="true" duration-ms="11141" started-at="2020-02-21T05:48:50Z" finished-at="2020-02-21T05:49:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_World()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="addMultiPost_World" duration-ms="21126" started-at="2020-02-21T05:49:01Z" description="Add Gratitude Journal selecting World tag and check the comments which had been added." finished-at="2020-02-21T05:49:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_World -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="tearDown" is-config="true" duration-ms="107" started-at="2020-02-21T05:49:22Z" finished-at="2020-02-21T05:49:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="initobjects" is-config="true" duration-ms="9227" started-at="2020-02-21T05:49:23Z" finished-at="2020-02-21T05:49:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_World()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="addMultiPost_World" duration-ms="22839" started-at="2020-02-21T05:49:32Z" description="Add Gratitude Journal selecting World tag and check the comments which had been added." finished-at="2020-02-21T05:49:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_World -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="tearDown" is-config="true" duration-ms="134" started-at="2020-02-21T05:49:55Z" finished-at="2020-02-21T05:49:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="initobjects" is-config="true" duration-ms="8173" started-at="2020-02-21T05:49:55Z" finished-at="2020-02-21T05:50:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="addMultiPost_World()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="addMultiPost_World" duration-ms="23640" started-at="2020-02-21T05:50:03Z" description="Add Gratitude Journal selecting World tag and check the comments which had been added." finished-at="2020-02-21T05:50:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addMultiPost_World -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC04@7692d9cc]" name="tearDown" is-config="true" duration-ms="82" started-at="2020-02-21T05:50:27Z" finished-at="2020-02-21T05:50:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC04 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC05">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC05@23529fee]" name="initobjects" is-config="true" duration-ms="7372" started-at="2020-02-21T05:52:53Z" finished-at="2020-02-21T05:53:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="validateBlankPost()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC05@23529fee]" name="validateBlankPost" duration-ms="17356" started-at="2020-02-21T05:53:01Z" description="Check validation message when user tries to post blank journal entry." finished-at="2020-02-21T05:53:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateBlankPost -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC05@23529fee]" name="tearDown" is-config="true" duration-ms="91" started-at="2020-02-21T05:53:18Z" finished-at="2020-02-21T05:53:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC05 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC06">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC06@4fe767f3]" name="initobjects" is-config="true" duration-ms="6611" started-at="2020-02-21T05:53:18Z" finished-at="2020-02-21T05:53:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="sEE_ALL_Messages()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC06@4fe767f3]" name="sEE_ALL_Messages" duration-ms="20509" started-at="2020-02-21T05:53:25Z" description="Click on &quot;See all messages&quot; and navigate to all the journal sections" finished-at="2020-02-21T05:53:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sEE_ALL_Messages -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC06@4fe767f3]" name="tearDown" is-config="true" duration-ms="89" started-at="2020-02-21T05:53:45Z" finished-at="2020-02-21T05:53:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC06 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC07">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC07@2805c96b]" name="initobjects" is-config="true" duration-ms="6901" started-at="2020-02-21T05:53:45Z" finished-at="2020-02-21T05:53:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="eDit_Journal_ME()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC07@2805c96b]" name="eDit_Journal_ME" duration-ms="125916" started-at="2020-02-21T05:53:52Z" description="Click on &quot;See all messages&quot; and navigate to all the journal sections" finished-at="2020-02-21T05:55:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eDit_Journal_ME -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC07@2805c96b]" name="tearDown" is-config="true" duration-ms="155" started-at="2020-02-21T05:55:58Z" finished-at="2020-02-21T05:55:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC07 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC08">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC08@184cf7cf]" name="initobjects" is-config="true" duration-ms="8977" started-at="2020-02-21T05:55:58Z" finished-at="2020-02-21T05:56:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="eDit_Journal_Group()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC08@184cf7cf]" name="eDit_Journal_Group" duration-ms="73299" started-at="2020-02-21T05:56:07Z" description="Click on &quot;See all messages&quot; and navigate to all the journal sections" finished-at="2020-02-21T05:57:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eDit_Journal_Group -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC08@184cf7cf]" name="tearDown" is-config="true" duration-ms="90" started-at="2020-02-21T05:57:20Z" finished-at="2020-02-21T05:57:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC08 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC010">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC010@5bfa9431]" name="initobjects" is-config="true" duration-ms="9997" started-at="2020-02-21T05:59:34Z" finished-at="2020-02-21T05:59:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="eDit_Journal_World()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC010@5bfa9431]" name="eDit_Journal_World" duration-ms="126571" started-at="2020-02-21T05:59:44Z" description="Click on &quot;See all messages&quot; and navigate to all the journal sections" finished-at="2020-02-21T06:01:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eDit_Journal_World -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC010@5bfa9431]" name="tearDown" is-config="true" duration-ms="142" started-at="2020-02-21T06:01:51Z" finished-at="2020-02-21T06:01:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC010 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC09">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC09@2fd6b6c7]" name="initobjects" is-config="true" duration-ms="6329" started-at="2020-02-21T05:57:21Z" finished-at="2020-02-21T05:57:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="eDit_Journal_MyOrganisation()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC09@2fd6b6c7]" name="eDit_Journal_MyOrganisation" duration-ms="127022" started-at="2020-02-21T05:57:27Z" description="Click on &quot;See all messages&quot; and navigate to all the journal sections" finished-at="2020-02-21T05:59:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eDit_Journal_MyOrganisation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.gratitudeJournal.testcase.TC09@2fd6b6c7]" name="tearDown" is-config="true" duration-ms="95" started-at="2020-02-21T05:59:34Z" finished-at="2020-02-21T05:59:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC09 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
