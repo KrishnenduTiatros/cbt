@@ -53,7 +53,7 @@ public class TC014 extends TestBase {
 	}
 
 	@Test
-	public void profileChangeDetails() throws Throwable {
+	public void userPersonalProgressSection() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		pp = cdp.myProgress();

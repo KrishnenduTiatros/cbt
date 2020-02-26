@@ -34,7 +34,7 @@ public class TC011 extends TestBase {
 	}
 
 	@Test
-	public void myGroupSection() throws Throwable {
+	public void clickAllReportAbouse() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.clickReport();

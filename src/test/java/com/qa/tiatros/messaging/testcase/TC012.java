@@ -36,7 +36,7 @@ public class TC012 extends TestBase{
 	}
 
 	@Test
-	public void myGroupSection() throws Throwable {
+	public void checkAllNotificationDetails() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.notificationCounterCheck();
