@@ -4,12 +4,12 @@
 
 	<listeners>
 		<listener
-			class-name="com.qa.tiatros.report.ExtentReportListeners"/>
+			class-name="com.qa.tiatros.report.ExtentReportListeners" />
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="com.qa.tiatros.messaging.testcase.TC001" />
-		    <class name="com.qa.tiatros.messaging.testcase.TC002" />
+			<class name="com.qa.tiatros.messaging.testcase.TC002" />
 			<class name="com.qa.tiatros.messaging.testcase.TC003" />
 			<class name="com.qa.tiatros.messaging.testcase.TC004" />
 			<class name="com.qa.tiatros.messaging.testcase.TC005" />

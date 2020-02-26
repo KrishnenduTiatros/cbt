@@ -33,7 +33,7 @@ public class TC002 extends TestBase
 		mpp = new MessagePostPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Add a new image with subject details and save the post. ")
 	public void upLoadImage() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

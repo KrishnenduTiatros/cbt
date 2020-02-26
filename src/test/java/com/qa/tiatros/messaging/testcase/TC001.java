@@ -34,13 +34,14 @@ public class TC001 extends TestBase {
 		mpp = new MessagePostPage();
 	}
 
-	@Test(description="To add message post in Messaging section")
+	@Test(invocationCount=1, description= "To add message post in Messaging section")
 	public void addNewMessage() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.courseDashboardVerification();
 		mpp = cdp.add_MessagePost();
 		mpp.check_messagePost();
+		mpp.logoutM();
 	}
 
 	@AfterMethod

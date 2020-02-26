@@ -6,20 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tiatros.messaging.testcase.TC005">
+      <class name="com.qa.tiatros.messaging.testcase.TC006">
         <methods>
+          <include name="clickAllTilesInMessages"/>
           <include name="tearDown"/>
           <include name="initobjects"/>
-          <include name="clickAll4Notification"/>
         </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC005 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC004">
-        <methods>
-          <include name="heartIconClick"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC004 -->
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC006 -->
       <class name="com.qa.tiatros.messaging.testcase.TC002">
         <methods>
           <include name="upLoadImage"/>
@@ -27,13 +20,6 @@
           <include name="initobjects"/>
         </methods>
       </class> <!-- com.qa.tiatros.messaging.testcase.TC002 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC007">
-        <methods>
-          <include name="myGroupSection"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC007 -->
       <class name="com.qa.tiatros.messaging.testcase.TC012">
         <methods>
           <include name="myGroupSection"/>
@@ -41,20 +27,6 @@
           <include name="initobjects"/>
         </methods>
       </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC008">
-        <methods>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-          <include name="messagePostFromJMFSection"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC008 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC001">
-        <methods>
-          <include name="addNewMessage"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC001 -->
       <class name="com.qa.tiatros.messaging.testcase.TC009">
         <methods>
           <include name="tearDown"/>

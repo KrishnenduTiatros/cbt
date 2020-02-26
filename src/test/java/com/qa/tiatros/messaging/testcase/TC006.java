@@ -31,7 +31,7 @@ public class TC006 extends TestBase{
 		mpp = new MessagePostPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Click all the tiles in the my messages and also pagination")
 	public void clickAllTilesInMessages() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

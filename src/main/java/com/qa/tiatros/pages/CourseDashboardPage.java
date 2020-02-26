@@ -29,7 +29,7 @@ public class CourseDashboardPage extends TestBase {
 	@FindBy(xpath = "//a[@id='camera_btn']")
 	WebElement capture_image;
 
-	@FindBy(xpath = "//li[4]//a[1]//img[1]")
+	@FindBy(xpath = "//div[@class=\"ibox-title clearfix message-ibox-title\"]//li[4]//a[1]//img")
 	WebElement peer_review;
 
 	@FindBy(xpath = "//div[@id='page-wrapper']//li[3]//a[1]//img[1]")
@@ -208,20 +208,17 @@ public class CourseDashboardPage extends TestBase {
 	public void click_HeartIconAll() throws Throwable {
 		Thread.sleep(5000);
 		UtilTest.loveIcon();
-		UtilTest.click_hambergur();
-		UtilTest.logout();
 	}
 
 	public void click_all_notificationIcons() throws Throwable {
-		Thread.sleep(6000);
+		Thread.sleep(5000);
 		UtilTest.element_click(driver, facilitator_icon);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		UtilTest.element_click(driver, notification);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		UtilTest.element_click(driver, group_message);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		UtilTest.element_click(driver, peer_review);
-		Thread.sleep(5000);
 	}
 
 	public void logoutM() throws Throwable {
@@ -229,7 +226,6 @@ public class CourseDashboardPage extends TestBase {
 		UtilTest.click_hambergur();
 		Thread.sleep(2000);
 		UtilTest.logout();
-
 	}
 
 	public MessagePostPage click_SeeAllMessage() throws Throwable {
@@ -241,15 +237,15 @@ public class CourseDashboardPage extends TestBase {
 
 	public Viewable_MembersPage clickMyGroup() {
 		UtilTest.element_click(driver, hambarger);
-		UtilTest.element_click(driver, myPrograms);
-		UtilTest.element_click(driver, myGroup);
+		UtilTest.click_js(myPrograms);
+		UtilTest.click_js(myGroup);
 		return new Viewable_MembersPage();
 	}
 
 	public MessagePostPage addMessageFromJMF() throws Throwable {
 		UtilTest.element_click(driver, hambarger);
-		UtilTest.element_click(driver, myPrograms);
-		UtilTest.element_click(driver, joyMoments);
+		UtilTest.click_js(myPrograms);
+		UtilTest.click_js(joyMoments);
 		Thread.sleep(5000);
 		UtilTest.element_click(driver, new_Message);
 		Thread.sleep(3000);

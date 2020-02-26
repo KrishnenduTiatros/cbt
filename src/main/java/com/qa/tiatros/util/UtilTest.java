@@ -76,6 +76,8 @@ public class UtilTest extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", locator);
 	}
+	
+
 
 	// This method used to scroll down a web page
 	public static void scrollDown(WebDriver driver, WebElement element) {
@@ -687,7 +689,7 @@ public class UtilTest extends TestBase {
 				.size();
 
 		// This loop will run till the number of edit buttons found in the page
-		for (int j = 2; j <= totaledit+1; j++) {
+		for (int j = 2; j <= totaledit + 1; j++) {
 			try {
 				driver.findElement(By.xpath(
 						"//div[@class=\"ibox-content gratitude-box-content\"]//div[" + j + "]/div/div/span[2]/a/i"))
@@ -701,7 +703,8 @@ public class UtilTest extends TestBase {
 			Date date = new Date();
 			String d = sdf.format(date);
 			driver.findElement(By.xpath("//div[@class=\"modal-body\"]/textarea")).clear();
-			driver.findElement(By.xpath("//div[@class=\"modal-body\"]/textarea")).sendKeys(prop.getProperty("JournalEdit")+ "_"+d);
+			driver.findElement(By.xpath("//div[@class=\"modal-body\"]/textarea"))
+					.sendKeys(prop.getProperty("JournalEdit") + "_" + d);
 			Thread.sleep(2000);
 			// Click on the Save button
 			driver.findElement(By.xpath("//div[@class=\"modal-footer\"]/div/input[@type='submit']")).click();

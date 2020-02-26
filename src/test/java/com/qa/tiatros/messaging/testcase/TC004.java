@@ -31,12 +31,13 @@ public class TC004 extends TestBase
 		mpp = new MessagePostPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Click all the heart Icons in the dashboard page.")
 	public void heartIconClick() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.courseDashboardVerification();
 		cdp.click_HeartIconAll();
+		cdp.logoutM();
 	}
 
 	@AfterMethod

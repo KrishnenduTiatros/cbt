@@ -41,9 +41,6 @@ public class MessagePostPage extends TestBase {
 	public void check_messagePost() throws Throwable {
 		Thread.sleep(3000);
 		UtilTest.message_Post_Verification();
-		Thread.sleep(3000);
-		UtilTest.click_hambergur();
-		UtilTest.logout();
 	}
 
 	public Message_post_commentsPage reply_message_post() {
@@ -55,9 +52,9 @@ public class MessagePostPage extends TestBase {
 	public void logoutM() throws Throwable {
 		Thread.sleep(5000);
 		UtilTest.click_hambergur();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		UtilTest.logout();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 	}
 
 	public void clickOnTiles() {

@@ -32,7 +32,7 @@ public class TC005 extends TestBase
 		mpp = new MessagePostPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Click all 4 notification icons found in the dashboard page")
 	public void clickAll4Notification() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

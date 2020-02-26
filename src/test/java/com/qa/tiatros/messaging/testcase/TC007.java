@@ -35,7 +35,7 @@ public class TC007 extends TestBase {
 		vmp = new Viewable_MembersPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Click on the my group section.")
 	public void myGroupSection() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

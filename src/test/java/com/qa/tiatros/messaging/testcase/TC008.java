@@ -32,7 +32,7 @@ public class TC008 extends TestBase
 		mpp = new MessagePostPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Add message post from joyful moments through left side panel")
 	public void messagePostFromJMFSection() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

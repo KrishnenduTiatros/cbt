@@ -36,18 +36,20 @@ public class ExtentReportListeners extends TestBase implements ITestListener
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		testRport.set(test.log(Status.PASS, "Test Method --> " + result.getName()));
-		testRport.set(test.log(Status.PASS, "Test Case Description--> " + result.getMethod().getDescription()));
-		testRport.set(test.log(Status.PASS, "Test Case Invocation Count--> " + result.getMethod().getInvocationCount()));
+		testRport.set(test.log(Status.PASS, "Test Method --" + result.getName()));
+		testRport.set(test.log(Status.PASS, "Test Case Description -- " + result.getMethod().getDescription()));
+		testRport.set(test.log(Status.PASS, "Test Case Invocation Count --" + result.getMethod().getInvocationCount()));
 	}
 
 	public void onTestFailure(ITestResult result) {
 
 		// to add name in extent report
-		testRport.set(test.log(Status.FAIL, "Test Method -->" + result.getName()));
+		testRport.set(test.log(Status.FAIL, "Test Method --" + result.getName()));
+		testRport.set(test.log(Status.PASS, "Test Case Description -- " + result.getMethod().getDescription()));
+		testRport.set(test.log(Status.PASS, "Test Case Invocation Count --" + result.getMethod().getInvocationCount()));
 		
 		// to add error/exception in extent report
-		testRport.set(test.log(Status.FAIL, "Test Failure Description -->" + result.getThrowable()));
+		testRport.set(test.log(Status.FAIL, "Test Failure Description --" + result.getThrowable()));
 		// adding screen shot in the report
 		String screenshotPath;
 		try {
@@ -62,6 +64,8 @@ public class ExtentReportListeners extends TestBase implements ITestListener
 
 	public void onTestSkipped(ITestResult result) {
 		testRport.set(test.log(Status.SKIP, "Test Method SKIPPED IS " + result.getName()));
+		testRport.set(test.log(Status.PASS, "Test Case Description -- " + result.getMethod().getDescription()));
+		testRport.set(test.log(Status.PASS, "Test Case Invocation Count --" + result.getMethod().getInvocationCount()));
 
 	}
 

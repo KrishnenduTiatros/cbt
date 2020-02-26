@@ -34,7 +34,7 @@ public class TC003 extends TestBase
 		mpcp = new Message_post_commentsPage();
 	}
 
-	@Test
+	@Test(invocationCount=1, description = "Add new message post  and comment in the message post and save the post.")
 	public void addReplyComments() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

@@ -2,22 +2,22 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-<listeners>
+	<listeners>
 		<listener
-			class-name="com.qa.tiatros.report.ExtentReportListeners"/>
+			class-name="com.qa.tiatros.report.ExtentReportListeners" />
 	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC01"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC02"/>
-     <!-- <class name="com.qa.tiatros.gratitudeJournal.testcase.TC09"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC06"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC07"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC04"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC05"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC08"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC03"/>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC010"/>-->
-    </classes>
-  </test> <!-- Test -->
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC01" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC02" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC09" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC06" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC07" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC04" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC05" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC08" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC03" />
+			<class name="com.qa.tiatros.gratitudeJournal.testcase.TC010" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
