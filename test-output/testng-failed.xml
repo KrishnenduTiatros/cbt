@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.qa.tiatros.report.ExtentReportListeners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tiatros.messaging.testcase.TC006">
-        <methods>
-          <include name="clickAllTilesInMessages"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC006 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC002">
-        <methods>
-          <include name="upLoadImage"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC002 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC012">
-        <methods>
-          <include name="myGroupSection"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
       <class name="com.qa.tiatros.messaging.testcase.TC009">
         <methods>
           <include name="tearDown"/>
@@ -35,5 +11,5 @@
         </methods>
       </class> <!-- com.qa.tiatros.messaging.testcase.TC009 -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

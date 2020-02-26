@@ -389,17 +389,19 @@ public class UtilTest extends TestBase {
 				.getText();
 		int bNum = Integer.parseInt(beforeNum);
 		System.out.println(bNum);
-
+		// Navigate to the message post page
+		driver.findElement(By.xpath("//a[contains(text(),'See All Messages')]")).click();
+		
 		// Take the total count of the total tiles of the page
 		int totalTiles = driver.findElements(By.xpath(
-				"//div[contains(@id,'message_post_item')]/div/a[@class='panel-heading message-panel block clearfix']"))
+				"//div[contains(@id,'message_post_item')]"))
 				.size();
 
 		// This loop will run till the number of Love Icons found in the page found
 		for (int i = 1; i <= totalTiles; i++) {
 			try {
 				driver.findElement(By.xpath("//div[contains(@id,'message_post_item')][" + i
-						+ "]/div/a[@class='panel-heading message-panel block clearfix']")).click();
+						+ "]/div/a")).click();
 				Thread.sleep(3000);
 			} catch (Exception e) {
 
