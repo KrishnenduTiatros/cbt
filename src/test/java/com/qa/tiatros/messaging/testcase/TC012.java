@@ -35,7 +35,8 @@ public class TC012 extends TestBase{
 		vmp = new Viewable_MembersPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description= "Click on the Notification icon and click all the tiles present in that section , \n" + 
+			"check the count before and after notification. ")
 	public void checkAllNotificationDetails() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

@@ -35,7 +35,7 @@ public class TC013 extends TestBase{
 		vmp = new Viewable_MembersPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description= "Change profile details like -firstname, lastname, gender and DOB with help of password ")
 	public void profileChangeDetails() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

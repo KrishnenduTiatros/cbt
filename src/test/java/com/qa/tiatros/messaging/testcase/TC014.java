@@ -52,7 +52,7 @@ public class TC014 extends TestBase {
 		si = new Stress_inventoryPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description= "User provide Personal progress section when user is assigned to a Course ")
 	public void userPersonalProgressSection() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

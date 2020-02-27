@@ -78,6 +78,10 @@ public class UtilTest extends TestBase {
 	}
 	
 
+	//Wait
+    public static void waitVisibility(By by){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
 
 	// This method used to scroll down a web page
 	public static void scrollDown(WebDriver driver, WebElement element) {
@@ -399,10 +403,11 @@ public class UtilTest extends TestBase {
 
 		// This loop will run till the number of Love Icons found in the page found
 		for (int i = 1; i <= totalTiles; i++) {
+			
 			try {
 				driver.findElement(By.xpath("//div[contains(@id,'message_post_item')][" + i
 						+ "]/div/a")).click();
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 			} catch (Exception e) {
 
 				e.printStackTrace();

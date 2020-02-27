@@ -34,7 +34,7 @@ public class TC016 extends TestBase{
 		vmp = new Viewable_MembersPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description="Click on the Peer Review icon and click the first peer review if available ")
 	public void peerReview() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

@@ -54,7 +54,7 @@ public class TC015 extends TestBase
 		si = new Stress_inventoryPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description= "Fetch data from Personal progress section on user demand Program Stage ")
 	public void fetchMyProgressResults() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

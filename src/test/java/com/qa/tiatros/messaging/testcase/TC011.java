@@ -33,7 +33,7 @@ public class TC011 extends TestBase {
 		vmp = new Viewable_MembersPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description= "Click all the report abouse present in the dashboard page.")
 	public void clickAllReportAbouse() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();

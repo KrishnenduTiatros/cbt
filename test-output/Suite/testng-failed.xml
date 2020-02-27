@@ -6,27 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tiatros.messaging.testcase.TC006">
-        <methods>
-          <include name="clickAllTilesInMessages"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC006 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC002">
-        <methods>
-          <include name="upLoadImage"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC002 -->
-      <class name="com.qa.tiatros.messaging.testcase.TC012">
-        <methods>
-          <include name="myGroupSection"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
       <class name="com.qa.tiatros.messaging.testcase.TC009">
         <methods>
           <include name="tearDown"/>
@@ -34,6 +13,20 @@
           <include name="myGroupSection"/>
         </methods>
       </class> <!-- com.qa.tiatros.messaging.testcase.TC009 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC012">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkAllNotificationDetails"/>
+          <include name="initobjects"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC012 -->
+      <class name="com.qa.tiatros.messaging.testcase.TC016">
+        <methods>
+          <include name="peerReview"/>
+          <include name="tearDown"/>
+          <include name="initobjects"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.messaging.testcase.TC016 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

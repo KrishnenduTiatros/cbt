@@ -31,7 +31,7 @@ public class TC010 extends TestBase
 		mpp = new MessagePostPage();
 	}
 
-	@Test
+	@Test(invocationCount = 1, description= "Add multiple times message post according to the user request.")
 	public void addMultipleMessagePost() throws Throwable {
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
