@@ -28,7 +28,8 @@
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
 						<suiteXmlFile>TestNG_Messaging.xml</suiteXmlFile>
-
+						<suiteXmlFile>GratitudeJournal_TestNg.xml</suiteXmlFile>
+						<suiteXmlFile>testNG_Registraion.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
 					<!-- TestNG 6.9.8 (JRE 1.7) and plugin version 2.19 or higher allows 
@@ -39,10 +40,12 @@
 			<!-- Compiler plugin configures the java version to be used for compiling 
 				the code -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 
@@ -118,7 +121,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.1.0</version>
+			<version>6.9.8</version>
 			<scope>complile</scope>
 		</dependency>
 
