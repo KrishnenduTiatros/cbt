@@ -3,7 +3,7 @@
 <suite name="Tiatros">
 	<listeners>
 		<listener
-			class-name="com.qa.tiatros.report.ExtentReportListner" />
+			class-name="com.qa.tiatros.report.ExtentReportListners" />
 	</listeners>
 
 	<test name="ALL">
