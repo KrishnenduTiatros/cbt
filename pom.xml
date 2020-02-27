@@ -28,8 +28,8 @@
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
 						<suiteXmlFile>TestNG_Messaging.xml</suiteXmlFile>
-						<suiteXmlFile>GratitudeJournal_TestNg.xml</suiteXmlFile>
-						<suiteXmlFile>testNG_Registraion.xml</suiteXmlFile>
+					<!--	<suiteXmlFile>GratitudeJournal_TestNg.xml</suiteXmlFile>
+						<suiteXmlFile>testNG_Registraion.xml</suiteXmlFile>-->
 					</suiteXmlFiles>
 
 					<!-- TestNG 6.9.8 (JRE 1.7) and plugin version 2.19 or higher allows 
