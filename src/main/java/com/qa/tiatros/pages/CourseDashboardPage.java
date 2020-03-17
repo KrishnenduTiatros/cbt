@@ -310,6 +310,8 @@ public class CourseDashboardPage extends TestBase {
 		UtilTest.element_click(driver, post_TO);
 		Thread.sleep(3000);
 		UtilTest.verifyGratitudeText(mS);
+		
+		
 	}
 
 	public void addGratitudeInDashboard_Group() throws Throwable {
