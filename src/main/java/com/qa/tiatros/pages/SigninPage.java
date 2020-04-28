@@ -91,7 +91,7 @@ public class SigninPage extends TestBase {
 	public DashboardPage signin() throws Exception {
 		UtilTest.sendkeys(driver, email, prop.getProperty("Email"));
 		UtilTest.sendkeys(driver, pass, prop.getProperty("Password"));
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		UtilTest.element_click(driver, sub);
 		return new DashboardPage();
 	}
@@ -107,8 +107,7 @@ public class SigninPage extends TestBase {
 	public All_moderator_Page signin_Moderator() throws Exception {
 		UtilTest.sendkeys(driver, email, prop.getProperty("M_username"));
 		UtilTest.sendkeys(driver, pass, prop.getProperty("M_password"));
-		Thread.sleep(2000);
-		UtilTest.element_click(driver, sub);
+		UtilTest.click_js(sub);
 		return new All_moderator_Page();
 
 	}

@@ -24,7 +24,7 @@ public class TestBase {
 			prop = new Properties();
 			FileInputStream fi;
 			fi = new FileInputStream(
-					"/Users/krishnendu/eclipse-workspace/Tiatros/src/main/java/com/qa/tiatros/config/Config.properties");
+					"C:\\Users\\DELL\\eclipse-workspace\\CBT\\src\\main\\java\\com\\qa\\tiatros\\config\\Config.properties");
 			prop.load(fi);
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
@@ -39,7 +39,7 @@ public class TestBase {
 		// Browser Initialization
 		String browser = prop.getProperty("Browser");
 		if (browser.equals("CHROME")) {
-			System.setProperty("webdriver.chrome.driver", "/Users/krishnendu/Selenium/chromedriver 7");
+			System.setProperty("webdriver.chrome.driver", "D:\\Krishnendu\\Selenium\\chromedriver.exe");
 			
 			 ChromeOptions options = new ChromeOptions();
 			 options.addArguments("--incognito");

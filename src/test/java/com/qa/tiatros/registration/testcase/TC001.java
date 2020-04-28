@@ -63,7 +63,7 @@ public class TC001 extends TestBase {
 	}
 
 	//invocationCount = 6,
-	@Test( invocationCount = 2, description = "This Test case will run End to END Registration without phn number")
+	@Test( invocationCount = 5, description = "This Test case will run End to END Registration without phn number")
 	public void registration_E2E_WithoutPhnNum() throws Throwable {
 
 		sp = rp.click_signupLink();
@@ -72,6 +72,7 @@ public class TC001 extends TestBase {
 		fwv = pp.clickNext();
 		d = fwv.inputProfileDetails();
 		d.verify_text7();
+		//Thread.sleep(3000);
 
 		// Phq9 page call
 		p9 = d.phq9Question();

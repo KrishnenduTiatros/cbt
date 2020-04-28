@@ -37,9 +37,10 @@ public class ProfilePage extends TestBase {
 	// Business Component
 
 	public FromWelcomeVidPage clickNext() throws InterruptedException {
-		UtilTest.element_click(driver, ok_button);
+		Thread.sleep(5000);
+		UtilTest.click_js(ok_button);
+		UtilTest.click_js(next_button);
 		Thread.sleep(3000);
-		UtilTest.element_click(driver, next_button);
 		return new FromWelcomeVidPage();
 		
 

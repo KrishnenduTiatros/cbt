@@ -67,46 +67,52 @@ public class TC003 extends TestBase {
 		sgn.verify_text12();
 		d = sgn.signin();
 		d.verify_text15();
+		Thread.sleep(3000);
 
-		// Phq9 page call
-		p9 = d.phq9Question();
-		p9.verify_text8();
-		p9.phq9_Dynamic_Click();
+		try {
+			// Phq9 page call
+			p9 = d.phq9Question();
+			p9.verify_text8();
+			p9.phq9_Dynamic_Click();
 
-		// Gad7 page call
-		g7 = d.gad7Question();
-		g7.verify_text9();
-		g7.gad7_Dynamic_Click();
+			// Gad7 page call
+			g7 = d.gad7Question();
+			g7.verify_text9();
+			g7.gad7_Dynamic_Click();
 
-		// Phq15 Page call
-		p15 = d.phq15Question();
-		p15.verify_text10();
-		p15.phq15_Dynamic_Click();
+			// Phq15 Page call
+			p15 = d.phq15Question();
+			p15.verify_text10();
+			p15.phq15_Dynamic_Click();
 
-		// Phq10 Page call
-		p10 = d.pss10Question();
-		p10.verify_text11();
-		p10.pss10_Dynamic_Click();
+			// Phq10 Page call
+			p10 = d.pss10Question();
+			p10.verify_text11();
+			p10.pss10_Dynamic_Click();
 
-		// User facts
-		uf = d.user_factsQuestion();
-		uf.verify_text13();
-		uf.user_facts_details();
+			// User facts
+			uf = d.user_factsQuestion();
+			uf.verify_text13();
+			uf.user_facts_details();
 
-		// Stress Inventory Sections
+			// Stress Inventory Sections
 
-		si = d.stress_inventoryQuestion();
-		si.verify_text12();
-		si.stress_inventory_CheckBox();
+			si = d.stress_inventoryQuestion();
+			si.verify_text12();
+			si.stress_inventory_CheckBox();
 
-		// Pledge call
-		//d.pledge();
+			// Pledge call
+			//d.pledge();
 
-		d.scale_click();
-		d.course_complete();
+			d.scale_click();
+			d.course_complete();
 
-		// Logout Method
-		d.logoutM();
+			// Logout Method
+			d.logoutM();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

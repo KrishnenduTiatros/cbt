@@ -39,8 +39,7 @@ public class PinPage extends TestBase {
 	public ProfilePage verifyPin() throws Throwable {
 		String pin = UtilTest.fetchGmailPin("krishnendu@tiatros.com", "q1w2e3R$");
 		UtilTest.sendkeys(driver, enterPin, pin);
-		Thread.sleep(2000);
-		UtilTest.element_click(driver, verify_pin);
+		UtilTest.click_js(verify_pin);
 		//UtilTest.writeExcel("SignUP", prop.getProperty("TestCase"), "Email");
 		return new ProfilePage();
 	}

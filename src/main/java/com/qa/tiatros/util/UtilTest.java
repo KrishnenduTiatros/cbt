@@ -586,20 +586,20 @@ public class UtilTest extends TestBase {
 																// user requirement
 
 		// Fetching current system time for unique image identification
-		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
+		DateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmm");
 		Date date = new Date();
 		String t = dateFormat.format(date);
-
+		
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenshotFile, new File(
-					"/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png"));
+					(prop.getProperty("SCPath")) + imageName + "_" + t + ".png"));
 		} catch (IOException e) {
 			System.out.println("File Exception- " + e.getMessage());
 			e.printStackTrace();
 		}
 
-		String imagePath = "/Users/krishnendu/eclipse-workspace/Tiatros/Screenshots/" + imageName + "_" + t + ".png";
+		String imagePath = (prop.getProperty("SCPath")) + imageName + "_" + t + ".png";
 		return imagePath;
 	}
 

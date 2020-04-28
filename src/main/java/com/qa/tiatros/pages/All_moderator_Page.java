@@ -17,8 +17,23 @@ public class All_moderator_Page extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Facilitator Tools')]")
 	WebElement faci_tool;
 
+	@FindBy(xpath = "//span[contains(text(),'Messages')]")
+	WebElement messages;
+
 	@FindBy(xpath = "//a[contains(text(),'Review Goals Assessments')]")
 	WebElement r_goal_ass;
+	
+	@FindBy(xpath = "//span[contains(text(),'Channels')]")
+	WebElement channels;
+
+	@FindBy(xpath = "//span[contains(text(),'Review Content')]")
+	WebElement reviewContent;
+
+	@FindBy(xpath = "//span[contains(text(),'Coupons')]")
+	WebElement coupons;
+	
+	@FindBy(xpath = "//a[contains(text(),'NPS Score')]")
+	WebElement nps;
 
 	// Initializing the page object
 
@@ -28,20 +43,38 @@ public class All_moderator_Page extends TestBase {
 
 	// All Verifications and Validations
 
-	public void verify_text2() {
-		boolean vt = home_page_landing_text.isDisplayed();
-		Assert.assertEquals(vt, true);
+	public void verify_Moderator_homePage() {
+		String vmh = home_page_landing_text.getText();
+		Assert.assertEquals(vmh, "Peer Groups", "Peer Groups Text Not Found Contact Developer");
 	}
 
 	// Business Component
 
 	public Review_goals_assessments_Page click_Review_Goal() throws Throwable {
 		Thread.sleep(3000);
-		UtilTest.element_click(driver, faci_tool);
+		UtilTest.click_js(faci_tool);
 		Thread.sleep(2000);
-		UtilTest.element_click(driver, r_goal_ass);
+		UtilTest.click_js(r_goal_ass);
 		Thread.sleep(1000);
 		return new Review_goals_assessments_Page();
 	}
+
+	public Moderator_message_Page click_MessageSection() throws Throwable {
+		UtilTest.click_js(messages);
+		Thread.sleep(2000);
+		UtilTest.staticScreenShot("MyMessage_Landing_Page");
+		return new Moderator_message_Page();
+	}
+	
+	public Moderator_NPS_Score_Page click_NPSScore() throws Throwable
+	{
+		UtilTest.click_js(faci_tool);
+		UtilTest.click_js(nps);
+		Thread.sleep(2000);
+		UtilTest.staticScreenShot("NPSScore_Landing_Page");
+		return new Moderator_NPS_Score_Page();
+	}
+	
+	
 
 }

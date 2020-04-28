@@ -35,7 +35,7 @@ public class TC01 extends TestBase {
 	public void review_goal_setting_color() throws Throwable {
 		sgn.verify_text12();
 		al = sgn.signin_Moderator();
-		al.verify_text2();
+		al.verify_Moderator_homePage();		
 		rga = al.click_Review_Goal();
 		rga.check_review();
 	}
