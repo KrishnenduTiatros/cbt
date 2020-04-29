@@ -9,33 +9,39 @@ import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.util.UtilTest;
 
 public class Moderator_NPS_Score_Page extends TestBase {
-	
+
 	// Page factory - OR
 
-	@FindBy(xpath = "//strong[@class='hidden-xs-cbt' and contains(text(),'Flagged Contents')]")
-	WebElement reviewContent_homepage;
+	@FindBy(xpath = "//small[contains(text(),'NPS Score')]")
+	WebElement nps_text;
+	
+	@FindBy(xpath = "//strong[@class='hidden-xs-cbt' and contains(text(),'Facilitator Tools')]")
+	WebElement faci_breadcrumb;
+	
+	@FindBy(xpath = "//a[contains(text(),'Monitor & Nudge')]")
+	WebElement nudge;
 
 	// Initializing the page object
 
 	public Moderator_NPS_Score_Page() {
-			PageFactory.initElements(driver, this);
-		}
+		PageFactory.initElements(driver, this);
+	}
 
 	// All Verifications and Validations
 
-	public void verify_reviewContent_LandingPage() {
-		String vt = reviewContent_homepage.getText();
-		Assert.assertEquals(vt, "Flagged Contents",
-				"Flagged Contents Text Not Found in Review Content Page, Contact Developer");
+	public void verify_NPS_LandingPage() {
+		String vt = nps_text.getText();
+		Assert.assertEquals(vt, "NPS Score",
+				"NPS Score Text Not Found in NPS Page, Contact Developer");
 	}
 
 	// Business Component
 
-	public Moderator_Coupon_Page click_coupons() throws Throwable {
-		
+	public Moderator_Nudge_Page click_Nudge() throws Throwable {
+		UtilTest.click_js(nudge);
 		Thread.sleep(2000);
-		UtilTest.staticScreenShot("Coupon_Landing_Page");
-		return new Moderator_Coupon_Page();
+		UtilTest.staticScreenShot("Nudge_Landing_Page");
+		return new Moderator_Nudge_Page();
 	}
 
 }
