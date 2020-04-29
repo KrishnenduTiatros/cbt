@@ -1,5 +1,8 @@
 package com.qa.tiatros.pages;
 
-public class Moderator_course_Page {
+import com.qa.tiatros.base.TestBase;
+
+public class Moderator_course_Page extends TestBase{
+	
 
 }

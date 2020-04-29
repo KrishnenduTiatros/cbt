@@ -22,7 +22,7 @@ public class All_moderator_Page extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Review Goals Assessments')]")
 	WebElement r_goal_ass;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'Channels')]")
 	WebElement channels;
 
@@ -31,10 +31,20 @@ public class All_moderator_Page extends TestBase {
 
 	@FindBy(xpath = "//span[contains(text(),'Coupons')]")
 	WebElement coupons;
-	
+
 	@FindBy(xpath = "//a[contains(text(),'NPS Score')]")
 	WebElement nps;
 
+	@FindBy(xpath = "//span[contains(text(),'Reassign Requests')]")
+	WebElement reassign;
+
+	@FindBy(xpath = "//span[@class='custom-nav-label']")
+	WebElement participants;
+	
+	@FindBy(xpath = "//a[contains(text(),'Registered')]")
+	WebElement regis;
+	
+	
 	// Initializing the page object
 
 	public All_moderator_Page() {
@@ -65,16 +75,29 @@ public class All_moderator_Page extends TestBase {
 		UtilTest.staticScreenShot("MyMessage_Landing_Page");
 		return new Moderator_message_Page();
 	}
-	
-	public Moderator_NPS_Score_Page click_NPSScore() throws Throwable
-	{
+
+	public Moderator_NPS_Score_Page click_NPSScore() throws Throwable {
 		UtilTest.click_js(faci_tool);
 		UtilTest.click_js(nps);
 		Thread.sleep(2000);
 		UtilTest.staticScreenShot("NPSScore_Landing_Page");
 		return new Moderator_NPS_Score_Page();
 	}
+
+	public Moderator_ReassignRequests_Page click_Requests() throws Throwable {
+		UtilTest.click_js(reassign);
+		Thread.sleep(2000);
+		UtilTest.staticScreenShot("Reassign_Landing_Page");
+		return new Moderator_ReassignRequests_Page();
+	}
 	
-	
+	public Moderator_REGISTERED_Page click_Participant() throws Throwable
+	{
+		UtilTest.click_js(participants);
+		UtilTest.click_js(regis);
+		Thread.sleep(2000);
+		UtilTest.staticScreenShot("RegisterParticipant_Page");
+		return new Moderator_REGISTERED_Page();
+	}
 
 }
