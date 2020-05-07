@@ -39,7 +39,7 @@ public class TC003 extends TestBase
 		sgn.verify_text12();
 		cdp = sgn.signin_Course();
 		cdp.courseDashboardVerification();
-		mpp = cdp.add_MessagePost();
+		mpp = cdp.postMsg_Moderator();
 		mpcp = mpp.reply_message_post();
 		mpcp.add_reply_messageText();
 	}

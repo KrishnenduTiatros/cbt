@@ -48,6 +48,12 @@ public class MessagePostPage extends TestBase {
 		UtilTest.message_Post_click();
 		return new Message_post_commentsPage();
 	}
+	
+	public Message_post_commentsPage rply_msg_moderatort() {
+		UtilTest.msg_Post_RE_VerifY();
+		UtilTest.message_Post_click();
+		return new Message_post_commentsPage();
+	}
 
 	public void logoutM() throws Throwable {
 		Thread.sleep(5000);

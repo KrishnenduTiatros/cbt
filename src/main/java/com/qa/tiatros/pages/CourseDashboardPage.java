@@ -141,6 +141,9 @@ public class CourseDashboardPage extends TestBase {
 	@FindBy(xpath = "//span[@class=\"col-xs-12 text-center\"]/a/i")
 	WebElement seeAll;
 	
+	@FindBy(xpath = "//div[@class='radio radio-inline no-padding']//div[@class='iradio_square-blue']/ins[@class=\"iCheck-helper\"]")
+	WebElement facilitator;	
+	
 
 	// Initializing the page object
 
@@ -170,6 +173,19 @@ public class CourseDashboardPage extends TestBase {
 		Thread.sleep(5000);
 		return new MessagePostPage();
 	}
+	
+	public MessagePostPage postMsg_Moderator() throws Throwable {
+		UtilTest.click_js(new_Message);
+		Thread.sleep(3000);
+		UtilTest.click_js(facilitator);
+		UtilTest.sendkeys(driver, subject_message, UtilTest.gnrt_msg_sub_Moderator());
+		UtilTest.sendkeys(driver, body_message, prop.getProperty("Note1"));
+		UtilTest.element_click(driver, post_btn);
+		Thread.sleep(5000);
+		return new MessagePostPage();
+	}
+	
+	
 
 	public MessagePostPage add_MultiplePost() throws Throwable {
 		int limit = Integer.parseInt(prop.getProperty("NumberMP"));

@@ -2,6 +2,7 @@ package com.qa.tiatros.regressionSuite.testcase;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.tiatros.base.TestBase;
@@ -15,8 +16,10 @@ import com.qa.tiatros.pages.Moderator_REGISTERED_Page;
 import com.qa.tiatros.pages.Moderator_REMOVED_Page;
 import com.qa.tiatros.pages.Moderator_ReassignRequests_Page;
 import com.qa.tiatros.pages.SigninPage;
+import com.qa.tiatros.util.CustomListener;
 import com.qa.tiatros.util.UtilTest;
 
+@Listeners(CustomListener.class)
 public class TC03 extends TestBase {
 	// Global object declaration
 
@@ -53,7 +56,7 @@ public class TC03 extends TestBase {
 
 	@Test(description = "Login with nexa moderator and check the below links and pages :-\r\n" + "1. Home page\r\n"
 			+ "2. Reassign Requests\r\n" + "3. Courses\r\n" + "4. Participants")
-	public void regression_TC02() throws Throwable {
+	public void regression_TC03() throws Throwable {
 		sgn.verify_text12();
 		al = sgn.signin_Moderator();
 		al.verify_Moderator_homePage();

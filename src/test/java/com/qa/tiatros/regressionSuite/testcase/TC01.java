@@ -16,6 +16,7 @@ import com.qa.tiatros.pages.SigninPage;
 import com.qa.tiatros.util.CustomListener;
 import com.qa.tiatros.util.UtilTest;
 
+@Listeners(CustomListener.class)
 public class TC01 extends TestBase {
 
 	// Global object declairation

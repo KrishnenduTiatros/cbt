@@ -2,28 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90178" started-at="2020-04-29T12:46:58Z" finished-at="2020-04-29T12:48:28Z">
+  <suite name="Default suite" duration-ms="68683" started-at="2020-05-07T09:08:26Z" finished-at="2020-05-07T09:09:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90178" started-at="2020-04-29T12:46:58Z" finished-at="2020-04-29T12:48:28Z">
-      <class name="com.qa.tiatros.regressionSuite.testcase.TC03">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC03@72d818d1]" name="initobjects" is-config="true" duration-ms="16730" started-at="2020-04-29T12:46:58Z" finished-at="2020-04-29T12:47:15Z">
+    <test name="Default test" duration-ms="68683" started-at="2020-05-07T09:08:26Z" finished-at="2020-05-07T09:09:34Z">
+      <class name="com.qa.tiatros.regressionSuite.testcase.TC05">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC05@72d818d1]" name="initobjects" is-config="true" duration-ms="12524" started-at="2020-05-07T09:08:26Z" finished-at="2020-05-07T09:08:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="regression_TC02()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC03@72d818d1]" name="regression_TC02" duration-ms="72786" started-at="2020-04-29T12:47:15Z" description="Login with nexa moderator and check the below links and pages :-
-1. Home page
-2. Reassign Requests
-3. Courses
-4. Participants" finished-at="2020-04-29T12:48:28Z">
+        <test-method status="PASS" signature="regression_TC05()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC05@72d818d1]" name="regression_TC05" duration-ms="55482" started-at="2020-05-07T09:08:38Z" description="Login with participant and post a message for facilitator, login with moderator and check that particular participants message is visible in the moderator section and also reply on that too." finished-at="2020-05-07T09:09:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regression_TC02 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC03@72d818d1]" name="tearDown" is-config="true" duration-ms="644" started-at="2020-04-29T12:48:28Z" finished-at="2020-04-29T12:48:28Z">
+        </test-method> <!-- regression_TC05 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC05@72d818d1]" name="tearDown" is-config="true" duration-ms="646" started-at="2020-05-07T09:09:34Z" finished-at="2020-05-07T09:09:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.regressionSuite.testcase.TC03 -->
+      </class> <!-- com.qa.tiatros.regressionSuite.testcase.TC05 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

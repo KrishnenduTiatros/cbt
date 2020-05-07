@@ -55,6 +55,7 @@ public class UtilTest extends TestBase {
 	public static String demail = "";
 	public static WebDriverWait wait;
 	public static String testCaseID = "";
+	public static String messageSub = "";
 
 	/***** Methods for click and sendKeys using explicit wait and JsExecutor *****/
 
@@ -90,7 +91,7 @@ public class UtilTest extends TestBase {
 		js.executeScript("arguments[0].scrollIntoView();", Ele);
 	}
 
-	// This method to select element from the drop down
+	// This method to select By Text from the drop down
 	public static void select_dropdown(WebElement element, String value) {
 		try {
 			Thread.sleep(1000);
@@ -105,6 +106,22 @@ public class UtilTest extends TestBase {
 			e.printStackTrace();
 		}
 	}
+	
+	// This method to select By Value from the drop down
+		public static void select_DrpDwn_ByValue(WebElement element, String value) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			Select os = new Select(element);
+			os.selectByValue(value);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 
 	/** ****************************************** **/
 
@@ -263,20 +280,37 @@ public class UtilTest extends TestBase {
 	}
 
 	public static String generate_message_subject() {
-		DateFormat dateFormat = new SimpleDateFormat("HHmmss");
+		DateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmm");
 		Date date = new Date();
 		String t = dateFormat.format(date);
 		String beforet = "My Dear Gratitue Messanger....";
-		String messageSub = beforet.concat(t);
+		messageSub = beforet.concat(t);
+		return messageSub;
+	}
+	
+	public static String gnrt_msg_sub_Moderator() {
+		DateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmm");
+		Date date = new Date();
+		String t = dateFormat.format(date);
+		String beforet = "Hello Moderator/Fecilitator....";
+		messageSub = beforet.concat(t);
 		return messageSub;
 	}
 
 	public static void message_Post_Verification() {
-		WebElement ele = driver
-				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]"));
-		boolean vt = ele.isDisplayed();
-		Assert.assertEquals(vt, true, "Uploaded Text Not Found");
-
+		String ele = driver
+				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]")).getText();
+		Assert.assertEquals(ele, messageSub,
+				"Message Post Not Found in The Page, Contact Developer");
+	}
+	
+	public static void msg_Post_RE_VerifY() {
+		String ele = driver
+				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]")).getText();
+		String rE = "Re: ";
+		String conRe = rE.concat(messageSub); 
+		Assert.assertEquals(ele, conRe,
+				"Message Post Not Found in The Page, Contact Developer");
 	}
 
 	public static void message_Post_click() {

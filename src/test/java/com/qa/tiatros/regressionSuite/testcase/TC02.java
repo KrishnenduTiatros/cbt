@@ -2,6 +2,7 @@ package com.qa.tiatros.regressionSuite.testcase;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.tiatros.base.TestBase;
@@ -13,8 +14,10 @@ import com.qa.tiatros.pages.Moderator_Nudge_Page;
 import com.qa.tiatros.pages.Moderator_Review_Respond_Page;
 import com.qa.tiatros.pages.Review_goals_assessments_Page;
 import com.qa.tiatros.pages.SigninPage;
+import com.qa.tiatros.util.CustomListener;
 import com.qa.tiatros.util.UtilTest;
 
+@Listeners(CustomListener.class)
 public class TC02 extends TestBase {
 	// Global object declaration
 
