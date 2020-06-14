@@ -6,27 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC07">
-        <methods>
-          <include name="eDit_Journal_ME"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC07 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC09">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-          <include name="eDit_Journal_MyOrganisation"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC09 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC01">
-        <methods>
-          <include name="addMultiPost_ME"/>
-          <include name="tearDown"/>
-          <include name="initobjects"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC01 -->
       <class name="com.qa.tiatros.gratitudeJournal.testcase.TC010">
         <methods>
           <include name="tearDown"/>
@@ -41,6 +20,13 @@
           <include name="eDit_Journal_Group"/>
         </methods>
       </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC08 -->
+      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC07">
+        <methods>
+          <include name="eDit_Journal_ME"/>
+          <include name="initobjects"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC07 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

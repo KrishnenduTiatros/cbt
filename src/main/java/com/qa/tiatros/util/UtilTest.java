@@ -542,11 +542,11 @@ public class UtilTest extends TestBase {
 
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("q1w2e3R$");
 		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
-		Thread.sleep(7000);
+		Thread.sleep(13000);
 
 		driver.findElement(By.xpath("//input[@aria-label='Search mail']")).sendKeys(demail);
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("//button[@aria-label='Search Mail']")).click();
+		Thread.sleep(7000);
+		driver.findElement(By.xpath("//button[@aria-label='Search mail']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@class='ae4 UI UJ']")).click();
 		Thread.sleep(3000);

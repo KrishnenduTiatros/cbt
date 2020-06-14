@@ -38,9 +38,6 @@ public class Message_post_commentsPage extends TestBase {
 		UtilTest.sendkeys(driver, reply_text_box, prop.getProperty("Note4"));
 		UtilTest.click_js(post);
 		Thread.sleep(5000);
-		UtilTest.click_hambergur();
-		Thread.sleep(3000);
-		UtilTest.logout();
 	}
 
 }

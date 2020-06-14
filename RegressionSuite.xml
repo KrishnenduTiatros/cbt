@@ -10,6 +10,8 @@
 			<class name="com.qa.tiatros.regressionSuite.testcase.TC03" />
 			<class name="com.qa.tiatros.regressionSuite.testcase.TC01" />
 			<class name="com.qa.tiatros.regressionSuite.testcase.TC02" />
+			<class name="com.qa.tiatros.regressionSuite.testcase.TC04" />
+			<class name="com.qa.tiatros.regressionSuite.testcase.TC05" />			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

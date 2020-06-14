@@ -63,7 +63,7 @@ public class Moderator_message_Page extends TestBase {
 
 	public MessagePostPage add_MessagePost() throws Throwable {
 		UtilTest.click_js(message_Post_Button);
-		UtilTest.select_DrpDwn_ByValue(select_Group, "535");
+		UtilTest.select_DrpDwn_ByValue(select_Group, "99");
 		UtilTest.sendkeys(driver, subject_message, UtilTest.generate_message_subject());
 		UtilTest.sendkeys(driver, message_Body, prop.getProperty("Note1"));
 		Thread.sleep(3000);

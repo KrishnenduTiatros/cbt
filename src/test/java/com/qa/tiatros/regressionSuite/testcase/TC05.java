@@ -2,6 +2,7 @@ package com.qa.tiatros.regressionSuite.testcase;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.tiatros.base.TestBase;
@@ -12,9 +13,10 @@ import com.qa.tiatros.pages.Message_post_commentsPage;
 import com.qa.tiatros.pages.Moderator_ReassignRequests_Page;
 import com.qa.tiatros.pages.Moderator_message_Page;
 import com.qa.tiatros.pages.SigninPage;
-import com.qa.tiatros.pages.SignupPage;
+import com.qa.tiatros.util.CustomListener;
 import com.qa.tiatros.util.UtilTest;
 
+@Listeners(CustomListener.class)
 public class TC05 extends TestBase {
 	// Global object declaration
 
@@ -57,9 +59,10 @@ public class TC05 extends TestBase {
 		UtilTest.staticScreenShot("Moderator_Landing_Page");
 		mmp = al.click_MessageSection();
 		mmp.verify_MyMessage_LandingPage();
-		
 		mpcp = mpp.rply_msg_moderatort();
 		mpcp.modrt_reply_Mesg();
+		UtilTest.staticScreenShot("ModeratorReplyPost_Page");
+		UtilTest.logout();
 	}
 
 	@AfterMethod

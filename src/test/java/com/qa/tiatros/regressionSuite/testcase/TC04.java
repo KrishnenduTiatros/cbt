@@ -46,7 +46,7 @@ public class TC04 extends TestBase {
 		mmp = al.click_MessageSection();
 		mmp.verify_MyMessage_LandingPage();
 		mpp = mmp.add_MessagePost();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		mpp.check_messagePost();
 		UtilTest.logout();
 	}
