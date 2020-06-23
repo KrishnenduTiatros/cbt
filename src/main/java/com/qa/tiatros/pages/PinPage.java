@@ -17,7 +17,7 @@ public class PinPage extends TestBase {
 	@FindBy(xpath = "//h2[contains(text(),'Check Your Email!')]")
 	WebElement verification_text4;
 	
-	@FindBy(xpath = "//input[@placeholder='Enter your PIN']")
+	@FindBy(xpath = "//input[@id='user_pin']")
 	WebElement enterPin;
 	
 
