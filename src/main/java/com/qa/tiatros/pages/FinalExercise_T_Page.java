@@ -9,7 +9,7 @@ import com.qa.tiatros.base.TestBase;
 import com.qa.tiatros.util.UtilTest;
 
 public class FinalExercise_T_Page extends TestBase {
-	
+
 	// Page factory - OR
 
 	@FindBy(xpath = "//strong[@class='hidden-xs-cbt']")
@@ -71,8 +71,7 @@ public class FinalExercise_T_Page extends TestBase {
 
 	// Business Component
 
-	public void course_tour5() throws Throwable
-	{
+	public void course_tour5() throws Throwable {
 		boolean vt = verification_text24.isDisplayed();
 		Assert.assertEquals(vt, true);
 		boolean vt1 = page_logo.isDisplayed();

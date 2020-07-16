@@ -10,12 +10,12 @@ import com.qa.tiatros.util.UtilTest;
 import Thread.ResilienceDiscussion_T_Page;
 
 public class Course_Sessions_page extends TestBase {
-	
+
 	// Page factory - OR
 
 	@FindBy(xpath = "//i[@class='fa fa-angle-up fa-2x more-less']")
 	WebElement openSession;
-	
+
 	@FindBy(xpath = "//strong[@class='hidden-xs-cbt']")
 	WebElement verification_text_CoursePage;
 
@@ -57,22 +57,22 @@ public class Course_Sessions_page extends TestBase {
 
 	@FindBy(xpath = "//div[@id='collapse0']/div/div/a/div[1]/span[contains(text(),'5')]")
 	WebElement final_Exercise;
-	
-	@FindBy (xpath = "//div[@id='collapse0']/div/div/a/div[1]/span[contains(text(),'6')]")
+
+	@FindBy(xpath = "//div[@id='collapse0']/div/div/a/div[1]/span[contains(text(),'6')]")
 	WebElement Peer_Review;
 
 	@FindBy(xpath = "//span[contains(text(),'×')]")
 	WebElement cross;
-	
+
 	@FindBy(xpath = "//p[contains(text(),'3/3 Completed')]")
 	WebElement peer_validation_message;
-	
+
 	@FindBy(xpath = "//div[@class='panel-collapse collapse in']//p[@class='text-danger'][contains(text(),'krishnendu s has not yet completed all activities ')]")
 	WebElement peer_validation_message1;
-	
+
 	@FindBy(xpath = "//div[@class='i-checks clearfix accept-9']/div/ins[@class='iCheck-helper']")
 	WebElement scale_click;
-	
+
 	@FindBy(xpath = "//div[@class='modal-footer']/div/input[@id='btn_cancel']")
 	WebElement cancel;
 
@@ -88,14 +88,10 @@ public class Course_Sessions_page extends TestBase {
 		boolean vt = verification_text_CoursePage.isDisplayed();
 		Assert.assertEquals(vt, true);
 	}
-	
-	
-
 
 	// Business Component
 
-	public void currentOpenSession() throws Throwable
-	{
+	public void currentOpenSession() throws Throwable {
 		CommonPage.sessionSteps();
 	}
 

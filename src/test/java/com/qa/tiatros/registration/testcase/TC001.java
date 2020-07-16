@@ -62,7 +62,7 @@ public class TC001 extends TestBase {
 		rur = new ReturnUserRegistrationPage();
 	}
 
-	@Test(invocationCount = 6, description = "This Test case will run End to END Registration without phn number")
+	@Test(invocationCount = 1, description = "This Test case will run End to END Registration without phn number")
 	public void registration_E2E_WithoutPhnNum() throws Throwable {
 
 		sp = rp.click_signupLink();

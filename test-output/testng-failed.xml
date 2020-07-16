@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.qa.tiatros.report.ExtentReportListeners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC08">
-        <methods>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-          <include name="eDit_Journal_Group"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC08 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC010">
+      <class name="com.qa.tiatros.registration.testcase.TC001">
         <methods>
           <include name="tearDown"/>
           <include name="initobjects"/>
-          <include name="eDit_Journal_World_TC010"/>
+          <include name="registration_E2E_WithoutPhnNum"/>
         </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC010 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC03">
-        <methods>
-          <include name="initobjects"/>
-          <include name="addMultiPost_MyOrganisation"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC03 -->
-      <class name="com.qa.tiatros.gratitudeJournal.testcase.TC07">
-        <methods>
-          <include name="eDit_Journal_ME"/>
-          <include name="initobjects"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.tiatros.gratitudeJournal.testcase.TC07 -->
+      </class> <!-- com.qa.tiatros.registration.testcase.TC001 -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
