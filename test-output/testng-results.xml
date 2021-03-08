@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60495" started-at="2020-07-13T13:22:29Z" finished-at="2020-07-13T13:23:30Z">
+  <suite name="Default suite" duration-ms="162906" started-at="2021-03-08T09:27:39Z" finished-at="2021-03-08T09:30:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60495" started-at="2020-07-13T13:22:29Z" finished-at="2020-07-13T13:23:30Z">
-      <class name="com.qa.tiatros.regressionSuite.testcase.TC05">
-        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC05@1d082e88]" name="initobjects" is-config="true" duration-ms="11436" started-at="2020-07-13T13:22:29Z" finished-at="2020-07-13T13:22:41Z">
+    <test name="Default test" duration-ms="162906" started-at="2021-03-08T09:27:39Z" finished-at="2021-03-08T09:30:22Z">
+      <class name="com.qa.tiatros.cisis.registration.testcase.TC01">
+        <test-method status="PASS" signature="initobjects()[pri:0, instance:com.qa.tiatros.cisis.registration.testcase.TC01@72d818d1]" name="initobjects" is-config="true" duration-ms="10222" started-at="2021-03-08T09:27:39Z" finished-at="2021-03-08T09:27:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initobjects -->
-        <test-method status="PASS" signature="regression_TC05()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC05@1d082e88]" name="regression_TC05" duration-ms="48390" started-at="2020-07-13T13:22:41Z" description="Login with participant and post a message for facilitator, login with moderator and check that particular participants message is visible in the moderator section and also reply on that too." finished-at="2020-07-13T13:23:29Z">
+        <test-method status="PASS" signature="registrationFlow_TC01()[pri:0, instance:com.qa.tiatros.cisis.registration.testcase.TC01@72d818d1]" name="registrationFlow_TC01" duration-ms="151398" started-at="2021-03-08T09:27:49Z" description="Signup user with just basic required process to complete registration process." finished-at="2021-03-08T09:30:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regression_TC05 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.regressionSuite.testcase.TC05@1d082e88]" name="tearDown" is-config="true" duration-ms="647" started-at="2020-07-13T13:23:29Z" finished-at="2020-07-13T13:23:30Z">
+        </test-method> <!-- registrationFlow_TC01 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tiatros.cisis.registration.testcase.TC01@72d818d1]" name="tearDown" is-config="true" duration-ms="1168" started-at="2021-03-08T09:30:20Z" finished-at="2021-03-08T09:30:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tiatros.regressionSuite.testcase.TC05 -->
+      </class> <!-- com.qa.tiatros.cisis.registration.testcase.TC01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

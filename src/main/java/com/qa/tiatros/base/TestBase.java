@@ -24,7 +24,7 @@ public class TestBase {
 			prop = new Properties();
 			FileInputStream fi;
 			fi = new FileInputStream(
-					"C:\\Users\\DELL\\eclipse-workspace\\CBT\\src\\main\\java\\com\\qa\\tiatros\\config\\Config_Regression.properties");
+					"C:\\Users\\DELL\\eclipse-workspace\\CBT\\src\\main\\java\\com\\qa\\tiatros\\config\\Staging.Resilience.Config.properties");
 			prop.load(fi);
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();

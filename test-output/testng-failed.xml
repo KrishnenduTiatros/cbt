@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tiatros.registration.testcase.TC001">
+      <class name="com.qa.tiatros.cisis.registration.testcase.TC01">
         <methods>
-          <include name="tearDown"/>
           <include name="initobjects"/>
-          <include name="registration_E2E_WithoutPhnNum"/>
+          <include name="registrationFlow_TC01"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.tiatros.registration.testcase.TC001 -->
+      </class> <!-- com.qa.tiatros.cisis.registration.testcase.TC01 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

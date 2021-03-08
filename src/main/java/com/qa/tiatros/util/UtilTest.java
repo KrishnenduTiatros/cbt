@@ -59,6 +59,14 @@ public class UtilTest extends TestBase {
 
 	/***** Methods for click and sendKeys using explicit wait and JsExecutor *****/
 
+	/***** Method to type any charrecter using BY class *****/
+	public static void type(By locator, String value) {
+		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
+		WebElement wait = new WebDriverWait(driver, timeout)
+				.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		wait.sendKeys(value);
+	}
+
 	// This Method used to type any given word in fields
 	public static void sendkeys(WebDriver driver, WebElement element, String value) {
 		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
@@ -77,12 +85,69 @@ public class UtilTest extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", locator);
 	}
-	
 
-	//Wait
-    public static void waitVisibility(By by){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-    }
+	/***** Method to click any object using By Class and Javascript *****/
+	public static void click_js(By locator) {
+		WebElement ele = driver.findElement(locator);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", ele);
+	}
+
+	/**** Method used for verification text, message on any web page. ***/
+	public static void textValidation(By locator, String s) {
+		WebElement we1 = UtilTest.returnElement(locator);
+		String actual_Text = we1.getText();
+		String expected_Text = s;
+		Assert.assertEquals(actual_Text, expected_Text,
+				expected_Text + "Text Validation Miss-Match, Please Contact Developer!!");
+	}
+
+	/***** Method to click any object using By Class *****/
+	public static void click_ele(By locator) {
+		int timeout = Integer.parseInt(prop.getProperty("Explicitwait"));
+		WebElement wait = new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(locator));
+		wait.click();
+	}
+
+	/***** Customized Method which will return a WebElement ****/
+	public static WebElement returnElement(By locator) {
+		WebElement ele = driver.findElement(locator);
+		return ele;
+	}
+
+	/***** Customized method to select By Value from the drop down ****/
+	public static void selDrpDwn_Index(By locator, int value) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		WebElement ele = driver.findElement(locator);
+		Select os = new Select(ele);
+		os.selectByIndex(value);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/***** Method to type any charrecter using BY class *****/
+	public static void doSendKeys(By locator, String value) {
+		try {
+			// wait visible
+			WebElement ele = driver.findElement(locator);
+			ele.clear();
+			ele.sendKeys(value);
+		} catch (Exception e) {
+			System.out.println("Some exception got occurred while entering value in a field.....");
+		}
+	}
+
+	// Wait
+	public static void waitVisibility(By by) {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+	}
 
 	// This method used to scroll down a web page
 	public static void scrollDown(WebDriver driver, WebElement element) {
@@ -106,22 +171,22 @@ public class UtilTest extends TestBase {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// This method to select By Value from the drop down
-		public static void select_DrpDwn_ByValue(WebElement element, String value) {
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			Select os = new Select(element);
-			os.selectByValue(value);
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+	public static void select_DrpDwn_ByValue(WebElement element, String value) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
+		Select os = new Select(element);
+		os.selectByValue(value);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 	/** ****************************************** **/
 
@@ -287,7 +352,7 @@ public class UtilTest extends TestBase {
 		messageSub = beforet.concat(t);
 		return messageSub;
 	}
-	
+
 	public static String gnrt_msg_sub_Moderator() {
 		DateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmm");
 		Date date = new Date();
@@ -299,18 +364,18 @@ public class UtilTest extends TestBase {
 
 	public static void message_Post_Verification() {
 		String ele = driver
-				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]")).getText();
-		Assert.assertEquals(ele, messageSub,
-				"Message Post Not Found in The Page, Contact Developer");
+				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]"))
+				.getText();
+		Assert.assertEquals(ele, messageSub, "Message Post Not Found in The Page, Contact Developer");
 	}
-	
+
 	public static void msg_Post_RE_VerifY() {
 		String ele = driver
-				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]")).getText();
+				.findElement(By.xpath("//div[contains(@id,'message_post_item')]//h3[contains(text(),'" + t + "')]"))
+				.getText();
 		String rE = "Re: ";
-		String conRe = rE.concat(messageSub); 
-		Assert.assertEquals(ele, conRe,
-				"Message Post Not Found in The Page, Contact Developer");
+		String conRe = rE.concat(messageSub);
+		Assert.assertEquals(ele, conRe, "Message Post Not Found in The Page, Contact Developer");
 	}
 
 	public static void message_Post_click() {
@@ -429,18 +494,15 @@ public class UtilTest extends TestBase {
 		System.out.println(bNum);
 		// Navigate to the message post page
 		driver.findElement(By.xpath("//a[contains(text(),'See All Messages')]")).click();
-		
+
 		// Take the total count of the total tiles of the page
-		int totalTiles = driver.findElements(By.xpath(
-				"//div[contains(@id,'message_post_item')]"))
-				.size();
+		int totalTiles = driver.findElements(By.xpath("//div[contains(@id,'message_post_item')]")).size();
 
 		// This loop will run till the number of Love Icons found in the page found
 		for (int i = 1; i <= totalTiles; i++) {
-			
+
 			try {
-				driver.findElement(By.xpath("//div[contains(@id,'message_post_item')][" + i
-						+ "]/div/a")).click();
+				driver.findElement(By.xpath("//div[contains(@id,'message_post_item')][" + i + "]/div/a")).click();
 				Thread.sleep(5000);
 			} catch (Exception e) {
 
@@ -529,6 +591,7 @@ public class UtilTest extends TestBase {
 		js.executeScript("window.scrollBy(0,5000)");
 	}
 
+	/**** Customized Method for retriving PIN fro Gmail Account ***/
 	public static String fetchGmailPin(String email, String pass) throws Throwable {
 
 		((JavascriptExecutor) driver).executeScript("window.open()");
@@ -540,26 +603,34 @@ public class UtilTest extends TestBase {
 		driver.findElement(By.xpath("//div[@class='dG5hZc']//div/div[@id='identifierNext']")).click();
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("q1w2e3R$");
-		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
-		Thread.sleep(13000);
+		By password = By.xpath("//input[@type='password']");
+		UtilTest.type(password, "");
+		By next = By.xpath("//span[contains(text(),'Next')]");
+		UtilTest.click_js(next);
 
-		driver.findElement(By.xpath("//input[@aria-label='Search mail']")).sendKeys(demail);
+		// driver.findElement(By.xpath("//input[@type='password']")).sendKeys("q1w2e3R$");
+		// driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
 		Thread.sleep(7000);
-		driver.findElement(By.xpath("//button[@aria-label='Search mail']")).click();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[@class='ae4 UI UJ']")).click();
+		By searchMail = By.xpath("//input[@aria-label='Search mail']");
+		UtilTest.type(searchMail, demail);
+		//driver.findElement(By.xpath("//input[@aria-label='Search mail']")).sendKeys(demail);
+		Thread.sleep(3000);
+		By searchMailClick = By.xpath("//button[@aria-label='Search mail']");
+		UtilTest.click_js(searchMailClick);
+		//driver.findElement(By.xpath("//button[@aria-label='Search mail']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[@class='ae4 UI UJ nH oy8Mbf id']")).click(); // //div[@class='ae4 UI UJ']
 		Thread.sleep(3000);
 		String s = driver
 				.findElement(
-						By.xpath("//span[contains(text(),'Your PIN:')]/following-sibling::span[starts-with(@id,'m_')]"))
+						By.xpath("//span[contains(text(),'ACCOUNT SETUP CODE: ')]/following-sibling::span[starts-with(@id,'m_')]"))
 				.getText();
 		System.out.println(s);
 		try {
 
 			driver.findElement(By.xpath("//div[starts-with(@class,'gb_ja') and @role='button']")).click();
 
-			driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
+			//driver.findElement(By.xpath("//a[starts-with(@id,'gb_')]")).click();
 			Alert alert = driver.switchTo().alert();
 			driver.switchTo().alert().accept();
 		} catch (Exception e) {
@@ -623,11 +694,10 @@ public class UtilTest extends TestBase {
 		DateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmm");
 		Date date = new Date();
 		String t = dateFormat.format(date);
-		
+
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenshotFile, new File(
-					(prop.getProperty("SCPath")) + imageName + "_" + t + ".png"));
+			FileUtils.copyFile(screenshotFile, new File((prop.getProperty("SCPath")) + imageName + "_" + t + ".png"));
 		} catch (IOException e) {
 			System.out.println("File Exception- " + e.getMessage());
 			e.printStackTrace();
@@ -695,10 +765,50 @@ public class UtilTest extends TestBase {
 
 		// Authentication and connection establishment to the sender's mail
 		Transport transport = session.getTransport("smtps");
-		transport.connect("smtp.gmail.com", 465, "krishnendu@tiatros.com", "q1w2e3R$");
+		transport.connect("smtp.gmail.com", 465, "krishnendu@tiatros.com", "");
 		transport.sendMessage(msg, msg.getAllRecipients());
 		transport.close();
 		System.out.println("Mail Sent successfully");
+	}
+
+	/***** Customized method to select By Value from the drop down ****/
+	public static void select_DrpDwn_ByValue(By locator, String value) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		WebElement element = driver.findElement(locator);
+		Select os = new Select(element);
+		os.selectByVisibleText(value);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/****
+	 * Method used for validation of a particular word/text message on any web page
+	 * using SubString.
+	 ***/
+	public static void textValidateUsingSubString(By locator, String s) {
+		WebElement we1 = UtilTest.returnElement(locator);
+		String actual_Text = we1.getText();
+		String subtext = actual_Text.substring(0, 7);
+		String expected_Text = s;
+		Assert.assertEquals(subtext, expected_Text, "Text Validation Miss-Match, Please Contact Developer!! ");
+	}
+
+	/**** Customized method enables a button when it is disabled in nature ***/
+	public static void enableButton(By locator) {
+		WebElement ele = UtilTest.returnElement(locator);
+		String className = ele.getAttribute("name");
+		// System.out.println(className);
+
+		JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		String toenable = "document.getElementsByName('" + className + "')[0].removeAttribute('disabled');";
+		javascript.executeScript(toenable);
 	}
 
 	public static void verifyGratitudeText(String ms1) {
@@ -753,6 +863,18 @@ public class UtilTest extends TestBase {
 
 		}
 
+	}
+
+	/***
+	 * Customized Method to generate Random Number by accepting upper limit and
+	 * lower limit
+	 ***/
+	public static int generateRandomNumber(int upperlimit) {
+		int number = 0;
+		// creating object for Random Class
+		Random r = new Random();
+		number = r.nextInt((upperlimit - 1) + 1) + 1;
+		return number;
 	}
 
 }
